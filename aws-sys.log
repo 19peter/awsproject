@@ -1,0 +1,535 @@
+14:14:55.867 [main] INFO  org.peters.projectaws.Main - Starting AWS-SYS-MOCK application
+14:14:55.868 [main] DEBUG org.peters.projectaws.Main - Initializing builders
+14:14:55.875 [main] INFO  org.peters.projectaws.Main - Creating AWS components
+14:14:55.880 [main] INFO  org.peters.projectaws.Main - Setting up S3 bucket and data
+14:14:55.882 [main] INFO  org.peters.projectaws.Main - Setting up API Gateway routes
+14:14:55.882 [main] INFO  org.peters.projectaws.Main - Setting up APIs for EC2
+14:14:55.884 [main] INFO  org.peters.projectaws.Main - Setting up async routes
+14:14:58.892 [main] INFO  org.peters.projectaws.Main - Shutting down components
+14:14:58.894 [main] INFO  org.peters.projectaws.Main - Application shutdown complete
+14:22:31.147 [main] INFO  org.peters.projectaws.Main - Starting AWS-SYS-MOCK application
+14:22:31.150 [main] DEBUG org.peters.projectaws.Main - Initializing builders
+14:22:31.153 [main] INFO  org.peters.projectaws.Main - Creating AWS components
+14:22:31.156 [main] INFO  org.peters.projectaws.Main - Setting up S3 bucket and data
+14:22:31.157 [main] INFO  org.peters.projectaws.Main - Setting up API Gateway routes
+14:22:31.157 [main] INFO  org.peters.projectaws.Main - Setting up APIs for EC2
+14:22:31.158 [main] INFO  org.peters.projectaws.Main - Setting up async routes
+14:22:31.162 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Checking API path and method: /ec2/data GET
+14:22:31.162 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Checking API path and method: /ec2/another-data GET
+14:22:31.163 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Checking API path and method: /ec2/data POST
+14:22:31.167 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+14:22:31.167 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+14:22:31.168 [pool-3-thread-1] INFO  org.peters.projectaws.Main - Api Executed: Returned: true
+14:22:34.160 [main] INFO  org.peters.projectaws.Main - Shutting down components
+14:22:34.162 [pool-3-thread-2] INFO  org.peters.projectaws.Main - Checking API path and method: /ec2/data GET
+14:22:34.163 [pool-3-thread-2] INFO  org.peters.projectaws.Main - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:22:34.163 [pool-3-thread-2] INFO  org.peters.projectaws.Main - Api Executed: Returned: new-data-value
+14:22:34.164 [main] INFO  org.peters.projectaws.Main - Application shutdown complete
+14:24:52.261 [main] INFO  - Starting AWS-SYS-MOCK application
+14:24:52.263 [main] DEBUG - Initializing builders
+14:24:52.267 [main] INFO  - Creating AWS components
+14:24:52.269 [main] INFO  - Setting up S3 bucket and data
+14:24:52.270 [main] INFO  - Setting up API Gateway routes
+14:24:52.270 [main] INFO  - Setting up APIs for EC2
+14:24:52.272 [main] INFO  - Setting up async routes
+14:24:52.277 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/data GET
+14:24:52.277 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/another-data GET
+14:24:52.277 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/data POST
+14:24:52.282 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+14:24:52.282 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+14:24:52.283 [pool-3-thread-1] INFO  - Api Executed: Returned: true
+14:24:55.280 [main] INFO  - Shutting down components
+14:24:55.281 [pool-3-thread-2] INFO  - Checking API path and method: /ec2/data GET
+14:24:55.282 [pool-3-thread-2] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:24:55.282 [pool-3-thread-2] INFO  - Api Executed: Returned: new-data-value
+14:24:55.283 [main] INFO  - Application shutdown complete
+14:26:15.516 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/data GET
+14:26:15.517 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/another-data GET
+14:26:15.517 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/data POST
+14:26:15.520 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+14:26:15.520 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+14:26:15.520 [pool-3-thread-1] INFO  - Api Executed: Returned: true
+14:26:18.512 [main] INFO  - Shutting down components
+14:26:18.514 [pool-3-thread-2] INFO  - Checking API path and method: /ec2/data GET
+14:26:18.515 [pool-3-thread-2] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:26:18.515 [pool-3-thread-2] INFO  - Api Executed: Returned: new-data-value
+14:26:18.516 [main] INFO  - Application shutdown complete
+14:42:33.893 [main] INFO  - Shutting down components
+14:42:33.893 [pool-3-thread-2] INFO  - Checking API path and method: /ec2/data GET
+14:42:33.893 [pool-3-thread-1] INFO  - Checking API path and method: /ec2/data GET
+14:42:33.896 [pool-3-thread-2] INFO  - Checking API path and method: /ec2/another-data GET
+14:42:33.896 [pool-3-thread-2] INFO  - Checking API path and method: /ec2/data POST
+14:42:33.900 [pool-3-thread-1] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:42:33.900 [pool-3-thread-2] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+14:42:33.900 [pool-3-thread-1] INFO  - Api Executed: Returned: new-data-value
+14:42:33.901 [pool-3-thread-2] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+14:42:33.901 [pool-3-thread-2] INFO  - Api Executed: Returned: true
+14:42:33.901 [main] INFO  - Application shutdown complete
+14:43:27.281 [pool-3-thread-2] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:43:27.281 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+14:43:27.281 [main] INFO  - Shutting down components
+14:43:27.283 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+14:43:27.284 [pool-3-thread-1] INFO  - Api Executed: Returned: true
+14:43:27.284 [main] INFO  - Application shutdown complete
+15:44:10.695 [pool-3-thread-2] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+15:44:10.695 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/data-version-2 And FnName: addDataToEC2
+15:44:10.697 [pool-3-thread-2] ERROR - Failed To Add To Bucket: data Key: new-data-key And Value: new-data-value
+15:44:10.697 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: data-version-2
+15:44:10.697 [pool-3-thread-1] INFO  - Api Executed: Returned: org.peters.projectaws.dtos.S3.PostResponseDto@332fd659
+15:44:10.697 [pool-3-thread-2] INFO  - Api Executed: Returned: org.peters.projectaws.dtos.S3.PostResponseDto@4f6e6a6e
+15:44:13.689 [main] INFO  - Shutting down components
+15:44:13.691 [pool-3-thread-3] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:44:13.692 [pool-3-thread-3] INFO  - Api Executed: Returned: org.peters.projectaws.dtos.S3.GetDataResponseDto@6e4338ce
+15:44:13.693 [main] INFO  - Application shutdown complete
+16:02:59.295 [pool-3-thread-2] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/data-version-2 And FnName: addDataToEC2
+16:02:59.295 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+16:02:59.298 [pool-3-thread-2] INFO  - Adding To Bucket: data Key: new-data-key And Value: data-version-2
+16:02:59.298 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+16:02:59.300 [pool-3-thread-2] INFO  - Api Executed: Returned Code: 200
+16:02:59.300 [pool-3-thread-1] INFO  - Api Executed: Returned Code: 200
+16:03:02.285 [main] INFO  - Shutting down components
+16:03:02.286 [pool-3-thread-3] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+16:03:02.286 [pool-3-thread-3] INFO  - Api Executed: Returned Code: null
+16:03:02.287 [main] INFO  - Application shutdown complete
+16:03:36.802 [pool-3-thread-1] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/new-data-value And FnName: addDataToEC2
+16:03:36.802 [pool-3-thread-2] INFO  - Executing API with method: POST And params: /S3/data/new-data-key/data-version-2 And FnName: addDataToEC2
+16:03:36.804 [pool-3-thread-1] INFO  - Adding To Bucket: data Key: new-data-key And Value: new-data-value
+16:03:36.804 [pool-3-thread-2] INFO  - Adding To Bucket: data Key: new-data-key And Value: data-version-2
+16:03:36.806 [pool-3-thread-2] INFO  - Api Executed: Returned Code: 200
+16:03:36.806 [pool-3-thread-1] INFO  - Api Executed: Returned Code: 200
+16:03:39.795 [main] INFO  - Shutting down components
+16:03:39.796 [pool-3-thread-3] INFO  - Executing API with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+16:03:39.797 [pool-3-thread-3] INFO  - Api Executed: Returned Code: 200
+16:03:39.797 [main] INFO  - Application shutdown complete
+15:16:34.150 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@707194ba[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:16:34.154 [main] INFO  - Initiating LoadBalancer shutdown
+15:16:34.154 [main] INFO  - LoadBalancer shutdown complete
+15:17:30.838 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@707194ba[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:17:30.844 [main] INFO  - Initiating LoadBalancer shutdown
+15:17:30.845 [main] INFO  - LoadBalancer shutdown complete
+15:17:30.851 [pool-4-thread-1] INFO  - Executing API in EC2:50895480 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:17:45.855 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:17:45.856 [pool-4-thread-1] INFO  - Executing API in EC2:50895480 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:20:28.499 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@707194ba[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:20:28.502 [main] INFO  - Initiating LoadBalancer shutdown
+15:20:28.503 [main] INFO  - LoadBalancer shutdown complete
+15:20:28.509 [pool-4-thread-1] INFO  - Executing API in EC2:-971033934 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:20:28.510 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:20:28.510 [pool-4-thread-1] INFO  - Executing API in EC2:-971033934 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:25:00.972 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@707194ba[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:25:00.976 [main] INFO  - Initiating LoadBalancer shutdown
+15:25:00.976 [main] INFO  - LoadBalancer shutdown complete
+15:25:00.979 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/data-key
+15:25:00.981 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/new-data-key
+15:25:14.055 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@707194ba[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:25:14.060 [main] INFO  - Initiating LoadBalancer shutdown
+15:25:14.062 [main] INFO  - LoadBalancer shutdown complete
+15:25:14.063 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/new-data-key
+15:25:14.063 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/data-key
+15:40:32.465 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:40:32.469 [main] INFO  - Initiating LoadBalancer shutdown
+15:40:32.469 [main] INFO  - LoadBalancer shutdown complete
+15:40:32.472 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/data-key
+15:40:32.472 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET /S3/data/new-data-key
+15:41:11.229 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:41:11.233 [main] INFO  - Initiating LoadBalancer shutdown
+15:41:11.234 [main] INFO  - LoadBalancer shutdown complete
+15:41:11.236 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+15:41:11.236 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+15:41:11.241 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1768466300
+15:41:11.241 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1768466300
+15:41:11.247 [pool-4-thread-1] INFO  - Executing API in EC2:-1768466300 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:41:11.250 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:41:11.250 [pool-4-thread-1] INFO  - Executing API in EC2:-1768466300 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:41:47.009 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:41:47.013 [main] INFO  - Initiating LoadBalancer shutdown
+15:41:47.014 [main] INFO  - LoadBalancer shutdown complete
+15:41:47.013 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:41:47.013 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:42:00.070 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:42:00.074 [main] INFO  - Initiating LoadBalancer shutdown
+15:42:00.075 [main] INFO  - LoadBalancer shutdown complete
+15:42:00.078 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+15:42:00.078 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+15:42:00.082 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1170225339
+15:42:00.082 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1170225339
+15:42:00.088 [pool-4-thread-1] INFO  - Executing API in EC2:-1170225339 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:42:00.090 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:42:00.090 [pool-4-thread-1] INFO  - Executing API in EC2:-1170225339 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:43:28.996 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:43:29.000 [main] INFO  - Initiating LoadBalancer shutdown
+15:43:29.000 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:43:29.000 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:43:29.000 [main] INFO  - LoadBalancer shutdown complete
+15:43:29.004 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+15:43:29.004 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+15:43:29.008 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 907127810
+15:43:29.008 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 907127810
+15:43:29.013 [pool-4-thread-1] INFO  - Executing API in EC2:907127810 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:43:29.015 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:43:29.015 [pool-4-thread-1] INFO  - Executing API in EC2:907127810 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:49:33.104 [main] INFO  - TargetGroup /ec2/data added target: -1294719294
+15:49:33.105 [main] INFO  - TargetGroup /ec2/data added target: -1561842864
+15:49:33.106 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:49:33.109 [main] INFO  - Initiating LoadBalancer shutdown
+15:49:33.110 [main] INFO  - LoadBalancer shutdown complete
+15:49:33.110 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:49:33.110 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:50:20.575 [main] INFO  - TargetGroup /ec2/data added target: -315900068
+15:50:20.576 [main] INFO  - TargetGroup /ec2/data added target: -473494770
+15:50:20.578 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:50:20.581 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:50:20.581 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:50:20.583 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+15:50:20.584 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+15:50:20.584 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -315900068
+15:50:20.584 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -315900068
+15:50:20.590 [pool-4-thread-1] INFO  - Executing API in EC2:-315900068 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:50:20.591 [pool-4-thread-1] INFO  - Executing API in EC2:-315900068 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:50:20.592 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+15:55:24.375 [main] INFO  - TargetGroup /ec2/data added target: 1466028973
+15:55:24.377 [main] INFO  - TargetGroup /ec2/data added target: -600984582
+15:55:24.379 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+15:55:24.384 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:55:24.384 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+15:55:24.389 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+15:55:24.389 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+15:55:24.389 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 1466028973
+15:55:24.389 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 1466028973
+15:55:24.397 [pool-4-thread-1] INFO  - Executing API in EC2:1466028973 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+15:55:24.398 [pool-4-thread-1] INFO  - Executing API in EC2:1466028973 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+15:55:24.399 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+16:10:07.181 [main] INFO  - TargetGroup /ec2/data added target: 910194921
+16:10:07.182 [main] INFO  - TargetGroup /ec2/data added target: -1522461819
+16:10:07.183 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+16:10:07.186 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+16:10:07.186 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+16:10:07.190 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+16:10:07.190 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+16:10:07.190 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 910194921
+16:10:07.190 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 910194921
+16:10:07.191 [pool-2-thread-1] INFO  - Target 910194921 added running request
+16:10:07.198 [pool-4-thread-1] INFO  - Executing API in EC2:910194921 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+16:10:07.200 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+16:10:07.215 [pool-2-thread-2] ERROR - Target 910194921 is overloaded
+16:10:07.215 [pool-2-thread-1] INFO  - Target 910194921 removed running request
+16:10:07.216 [pool-2-thread-2] INFO  - Target 910194921 removed running request
+16:15:13.767 [main] INFO  - TargetGroup /ec2/data added target: -16772928
+16:15:13.768 [main] INFO  - TargetGroup /ec2/data added target: -860207423
+16:15:13.770 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+16:15:13.776 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+16:15:13.776 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+16:15:13.782 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+16:15:13.782 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+16:15:13.782 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -860207423
+16:15:13.782 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -16772928
+16:15:13.783 [pool-2-thread-2] INFO  - Target -860207423 added running request
+16:15:13.783 [pool-2-thread-1] INFO  - Target -16772928 added running request
+16:15:13.785 [pool-2-thread-1] INFO  - Target -16772928 removed running request
+16:15:13.785 [pool-2-thread-2] INFO  - Target -860207423 removed running request
+16:15:13.791 [pool-5-thread-1] INFO  - Executing API in EC2:-860207423 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+16:15:13.791 [pool-4-thread-1] INFO  - Executing API in EC2:-16772928 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+16:15:13.793 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:26:36.296 [main] INFO  - TargetGroup /ec2/data added target: -1196007229
+20:26:36.298 [main] INFO  - TargetGroup /ec2/data added target: 127375902
+20:26:36.301 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:26:36.312 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:26:36.312 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:26:36.318 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:26:36.318 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:26:36.319 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 127375902
+20:26:36.319 [pool-2-thread-2] INFO  - Target 127375902 added running request
+20:26:36.319 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1196007229
+20:26:36.319 [pool-2-thread-1] INFO  - Target -1196007229 added running request
+20:26:36.321 [pool-2-thread-1] INFO  - Target -1196007229 removed running request
+20:26:36.321 [pool-2-thread-2] INFO  - Target 127375902 removed running request
+20:26:36.328 [pool-4-thread-1] INFO  - Executing API in EC2:-1196007229 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:26:36.328 [pool-5-thread-1] INFO  - Executing API in EC2:127375902 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:26:36.331 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:40:47.572 [main] INFO  - TargetGroup /ec2/data added target: -1243405045
+20:40:47.573 [main] INFO  - TargetGroup /ec2/data added target: -1314775611
+20:40:47.575 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:40:47.580 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:40:47.580 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:40:47.584 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:40:47.584 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:40:47.585 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1314775611
+20:40:47.585 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1243405045
+20:40:47.585 [pool-2-thread-2] INFO  - Target -1314775611 added running request
+20:40:47.585 [pool-2-thread-1] INFO  - Target -1243405045 added running request
+20:40:47.592 [pool-5-thread-1] INFO  - Executing API in EC2:-1314775611 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:40:47.592 [pool-4-thread-1] INFO  - Executing API in EC2:-1243405045 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:40:47.595 [pool-2-thread-2] INFO  - Target -1314775611 removed running request
+20:40:47.595 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:40:47.595 [pool-2-thread-1] INFO  - Target -1243405045 removed running request
+20:41:12.304 [main] INFO  - TargetGroup /ec2/data added target: -1425725352
+20:41:12.306 [main] INFO  - TargetGroup /ec2/data added target: -190159136
+20:41:12.308 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:41:12.312 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:41:12.312 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:41:12.317 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:41:12.317 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:41:12.317 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1425725352
+20:41:12.317 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -190159136
+20:41:12.317 [pool-2-thread-1] INFO  - Target -1425725352 added running request
+20:41:12.318 [pool-2-thread-2] INFO  - Target -190159136 added running request
+20:41:12.324 [pool-5-thread-1] INFO  - Executing API in EC2:-190159136 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:41:12.324 [pool-4-thread-1] INFO  - Executing API in EC2:-1425725352 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:41:12.325 [pool-2-thread-2] INFO  - Target -190159136 removed running request
+20:41:12.326 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:41:12.326 [pool-2-thread-1] INFO  - Target -1425725352 removed running request
+20:42:23.059 [main] INFO  - TargetGroup /ec2/data added target: 795297350
+20:42:23.061 [main] INFO  - TargetGroup /ec2/data added target: 1489045545
+20:42:23.062 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:42:23.067 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:42:23.067 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:42:23.070 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:42:23.070 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:42:23.070 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 1489045545
+20:42:23.071 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 795297350
+20:42:23.071 [pool-2-thread-2] INFO  - Target 1489045545 added running request
+20:42:23.071 [pool-2-thread-1] INFO  - Target 795297350 added running request
+20:42:23.079 [pool-5-thread-1] INFO  - Executing API in EC2:1489045545 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:42:23.079 [pool-4-thread-1] INFO  - Executing API in EC2:795297350 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:42:23.081 [pool-2-thread-2] INFO  - Target 1489045545 removed running request
+20:42:23.081 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:42:23.081 [pool-2-thread-1] INFO  - Target 795297350 removed running request
+20:44:23.622 [main] INFO  - TargetGroup /ec2/data added target: 367902650
+20:44:23.624 [main] INFO  - TargetGroup /ec2/data added target: -697489868
+20:44:23.626 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:44:23.630 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:44:23.630 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:44:23.634 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:44:23.634 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:44:23.635 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -697489868
+20:44:23.635 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 367902650
+20:44:23.636 [pool-2-thread-2] INFO  - Target -697489868 added running request
+20:44:23.636 [pool-2-thread-1] INFO  - Target 367902650 added running request
+20:44:23.643 [pool-4-thread-1] INFO  - Executing API in EC2:367902650 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:44:23.643 [pool-5-thread-1] INFO  - Executing API in EC2:-697489868 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:44:23.645 [pool-2-thread-2] INFO  - Target -697489868 removed running request
+20:44:23.645 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:44:23.645 [pool-2-thread-1] INFO  - Target 367902650 removed running request
+20:50:13.889 [main] INFO  - TargetGroup /ec2/data added target: 387510416
+20:50:13.890 [main] INFO  - TargetGroup /ec2/data added target: -1074043980
+20:50:13.892 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@65d09a04[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:50:13.896 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:50:13.896 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:50:13.900 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:50:13.900 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:50:13.901 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 387510416
+20:50:13.901 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1074043980
+20:50:13.901 [pool-2-thread-1] INFO  - Target 387510416 added running request
+20:50:13.901 [pool-2-thread-2] INFO  - Target -1074043980 added running request
+20:50:13.908 [pool-5-thread-1] INFO  - Executing API in EC2:-1074043980 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:50:13.908 [pool-4-thread-1] INFO  - Executing API in EC2:387510416 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:50:13.909 [pool-2-thread-2] INFO  - Target -1074043980 removed running request
+20:50:13.910 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+20:50:58.826 [main] INFO  - TargetGroup /ec2/data added target: -59774182
+20:50:58.827 [main] INFO  - TargetGroup /ec2/data added target: 1673319698
+20:50:58.828 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5aebe890[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:50:58.833 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:50:58.833 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+20:50:58.837 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:50:58.837 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:50:58.838 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 1673319698
+20:50:58.838 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -59774182
+20:50:58.838 [pool-2-thread-1] INFO  - Target 1673319698 added running request
+20:50:58.839 [pool-2-thread-2] INFO  - Target -59774182 added running request
+20:50:58.847 [pool-4-thread-1] INFO  - Executing API in EC2:-59774182 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:50:58.847 [pool-5-thread-1] INFO  - Executing API in EC2:1673319698 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:50:58.849 [pool-2-thread-2] INFO  - Target -59774182 removed running request
+20:50:58.849 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+21:22:46.045 [main] INFO  - TargetGroup /ec2/data added target: -1113299820
+21:22:46.047 [main] INFO  - TargetGroup /ec2/data added target: 596675184
+21:22:46.049 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@65d09a04[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:22:46.053 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:22:46.057 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:22:46.057 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 596675184
+21:22:46.058 [pool-2-thread-1] INFO  - Target 596675184 added running request
+21:22:46.064 [pool-5-thread-1] INFO  - Executing API in EC2:596675184 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:22:46.065 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+21:23:03.110 [main] INFO  - TargetGroup /ec2/data added target: 1418733578
+21:23:03.111 [main] INFO  - TargetGroup /ec2/data added target: 392510266
+21:23:03.112 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:23:03.116 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:23:03.120 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:23:03.120 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 392510266
+21:23:03.120 [pool-2-thread-1] INFO  - Target 392510266 added running request
+21:23:03.126 [pool-5-thread-1] INFO  - Executing API in EC2:392510266 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:23:03.127 [pool-2-thread-1] INFO  - Target 392510266 removed running request
+21:23:14.048 [main] INFO  - TargetGroup /ec2/data added target: -1888793610
+21:23:14.050 [main] INFO  - TargetGroup /ec2/data added target: -436470308
+21:23:14.052 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:23:14.057 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:23:14.061 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:23:14.061 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -436470308
+21:23:14.061 [pool-2-thread-1] INFO  - Target -436470308 added running request
+21:23:14.069 [pool-5-thread-1] INFO  - Executing API in EC2:-436470308 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:23:14.070 [pool-2-thread-1] INFO  - Target -436470308 removed running request
+21:26:00.628 [main] INFO  - TargetGroup /ec2/data added target: 494158011
+21:26:00.629 [main] INFO  - TargetGroup /ec2/data added target: 1341395771
+21:26:00.631 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:26:00.634 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:26:00.634 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:26:00.639 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:26:00.639 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:26:00.640 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 494158011
+21:26:00.640 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 1341395771
+21:26:00.640 [pool-2-thread-1] INFO  - Target 494158011 added running request
+21:26:00.640 [pool-2-thread-2] INFO  - Target 1341395771 added running request
+21:26:00.646 [pool-4-thread-1] INFO  - Executing API in EC2:494158011 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:26:00.646 [pool-5-thread-1] INFO  - Executing API in EC2:1341395771 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:26:00.647 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:26:00.647 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:26:59.692 [main] INFO  - TargetGroup /ec2/data added target: -492194890
+21:26:59.694 [main] INFO  - TargetGroup /ec2/data added target: -233218680
+21:26:59.695 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:26:59.700 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:26:59.700 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:26:59.700 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:26:59.704 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:26:59.704 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:26:59.704 [pool-2-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:26:59.705 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -492194890
+21:26:59.705 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -233218680
+21:26:59.705 [pool-2-thread-3] INFO  - TargetGroup /ec2/data found target: -492194890
+21:26:59.705 [pool-2-thread-1] INFO  - Target -492194890 added running request
+21:26:59.705 [pool-2-thread-2] INFO  - Target -233218680 added running request
+21:26:59.705 [pool-2-thread-3] INFO  - Target -492194890 added running request
+21:26:59.713 [pool-4-thread-2] INFO  - Executing API in EC2:-492194890 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:26:59.713 [pool-4-thread-1] INFO  - Executing API in EC2:-492194890 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:26:59.713 [pool-5-thread-1] INFO  - Executing API in EC2:-233218680 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:26:59.714 [pool-4-thread-2] INFO  - Api Executed: Returned Code: 400
+21:26:59.714 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:26:59.714 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:27:22.582 [main] INFO  - TargetGroup /ec2/data added target: -892750762
+21:27:22.584 [main] INFO  - TargetGroup /ec2/data added target: 1972896115
+21:27:22.585 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:27:22.589 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:27:22.589 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:27:22.589 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:27:22.593 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:27:22.593 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:27:22.593 [pool-2-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:27:22.594 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -892750762
+21:27:22.594 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 1972896115
+21:27:22.594 [pool-2-thread-3] INFO  - TargetGroup /ec2/data couldn't find a target
+21:27:22.594 [pool-2-thread-1] INFO  - Target -892750762 added running request
+21:27:22.594 [pool-2-thread-2] INFO  - Target 1972896115 added running request
+21:27:22.600 [pool-5-thread-1] INFO  - Executing API in EC2:1972896115 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:27:22.600 [pool-4-thread-1] INFO  - Executing API in EC2:-892750762 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:27:22.601 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:27:22.601 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:39:49.830 [main] INFO  - TargetGroup /ec2/data added target: 1125187803
+21:39:49.832 [main] INFO  - TargetGroup /ec2/data added target: -1765639980
+21:39:49.833 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:39:49.838 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:39:49.838 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:39:49.841 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:39:49.841 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:39:49.842 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1765639980
+21:39:49.842 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 1125187803
+21:39:49.842 [pool-2-thread-2] INFO  - Target -1765639980 added running request
+21:39:49.842 [pool-2-thread-1] INFO  - Target 1125187803 added running request
+21:39:49.848 [pool-5-thread-1] INFO  - Executing API in EC2:-1765639980 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:39:49.848 [pool-4-thread-1] INFO  - Executing API in EC2:1125187803 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:39:54.853 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:39:57.852 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:52:11.677 [main] INFO  - TargetGroup /ec2/data added target: -1704462890
+21:52:11.678 [main] INFO  - TargetGroup /ec2/data added target: -1361146792
+21:52:11.680 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:52:11.685 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:52:11.685 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:52:11.690 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:52:11.690 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:52:11.690 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1361146792
+21:52:11.690 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -1704462890
+21:52:11.690 [pool-2-thread-2] INFO  - Target -1361146792 added running request
+21:52:11.690 [pool-2-thread-1] INFO  - Target -1704462890 added running request
+21:52:11.698 [pool-5-thread-1] INFO  - Executing API in EC2:-1361146792 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:52:11.698 [pool-4-thread-1] INFO  - Executing API in EC2:-1704462890 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:52:16.702 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:52:19.710 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:53:47.772 [main] INFO  - TargetGroup /ec2/data added target: -1301419107
+21:53:47.773 [main] INFO  - TargetGroup /ec2/data added target: -898044686
+21:53:47.774 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:53:47.778 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:53:47.778 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:53:47.783 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:53:47.783 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:53:47.784 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1301419107
+21:53:47.784 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: -898044686
+21:53:47.784 [pool-2-thread-2] INFO  - Target -1301419107 added running request
+21:53:47.784 [pool-2-thread-1] INFO  - Target -898044686 added running request
+21:53:47.791 [pool-4-thread-1] INFO  - Executing API in EC2:-1301419107 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:53:47.791 [pool-5-thread-1] INFO  - Executing API in EC2:-898044686 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:53:50.794 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 400
+21:53:50.794 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+21:53:50.797 [pool-2-thread-1] INFO  - Target -898044686 removed running request
+21:53:50.797 [pool-2-thread-2] INFO  - Target -1301419107 removed running request
+21:55:13.962 [main] INFO  - TargetGroup /ec2/data added target: -1489062131
+21:55:13.964 [main] INFO  - TargetGroup /ec2/data added target: 1116214183
+21:55:13.965 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:55:13.969 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:13.969 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:13.972 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:55:13.972 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:55:13.973 [pool-2-thread-1] INFO  - TargetGroup /ec2/data found target: 1116214183
+21:55:13.973 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: -1489062131
+21:55:13.973 [pool-2-thread-1] INFO  - Target 1116214183 added running request
+21:55:13.973 [pool-2-thread-2] INFO  - Target -1489062131 added running request
+21:55:13.978 [pool-4-thread-1] INFO  - Executing API in EC2:-1489062131 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:55:13.979 [pool-5-thread-1] INFO  - Executing API in EC2:1116214183 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:55:16.987 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+21:55:16.987 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 400
+21:55:16.988 [pool-2-thread-2] INFO  - Target -1489062131 removed running request
+21:55:16.989 [pool-2-thread-1] INFO  - Target 1116214183 removed running request
+21:55:17.985 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:17.985 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:17.986 [pool-2-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:55:17.986 [pool-2-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:55:17.987 [pool-2-thread-4] INFO  - TargetGroup /ec2/data found target: -1489062131
+21:55:17.987 [pool-2-thread-3] INFO  - TargetGroup /ec2/data found target: 1116214183
+21:55:17.987 [pool-2-thread-4] INFO  - Target -1489062131 added running request
+21:55:17.987 [pool-2-thread-3] INFO  - Target 1116214183 added running request
+21:55:17.988 [pool-4-thread-1] INFO  - Executing API in EC2:-1489062131 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:55:17.988 [pool-5-thread-1] INFO  - Executing API in EC2:1116214183 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:55:20.991 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+21:55:20.991 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 400
+21:55:20.991 [pool-2-thread-3] INFO  - Target 1116214183 removed running request
+21:55:20.991 [pool-2-thread-4] INFO  - Target -1489062131 removed running request
+21:55:37.985 [main] INFO  - TargetGroup /ec2/data added target: -1087853103
+21:55:37.987 [main] INFO  - TargetGroup /ec2/data added target: 1595465398
+21:55:37.988 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@33c911a1[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:55:37.992 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:37.992 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:37.992 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:37.997 [pool-2-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:55:37.997 [pool-2-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:55:37.997 [pool-2-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:55:37.998 [pool-2-thread-2] INFO  - TargetGroup /ec2/data found target: 1595465398
+21:55:37.998 [pool-2-thread-3] INFO  - TargetGroup /ec2/data found target: -1087853103
+21:55:37.998 [pool-2-thread-1] INFO  - TargetGroup /ec2/data couldn't find a target
+21:55:37.998 [pool-2-thread-2] INFO  - Target 1595465398 added running request
+21:55:37.998 [pool-2-thread-3] INFO  - Target -1087853103 added running request
+21:55:38.005 [pool-4-thread-1] INFO  - Executing API in EC2:-1087853103 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:55:38.005 [pool-5-thread-1] INFO  - Executing API in EC2:1595465398 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:55:41.010 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:55:41.010 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:55:41.012 [pool-2-thread-3] INFO  - Target -1087853103 removed running request
+21:55:41.012 [pool-2-thread-2] INFO  - Target 1595465398 removed running request
+21:55:42.004 [pool-2-thread-5] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:41.993 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+21:55:42.005 [pool-2-thread-5] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:55:42.005 [pool-2-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:55:42.005 [pool-2-thread-4] INFO  - TargetGroup /ec2/data found target: -1087853103
+21:55:42.005 [pool-2-thread-5] INFO  - TargetGroup /ec2/data found target: 1595465398
+21:55:42.006 [pool-2-thread-4] INFO  - Target -1087853103 added running request
+21:55:42.006 [pool-2-thread-5] INFO  - Target 1595465398 added running request
+21:55:42.006 [pool-5-thread-1] INFO  - Executing API in EC2:1595465398 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:55:42.006 [pool-4-thread-1] INFO  - Executing API in EC2:-1087853103 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:55:45.011 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+21:55:45.011 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+21:55:45.012 [pool-2-thread-5] INFO  - Target 1595465398 removed running request
+21:55:45.012 [pool-2-thread-4] INFO  - Target -1087853103 removed running request
