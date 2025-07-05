@@ -17,26 +17,26 @@ public class LoadBalancer
 extends AWSObject
 implements ApiGatewayIntegrationInterface, LifecycleManager {
     private static final Logger logger = LogManager.getLogger(LoadBalancer.class);
-    private final ExecutorService executorService;
-    private final ConcurrentHashMap<String, TargetIntegrationInterface> targetGroupsRoutingRules;
+    private ExecutorService executorService;
+    private ConcurrentHashMap<String, TargetIntegrationInterface> targetGroupsRoutingRules;
     private final AtomicBoolean isRunning = new AtomicBoolean(false);
     private final int TIMEOUT = 30000;
+
     public LoadBalancer() {
-        this.executorService = Executors.newFixedThreadPool(10);
         this.targetGroupsRoutingRules = new ConcurrentHashMap<>();
         logger.info("LoadBalancer created with {} thread pool and Id: {}", executorService, this.getId());
     }
 
     @Override
     public void initialize() {
-        if (isRunning.get()) {
+        if (!isRunning.get()) {
+            this.executorService = Executors.newFixedThreadPool(10);
+            isRunning.set(true);
+            logger.info("LoadBalancer initialized with {} thread pool", executorService);
+        } else {
             logger.warn("LoadBalancer is already initialized ");
-            return;
         }
-        
-        isRunning.set(true);
-        logger.info("LoadBalancer initialized with {} thread pool", executorService);
-    }
+   }
 
     @Override
     public void shutdown() {
@@ -46,7 +46,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         }
 
         logger.info("Initiating LoadBalancer shutdown");
-        
+    
         // Shutdown thread pool gracefully
         executorService.shutdown();
         try {
@@ -70,13 +70,11 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
 
     @Override
     public boolean isRunning() {
+        logger.info("LoadBalancer isRunning: " + isRunning.get());
         return isRunning.get();
     }
 
     public void addTargetGroup(String path, TargetGroup targetGroup) {
-        if (!isRunning.get()) {
-            throw new IllegalStateException("LoadBalancer is not running");
-        }
         targetGroupsRoutingRules.put(path, targetGroup);
     }
 

@@ -1,23 +1,20 @@
 package org.peters.projectaws.Components.LoadBalancer.TargetGroup;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Builders.EC2Builder;
 import org.peters.projectaws.Components.EC2.EC2;
-import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
 import org.peters.projectaws.Components.Monitors.TargetMonitor;
-import org.peters.projectaws.Components.Monitors.TargetState;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
+import org.peters.projectaws.enums.TargetState;
 
 //Interacts with the Target Monitor Class of the EC2 Instance
-public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
+public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private static final Logger logger = LogManager.getLogger(EC2TargetGroup.class);
-
+    
     public EC2TargetGroup(String path) {
         super(path);
         targetsList = new ArrayList<>();
@@ -29,7 +26,7 @@ public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
         logger.info("TargetGroup " + this.getPath() + " received request: " + request.getPath() + " "
                 + request.getMethod() + " " + request.getData());
         
-        TargetMonitor target = getAvailableInstance();
+        EC2 target = getAvailableInstance();
 
         if (target == null) {
             logger.info("TargetGroup " + this.getPath() + " couldn't find a target");
@@ -44,7 +41,7 @@ public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
     private int currentTargetIndex = 0;
 
     @Override
-    public synchronized EC2TargetMonitor getAvailableInstance() {
+    public synchronized EC2 getAvailableInstance() {
         if (targetsList.isEmpty()) {
             return null;
         }
@@ -52,10 +49,11 @@ public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
         // Find the next healthy target in a round-robin fashion
         do {
             currentTargetIndex = (currentTargetIndex + 1) % targetsList.size();
-            EC2TargetMonitor target = targetsList.get(currentTargetIndex);
-            if (target.getState() == TargetState.HEALTHY) {
+            EC2 target = targetsList.get(currentTargetIndex);
+            
+            if (target.targetMonitor.getState() == TargetState.HEALTHY) {
                 try {
-                    target.addRunningRequest();
+                    target.targetMonitor.addRunningRequest();
                     return target;
                 } catch (InterruptedException e) {
                     continue; // Try next target if this one is overloaded
@@ -67,7 +65,7 @@ public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
     }
 
     @Override
-    public void addTarget(EC2TargetMonitor target) {
+    public void addTarget(EC2 target) {
         if (target instanceof EC2) {
             target.addObserver(this);
             targetsList.add(target);
@@ -91,29 +89,31 @@ public class EC2TargetGroup extends TargetGroup<EC2TargetMonitor> {
         logger.info("Target " + target.getId() + " running requests changed to " + target.getRunningRequests());
     }
 
-    private EC2TargetMonitor createHealthyTarget(int maxConn) {
+    private EC2 createHealthyTarget(int maxConn) {
         EC2Builder builder = new EC2Builder();
-        EC2TargetMonitor target = builder.createEc2(maxConn);
-        if (target.getState() == TargetState.HEALTHY) {
+        EC2 target = builder.createEc2(maxConn);
+        if (target.targetMonitor.getState() == TargetState.HEALTHY) {
             return target;
         } else {
             return createHealthyTarget(maxConn);
         }
     }
 
-    private Response processRequest(TargetMonitor target, Request request) {
+    private Response processRequest(EC2 target, Request request) {
         try {
             logger.info("Target " + target.getId() + " added running request");
-            Response response = ((EC2) target).executeApi(request);
+            Response response = target.executeApi(request);
             return response;
 
         } catch (Exception e) {
             logger.info("Target " + target.getId() + " removed running request");
             throw e;
         } finally {
-            target.removeRunningRequest();
+            target.targetMonitor.removeRunningRequest();
             logger.info("Target " + target.getId() + " removed running request");
         }
     }
+
+   
 
 }
