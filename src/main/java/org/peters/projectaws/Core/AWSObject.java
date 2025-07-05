@@ -5,6 +5,7 @@ import java.util.Random;
 public abstract class AWSObject {
     private long id;
     private String name;
+    private boolean isRunning = false;
 
     public AWSObject() {
         this.id = new Random().nextLong();
@@ -29,5 +30,13 @@ public abstract class AWSObject {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isRunning() {
+        return isRunning;
+    }
+
+    public void setRunning(boolean running) {
+        isRunning = running;
     }
 }

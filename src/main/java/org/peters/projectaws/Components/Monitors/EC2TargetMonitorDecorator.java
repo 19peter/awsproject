@@ -1,15 +1,13 @@
 package org.peters.projectaws.Components.Monitors;
 
-import java.util.concurrent.ExecutorService;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 
-public class EC2TargetMonitor extends TargetMonitor {
-    private static final Logger logger = LogManager.getLogger(EC2TargetMonitor.class);
+public class EC2TargetMonitorDecorator extends TargetMonitor {
+    private static final Logger logger = LogManager.getLogger(EC2TargetMonitorDecorator.class);
 
-    public EC2TargetMonitor(int maxConn) {
+    public EC2TargetMonitorDecorator(int maxConn) {
         super(maxConn);
         logger.info("EC2TargetMonitor created with maxConn: " + maxConn + " and id: " + this.getId());
     }
