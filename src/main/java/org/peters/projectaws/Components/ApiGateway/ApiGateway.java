@@ -1,21 +1,23 @@
 package org.peters.projectaws.Components.ApiGateway;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
 import org.peters.projectaws.dtos.Request.Request;
-import java.util.logging.Logger;
 import java.util.concurrent.*;
 
 public class ApiGateway extends AWSObject {
 
-    private static final Logger logger = Logger.getLogger(ApiGateway.class.getName());
+    private static final Logger logger = LogManager.getLogger(ApiGateway.class);
+
     ConcurrentHashMap<String, ApiGatewayIntegrationInterface> routingRules;
     final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
     public ApiGateway() {
         this.routingRules = new ConcurrentHashMap<>();
-        logger.info("ApiGateway created: " + this.getId());
+        logger.info("<ApiGateway>: ApiGateway created: " + this.getId());
     }
 
     public boolean addRule(String rule, ApiGatewayIntegrationInterface target) {

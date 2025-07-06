@@ -1,20 +1,16 @@
 package org.peters.projectaws.Components.LoadBalancer.TargetGroup;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Components.Monitors.TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetIntegrationInterface;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
-import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.enums.TargetState;
 
 import java.util.List;
+import java.util.Optional;
 
 public abstract class TargetGroup <T extends AWSObject>
 extends AWSObject
-implements TargetIntegrationInterface, TargetStateObserverInterface {
-    private static final Logger logger = LogManager.getLogger(TargetGroup.class);
+implements TargetIntegrationInterface, TargetStateObserverInterface<T> {
     String path;
     List<T> targetsList;
 
@@ -26,11 +22,12 @@ implements TargetIntegrationInterface, TargetStateObserverInterface {
         return path;
     }
 
-    public abstract void onTargetStateChanged(TargetMonitor target, TargetState newState);
+    public abstract void onTargetStateChanged(T target, TargetState newState);
 
-    public abstract void onRunningRequestsChanged(TargetMonitor target);
+    public abstract void onRunningRequestsChanged(T target);
 
-    abstract T getAvailableInstance();
+    abstract Optional<T> getAvailableInstance();
+    
     public abstract void addTarget(T target);
 
 }

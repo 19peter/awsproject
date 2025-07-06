@@ -24,7 +24,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
 
     public LoadBalancer() {
         this.targetGroupsRoutingRules = new ConcurrentHashMap<>();
-        logger.info("LoadBalancer created with {} thread pool and Id: {}", executorService, this.getId());
+        logger.info("<LoadBalancer>: LoadBalancer created with {} thread pool and Id: {}", executorService, this.getId());
     }
 
     @Override
@@ -32,20 +32,20 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         if (!isRunning.get()) {
             this.executorService = Executors.newFixedThreadPool(10);
             isRunning.set(true);
-            logger.info("LoadBalancer initialized with {} thread pool", executorService);
+            logger.info("<LoadBalancer>: LoadBalancer initialized with {} thread pool", executorService);
         } else {
-            logger.warn("LoadBalancer is already initialized ");
+            logger.warn("<LoadBalancer>: LoadBalancer is already initialized ");
         }
    }
 
     @Override
     public void shutdown() {
         if (!isRunning.get()) {
-            logger.warn("LoadBalancer is not running");
+            logger.warn("<LoadBalancer>: LoadBalancer is not running");
             return;
         }
 
-        logger.info("Initiating LoadBalancer shutdown");
+        logger.info("<LoadBalancer>: Initiating LoadBalancer shutdown");
     
         // Shutdown thread pool gracefully
         executorService.shutdown();
@@ -53,7 +53,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
             if (!executorService.awaitTermination(30, TimeUnit.SECONDS)) {
                 executorService.shutdownNow();
                 if (!executorService.awaitTermination(30, TimeUnit.SECONDS)) {
-                    logger.error("ExecutorService did not terminate");
+                    logger.error("<LoadBalancer>: ExecutorService did not terminate");
                 }
             }
         } catch (InterruptedException e) {
@@ -65,12 +65,12 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         targetGroupsRoutingRules.clear();
         
         isRunning.set(false);
-        logger.info("LoadBalancer shutdown complete");
+        logger.info("<LoadBalancer>: LoadBalancer shutdown complete");
     }
 
     @Override
     public boolean isRunning() {
-        logger.info("LoadBalancer isRunning: " + isRunning.get());
+        logger.info("<LoadBalancer>: LoadBalancer isRunning: " + isRunning.get());
         return isRunning.get();
     }
 
@@ -85,7 +85,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         String rule = request.getPath();
         if(!targetGroupsRoutingRules.containsKey(rule)) throw new IllegalArgumentException("Invalid path"); 
        
-        logger.info("LoadBalancer received request: " + request.getPath() + " " + request.getMethod());
+        logger.info("<LoadBalancer>: LoadBalancer received request: " + request.getPath() + " " + request.getMethod());
         TargetIntegrationInterface target = targetGroupsRoutingRules.get(rule);
         // Response response = target.receiveFromLoadBalancer(request);
         // return response;

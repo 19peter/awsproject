@@ -11,7 +11,6 @@ import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.EC2.EC2;
 import org.peters.projectaws.Components.LoadBalancer.LoadBalancer;
 import org.peters.projectaws.Components.LoadBalancer.TargetGroup.TargetGroup;
-import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
 import org.peters.projectaws.Components.S3.S3;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
 import org.peters.projectaws.Helpers.Helpers;
@@ -42,21 +41,27 @@ public class Test_Gateway_LB_TG_EC2 {
         apiGateway.addRule("/lb/ec2/data", loadBalancer);
         apiGateway.addRule("/lb/ec2/another-data", loadBalancer);
 
-        TargetGroup<EC2TargetMonitor> targetGroup = targetGroupBuilder.createEC2TargetGroup("/ec2/data");
+        Api getDataFromEC2 = apiBuilder.createGetApi("getDataFromEC2", "/lb/ec2/data", S3::getFromBucket);
+        ec2.setApis(getDataFromEC2);
+        ec2_2.setApis(getDataFromEC2);
+
+        ec2.initialize();
+        ec2_2.initialize();
+
+        TargetGroup<EC2> targetGroup = targetGroupBuilder.createEC2TargetGroup("/ec2/data");
         targetGroup.addTarget(ec2);
         targetGroup.addTarget(ec2_2);
 
         loadBalancer.initialize();
         loadBalancer.addTargetGroup("/lb/ec2/data", targetGroup);
 
-        Api getDataFromEC2 = apiBuilder.createGetApi("getDataFromEC2", "/lb/ec2/data", S3::getFromBucket);
-        ec2.setApis(getDataFromEC2);
-        ec2_2.setApis(getDataFromEC2);
 
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        // apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
+        // apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
     
-        Thread.sleep(Helpers.delayDuration + 1000);
+        // Thread.sleep(Helpers.delayDuration + 1000);
+
+        ec2.shutdown();
 
         apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
         apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));

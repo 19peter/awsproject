@@ -1,11 +1,14 @@
 package org.peters.projectaws.Components.LoadBalancer.TargetGroup;
 
 import java.util.ArrayList;
+import java.util.Optional;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Builders.EC2Builder;
 import org.peters.projectaws.Components.EC2.EC2;
-import org.peters.projectaws.Components.Monitors.TargetMonitor;
+import org.peters.projectaws.Components.Monitors.EC2TargetMonitorDecorator;
+import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.enums.TargetState;
@@ -14,85 +17,118 @@ import org.peters.projectaws.enums.TargetState;
 public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private static final Logger logger = LogManager.getLogger(EC2TargetGroup.class);
+    private static final int MAX_RETRIES = 3;
+    private static final int RETRY_DELAY_MS = 100;
+    private int currentTargetIndex = 0;
     
     public EC2TargetGroup(String path) {
         super(path);
         targetsList = new ArrayList<>();
-        logger.info("EC2TargetGroup created with path: " + path + " and Id: " + this.getId());
+        logger.info("<EC2TargetGroup>: EC2TargetGroup created with path: " + path + " and Id: " + this.getId());
     }
 
     @Override
     public Response receiveFromLoadBalancer(Request request) throws InterruptedException {
-        logger.info("TargetGroup " + this.getPath() + " received request: " + request.getPath() + " "
+        logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " received request: " + request.getPath() + " "
                 + request.getMethod() + " " + request.getData());
         
-        EC2 target = getAvailableInstance();
+        Optional<EC2> target = getAvailableInstance();
 
-        if (target == null) {
-            logger.info("TargetGroup " + this.getPath() + " couldn't find a target");
+        if (target.isEmpty()) {
+            logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " couldn't find a target");
             return null;
         }
 
-        logger.info("TargetGroup " + this.getPath() + " found target: " + target.getId());
+        logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " found target: " + target.get().getId());
 
-        return processRequest(target, request);
+        return processRequest(target.get(), request);
     }
 
-    private int currentTargetIndex = 0;
 
     @Override
-    public synchronized EC2 getAvailableInstance() {
+    protected synchronized Optional<EC2> getAvailableInstance() {
         if (targetsList.isEmpty()) {
-            return null;
+            logger.debug("<EC2TargetGroup>: TargetGroup {} is empty", getPath());
+            return Optional.empty();
         }
-
-        // Find the next healthy target in a round-robin fashion
+    
+        int attempts = 0;
+        int startIndex = currentTargetIndex;
+        int healthyTargets = 0;
+    
         do {
             currentTargetIndex = (currentTargetIndex + 1) % targetsList.size();
             EC2 target = targetsList.get(currentTargetIndex);
+    
+            // Skip if target is not healthy
+            if (target.targetMonitor.getState() != TargetState.HEALTHY) {
+                continue;
+            }
+    
+            healthyTargets++;
             
-            if (target.targetMonitor.getState() == TargetState.HEALTHY) {
+            // Try to get a connection slot
+            try {
+                if (target.targetMonitor.addRunningRequest()) {
+                    logger.debug("<EC2TargetGroup>: Selected target {} for request", target.getId());
+                    return Optional.of(target);
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                logger.warn("<EC2TargetGroup>: Interrupted while waiting for available target");
+                return Optional.empty();
+            }
+    
+            // If we've checked all targets and found some healthy but busy ones, wait and retry
+            if (currentTargetIndex == startIndex && healthyTargets > 0) {
+                if (++attempts >= MAX_RETRIES) {
+                    logger.warn("<EC2TargetGroup>: All healthy targets are busy after {} attempts", MAX_RETRIES);
+                    return Optional.empty();
+                }
                 try {
-                    target.targetMonitor.addRunningRequest();
-                    return target;
+                    Thread.sleep(RETRY_DELAY_MS);
                 } catch (InterruptedException e) {
-                    continue; // Try next target if this one is overloaded
+                    Thread.currentThread().interrupt();
+                    return Optional.empty();
                 }
             }
-        } while (currentTargetIndex != 0); // Loop until we've tried all targetsList
-
-        return null; // No healthy targetsList available
+        } while (currentTargetIndex != startIndex || healthyTargets == 0);
+    
+        logger.info("<EC2TargetGroup>: No healthy targets available in target group {}", getPath());
+        return Optional.empty();
     }
 
     @Override
-    public void addTarget(EC2 target) {
-        if (target instanceof EC2) {
-            target.addObserver(this);
-            targetsList.add(target);
-            logger.info("TargetGroup " + this.getPath() + " added target: " + target.getId());
-        } else
-            logger.error("Invalid Instance Type");
+    public void addTarget(EC2 ec2) {
+        if (!(ec2 instanceof EC2)) {
+            logger.error("<EC2TargetGroup>: Invalid Instance Type");
+            return;
+        }
+        if(!ec2.addObserver(this)) return;
+        targetsList.add(ec2);
+        logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " added target: " + ec2.getId());
     }
 
     @Override
-    public void onTargetStateChanged(TargetMonitor target, TargetState newState) {
-        logger.info("Target " + target.getId() + " state changed to " + newState);
-        if (newState == TargetState.UNHEALTHY) {
-            targetsList.remove(target);
-            addTarget(createHealthyTarget(target.getMaxConnections()));
-            logger.info("Target " + target.getId() + " removed from target group");
+    public void onTargetStateChanged(EC2 ec2, TargetState newState) {
+        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getId() + " state changed to " + newState);
+        if (newState == TargetState.UNHEALTHY || newState == TargetState.OFFLINE) {
+            targetsList.remove(ec2);
+            // addTarget(createHealthyTarget(target.getMaxConnections()));
+            logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getId() + " removed from target group");
         }   
     }
 
     @Override
-    public void onRunningRequestsChanged(TargetMonitor target) {
-        logger.info("Target " + target.getId() + " running requests changed to " + target.getRunningRequests());
+    public void onRunningRequestsChanged(EC2 ec2) {
+        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getId() + " running requests changed to " + ec2.targetMonitor.getRunningRequests());
     }
 
     private EC2 createHealthyTarget(int maxConn) {
         EC2Builder builder = new EC2Builder();
         EC2 target = builder.createEc2(maxConn);
         if (target.targetMonitor.getState() == TargetState.HEALTHY) {
+            target.initialize();
             return target;
         } else {
             return createHealthyTarget(maxConn);
@@ -101,16 +137,16 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private Response processRequest(EC2 target, Request request) {
         try {
-            logger.info("Target " + target.getId() + " added running request");
+            logger.info("<EC2TargetGroup>: EC2 " + target.getId() + " added running request");
             Response response = target.executeApi(request);
             return response;
 
         } catch (Exception e) {
-            logger.info("Target " + target.getId() + " removed running request");
-            throw e;
+            logger.error("<EC2TargetGroup>: EC2 " + target.getId() + " removed running request");
+            throw new RuntimeException(e);
         } finally {
             target.targetMonitor.removeRunningRequest();
-            logger.info("Target " + target.getId() + " removed running request");
+            logger.info("<EC2TargetGroup>: EC2 " + target.getId() + " removed running request");
         }
     }
 

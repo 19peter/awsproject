@@ -32,7 +32,7 @@ public abstract class AWSObject {
         this.name = name;
     }
 
-    public boolean isRunning() {
+    public boolean getRunning() {
         return isRunning;
     }
 

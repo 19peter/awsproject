@@ -533,3 +533,1186 @@
 21:55:45.011 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
 21:55:45.012 [pool-2-thread-5] INFO  - Target 1595465398 removed running request
 21:55:45.012 [pool-2-thread-4] INFO  - Target -1087853103 removed running request
+22:44:30.837 [main] INFO  - LoadBalancer created with null thread pool and Id: -2152131318195345175
+22:44:30.841 [main] INFO  - EC2 instance created with maxConn: 1 and id: -5100732207283405522
+22:44:30.842 [main] INFO  - EC2 instance created with maxConn: 1 and id: 7391361828661458338
+22:44:30.844 [main] INFO  - S3 created with id: -37359391931008504
+22:44:30.847 [main] INFO  - Bucket created with name: data and Id: -5806836812804328227
+22:44:30.848 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 312164910630966310
+22:48:43.036 [main] INFO  - LoadBalancer created with null thread pool and Id: -1104840334688240686
+22:48:43.041 [main] INFO  - EC2 instance created with maxConn: 1 and id: -7813887421581677133
+22:48:43.041 [main] INFO  - EC2 instance created with maxConn: 1 and id: -8693568586496240141
+22:48:43.043 [main] INFO  - S3 created with id: -1796714874164049167
+22:48:43.047 [main] INFO  - Bucket created with name: data and Id: 4330047873282376351
+22:48:43.048 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 2731400921792574659
+22:50:51.645 [main] INFO  - LoadBalancer created with null thread pool and Id: -274476165590669569
+22:50:51.650 [main] INFO  - EC2 instance created with maxConn: 1 and id: -8600944901880266697
+22:50:51.651 [main] INFO  - EC2 instance created with maxConn: 1 and id: 6589766814965875175
+22:50:51.652 [main] INFO  - S3 created with id: 5005306135451158586
+22:50:51.654 [main] INFO  - Bucket created with name: data and Id: -9025603386265383922
+22:50:51.655 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 2737628772045386474
+22:50:51.655 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:53:40.819 [main] INFO  - LoadBalancer created with null thread pool and Id: -2734945877081123258
+22:53:40.824 [main] INFO  - EC2 instance created with maxConn: 1 and id: 7262927749285874644
+22:53:40.824 [main] INFO  - EC2 instance created with maxConn: 1 and id: -7489138045441387575
+22:53:40.826 [main] INFO  - S3 created with id: -6795340405747272626
+22:53:40.829 [main] INFO  - Bucket created with name: data and Id: 5328370345516343200
+22:53:40.830 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -3306201673944129748
+22:53:40.830 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:54:37.770 [main] INFO  - LoadBalancer created with null thread pool and Id: 508108887838898264
+22:54:37.776 [main] INFO  - EC2 instance created with maxConn: 1 and id: 3101596167834734391
+22:54:37.776 [main] INFO  - EC2 instance created with maxConn: 1 and id: 353744808021323647
+22:54:37.777 [main] INFO  - S3 created with id: 5881723763024742609
+22:54:37.782 [main] INFO  - Bucket created with name: data and Id: 5538483415300795587
+22:54:42.073 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -7871748873334672834
+22:54:45.365 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@404bbcbd[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:57:25.246 [main] INFO  - LoadBalancer created with null thread pool and Id: -2120167021812801066
+22:57:25.253 [main] INFO  - EC2 instance created with maxConn: 1 and id: -3019980552508230027
+22:57:25.253 [main] INFO  - EC2 instance created with maxConn: 1 and id: -3690071630257679221
+22:57:25.254 [main] INFO  - S3 created with id: 71242457634352968
+22:57:25.259 [main] INFO  - Bucket created with name: data and Id: -6724928788834164468
+22:57:25.259 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -2351290084361321058
+22:57:25.259 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:57:59.128 [main] INFO  - LoadBalancer created with null thread pool and Id: -7080730329948829166
+22:57:59.218 [main] INFO  - EC2 instance created with maxConn: 1 and id: -5975136232019394808
+22:57:59.218 [main] INFO  - EC2 instance created with maxConn: 1 and id: -474663345105621704
+22:57:59.219 [main] INFO  - S3 created with id: -8591798962895959557
+22:57:59.225 [main] INFO  - Bucket created with name: data and Id: -7142771075948316808
+22:57:59.225 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 6897978781470278795
+22:57:59.225 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@44a7bfbc[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:59:37.335 [main] INFO  - LoadBalancer created with null thread pool and Id: -3787987823769328928
+22:59:37.342 [main] INFO  - EC2 instance created with maxConn: 1 and id: -5000769416653539359
+22:59:37.342 [main] INFO  - EC2 instance created with maxConn: 1 and id: -6123589250405004773
+22:59:37.344 [main] INFO  - S3 created with id: -681351491097997743
+22:59:37.349 [main] INFO  - Bucket created with name: data and Id: 2357901505400963127
+22:59:37.349 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -7148322711724367133
+22:59:37.350 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@37858383[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+22:59:37.352 [main] WARN  - EC2 instance -5000769416653539359 is not running
+22:59:37.355 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -6519708882287620074
+22:59:37.355 [main] INFO  - EC2 instance -5000769416653539359 initialized
+22:59:37.356 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -1423262166341765020
+22:59:37.356 [main] INFO  - EC2 instance -6123589250405004773 initialized
+22:59:37.358 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+22:59:37.358 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+22:59:37.361 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+22:59:37.361 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+22:59:37.362 [pool-3-thread-2] INFO  - TargetGroup /ec2/data couldn't find a target
+22:59:37.362 [pool-3-thread-1] INFO  - TargetGroup /ec2/data couldn't find a target
+22:59:41.369 [main] INFO  - EC2 instance -5000769416653539359 shutdown
+22:59:41.371 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+22:59:41.380 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+22:59:41.380 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+22:59:41.380 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+22:59:41.380 [pool-3-thread-3] INFO  - TargetGroup /ec2/data couldn't find a target
+22:59:41.380 [pool-3-thread-4] INFO  - TargetGroup /ec2/data couldn't find a target
+23:01:53.395 [main] INFO  - LoadBalancer created with null thread pool and Id: -270493823171448308
+23:01:53.401 [main] INFO  - EC2 instance created with maxConn: 1 and id: 4507807789143928880
+23:01:53.402 [main] INFO  - EC2 instance created with maxConn: 1 and id: -1435296482788523315
+23:01:53.403 [main] INFO  - S3 created with id: -2684961419178813758
+23:01:53.407 [main] INFO  - Bucket created with name: data and Id: 4156864694869921556
+23:01:53.408 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -4147478267248069780
+23:01:53.409 [main] WARN  - EC2 instance 4507807789143928880 is not running
+23:01:53.409 [main] INFO  - TargetGroup /ec2/data added target: 4507807789143928880
+23:01:53.409 [main] WARN  - EC2 instance -1435296482788523315 is not running
+23:01:53.409 [main] INFO  - TargetGroup /ec2/data added target: -1435296482788523315
+23:01:53.409 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:01:53.411 [main] WARN  - EC2 instance 4507807789143928880 is not running
+23:01:53.413 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -8499054456072139105
+23:01:53.414 [main] INFO  - EC2 instance 4507807789143928880 initialized
+23:01:53.414 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 8289628948410044946
+23:01:53.414 [main] INFO  - EC2 instance -1435296482788523315 initialized
+23:01:53.416 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:01:53.416 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:01:53.420 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:01:53.420 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:01:53.422 [pool-3-thread-2] INFO  - Target 8289628948410044946 state changed to OVERLOADED
+23:01:53.422 [pool-3-thread-1] INFO  - Target -8499054456072139105 state changed to OVERLOADED
+23:01:53.422 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: -1435296482788523315
+23:01:53.422 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 4507807789143928880
+23:01:53.423 [pool-3-thread-2] INFO  - Target -1435296482788523315 added running request
+23:01:53.423 [pool-3-thread-1] INFO  - Target 4507807789143928880 added running request
+23:01:53.423 [pool-3-thread-2] INFO  - Target 8289628948410044946 is overloaded
+23:01:53.423 [pool-3-thread-1] INFO  - Target -8499054456072139105 is overloaded
+23:01:53.424 [pool-3-thread-2] INFO  - Target -1435296482788523315 removed running request
+23:01:53.424 [pool-3-thread-1] INFO  - Target 4507807789143928880 removed running request
+23:01:53.431 [pool-3-thread-1] INFO  - Target -8499054456072139105 running requests changed to 0
+23:01:53.431 [pool-3-thread-2] INFO  - Target 8289628948410044946 running requests changed to 0
+23:01:53.431 [pool-3-thread-2] INFO  - Target -1435296482788523315 removed running request
+23:01:53.431 [pool-3-thread-1] INFO  - Target 4507807789143928880 removed running request
+23:01:57.427 [main] INFO  - EC2 instance 4507807789143928880 shutdown
+23:01:57.430 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:01:57.430 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:01:57.431 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:01:57.431 [pool-3-thread-3] INFO  - Target 8289628948410044946 state changed to OVERLOADED
+23:01:57.431 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:01:57.431 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: -1435296482788523315
+23:01:57.431 [pool-3-thread-3] INFO  - Target -1435296482788523315 added running request
+23:01:57.431 [pool-3-thread-3] INFO  - Target 8289628948410044946 is overloaded
+23:01:57.431 [pool-3-thread-3] INFO  - Target -1435296482788523315 removed running request
+23:01:57.431 [pool-3-thread-3] INFO  - Target 8289628948410044946 running requests changed to 0
+23:01:57.431 [pool-3-thread-3] INFO  - Target -1435296482788523315 removed running request
+23:10:59.700 [main] INFO  - LoadBalancer created with null thread pool and Id: 8246693295184960889
+23:10:59.705 [main] INFO  - EC2 instance created with maxConn: 1 and id: -3509184571909957333
+23:10:59.705 [main] INFO  - EC2 instance created with maxConn: 1 and id: -3547257916986206893
+23:10:59.707 [main] INFO  - S3 created with id: 8173608673502328771
+23:10:59.711 [main] INFO  - Bucket created with name: data and Id: -2046939342828154478
+23:10:59.711 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -5219286018870025637
+23:10:59.712 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -3509184571909957333 is not running
+23:10:59.712 [main] INFO  - TargetGroup /ec2/data added target: -3509184571909957333
+23:10:59.712 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -3547257916986206893 is not running
+23:10:59.712 [main] INFO  - TargetGroup /ec2/data added target: -3547257916986206893
+23:10:59.712 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:10:59.714 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -3509184571909957333 is not running
+23:10:59.716 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 1886571920678773198
+23:10:59.719 [main] INFO  - EC2 instance -3509184571909957333 initialized with maxConn: 1
+23:10:59.721 [main] INFO  - EC2 instance -3509184571909957333 Monitor instance 1886571920678773198
+23:10:59.722 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -7000023927771614791
+23:10:59.722 [main] INFO  - EC2 instance -3547257916986206893 initialized with maxConn: 1
+23:10:59.722 [main] INFO  - EC2 instance -3547257916986206893 Monitor instance -7000023927771614791
+23:10:59.724 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:10:59.724 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:10:59.729 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:10:59.729 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:10:59.732 [pool-3-thread-1] INFO  - Target -7000023927771614791 state changed to OVERLOADED
+23:10:59.732 [pool-3-thread-2] INFO  - Target 1886571920678773198 state changed to OVERLOADED
+23:10:59.732 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: -3547257916986206893
+23:10:59.732 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: -3509184571909957333
+23:10:59.732 [pool-3-thread-1] INFO  - Target -3547257916986206893 added running request
+23:10:59.732 [pool-3-thread-2] INFO  - Target -3509184571909957333 added running request
+23:10:59.734 [pool-3-thread-2] INFO  - Target 1886571920678773198 is overloaded
+23:10:59.734 [pool-3-thread-1] INFO  - Target -7000023927771614791 is overloaded
+23:10:59.734 [pool-3-thread-2] INFO  - Target -3509184571909957333 removed running request
+23:10:59.734 [pool-3-thread-1] INFO  - Target -3547257916986206893 removed running request
+23:10:59.734 [pool-3-thread-2] INFO  - Target 1886571920678773198 running requests changed to 0
+23:10:59.734 [pool-3-thread-1] INFO  - Target -7000023927771614791 running requests changed to 0
+23:10:59.734 [pool-3-thread-2] INFO  - Target -3509184571909957333 removed running request
+23:10:59.734 [pool-3-thread-1] INFO  - Target -3547257916986206893 removed running request
+23:11:03.731 [main] INFO  - EC2 instance -3509184571909957333 shutdown
+23:11:03.738 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:11:03.738 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:11:03.738 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:11:03.739 [pool-3-thread-3] INFO  - Target -7000023927771614791 state changed to OVERLOADED
+23:11:03.738 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:11:03.739 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: -3547257916986206893
+23:11:03.739 [pool-3-thread-3] INFO  - Target -3547257916986206893 added running request
+23:11:03.739 [pool-3-thread-3] INFO  - Target -7000023927771614791 is overloaded
+23:11:03.739 [pool-3-thread-3] INFO  - Target -3547257916986206893 removed running request
+23:11:03.739 [pool-3-thread-3] INFO  - Target -7000023927771614791 running requests changed to 0
+23:11:03.739 [pool-3-thread-3] INFO  - Target -3547257916986206893 removed running request
+23:45:18.779 [main] INFO  - LoadBalancer created with null thread pool and Id: -5584278371534905034
+23:45:18.784 [main] INFO  - EC2 instance created with maxConn: 1 and id: -5099810100047266798
+23:45:18.784 [main] INFO  - EC2 instance created with maxConn: 1 and id: 8659412548600923621
+23:45:18.786 [main] INFO  - S3 created with id: 8144610322978281414
+23:45:18.790 [main] INFO  - Bucket created with name: data and Id: -6557966135485528235
+23:45:18.790 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -5688247849350415776
+23:45:18.791 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -5099810100047266798 is not running
+23:45:18.791 [main] INFO  - TargetGroup /ec2/data added target: -5099810100047266798
+23:45:18.791 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8659412548600923621 is not running
+23:45:18.791 [main] INFO  - TargetGroup /ec2/data added target: 8659412548600923621
+23:45:18.791 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:45:18.795 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -5099810100047266798 is not running
+23:45:18.798 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 2617058381797141312
+23:45:18.801 [main] INFO  - EC2 instance -5099810100047266798 initialized with maxConn: 1
+23:45:18.803 [main] INFO  - EC2 instance -5099810100047266798 Monitor instance 2617058381797141312
+23:45:18.804 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -299144835376628847
+23:45:18.804 [main] INFO  - EC2 instance 8659412548600923621 initialized with maxConn: 1
+23:45:18.804 [main] INFO  - EC2 instance 8659412548600923621 Monitor instance -299144835376628847
+23:45:18.806 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:45:18.806 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:45:18.810 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:45:18.810 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:45:18.812 [pool-3-thread-1] INFO  - Target -299144835376628847 state changed to OVERLOADED
+23:45:18.813 [pool-3-thread-2] INFO  - Target 2617058381797141312 state changed to OVERLOADED
+23:45:18.813 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 8659412548600923621
+23:45:18.814 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: -5099810100047266798
+23:45:18.814 [pool-3-thread-1] INFO  - Target 8659412548600923621 added running request
+23:45:18.814 [pool-3-thread-2] INFO  - Target -5099810100047266798 added running request
+23:45:18.814 [pool-3-thread-1] INFO  - Target -299144835376628847 is overloaded
+23:45:18.814 [pool-3-thread-2] INFO  - Target 2617058381797141312 is overloaded
+23:45:18.815 [pool-3-thread-1] INFO  - Target 8659412548600923621 removed running request
+23:45:18.815 [pool-3-thread-2] INFO  - Target -5099810100047266798 removed running request
+23:45:18.815 [pool-3-thread-1] INFO  - Target -299144835376628847 running requests changed to 0
+23:45:18.815 [pool-3-thread-2] INFO  - Target 2617058381797141312 running requests changed to 0
+23:45:18.815 [pool-3-thread-1] INFO  - Target 8659412548600923621 removed running request
+23:45:18.815 [pool-3-thread-2] INFO  - Target -5099810100047266798 removed running request
+23:45:22.819 [main] INFO  - Target 2617058381797141312 state changed to OFFLINE
+23:45:22.820 [main] INFO  - EC2 instance -5099810100047266798 shutdown
+23:45:22.827 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:45:22.821 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:45:22.828 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:45:22.828 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:45:22.829 [pool-3-thread-3] INFO  - Target -299144835376628847 state changed to OVERLOADED
+23:45:22.829 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 8659412548600923621
+23:45:22.829 [pool-3-thread-3] INFO  - Target 8659412548600923621 added running request
+23:45:22.829 [pool-3-thread-3] INFO  - Target -299144835376628847 is overloaded
+23:45:22.829 [pool-3-thread-3] INFO  - Target 8659412548600923621 removed running request
+23:45:22.830 [pool-3-thread-3] INFO  - Target -299144835376628847 running requests changed to 0
+23:45:22.830 [pool-3-thread-3] INFO  - Target 8659412548600923621 removed running request
+23:53:26.068 [main] INFO  - LoadBalancer created with null thread pool and Id: -3002027140999110862
+23:53:26.072 [main] INFO  - EC2 instance created with maxConn: 1 and id: -9142115551003629479
+23:53:26.072 [main] INFO  - EC2 instance created with maxConn: 1 and id: 6339424968755453800
+23:53:26.074 [main] INFO  - S3 created with id: 9149505999192194868
+23:53:26.078 [main] INFO  - Bucket created with name: data and Id: 9112093306985267749
+23:53:26.078 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -5236871108363108467
+23:53:26.079 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -9142115551003629479 is not running
+23:53:26.079 [main] INFO  - TargetGroup /ec2/data added target: -9142115551003629479
+23:53:26.079 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 6339424968755453800 is not running
+23:53:26.079 [main] INFO  - TargetGroup /ec2/data added target: 6339424968755453800
+23:53:26.080 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:53:26.083 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -9142115551003629479 is not running
+23:53:26.085 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 1514594879241338741
+23:53:26.088 [main] INFO  - EC2 instance -9142115551003629479 initialized with maxConn: 1
+23:53:26.089 [main] INFO  - EC2 instance -9142115551003629479 Monitor instance 1514594879241338741
+23:53:26.090 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 2690938556817519741
+23:53:26.090 [main] INFO  - EC2 instance 6339424968755453800 initialized with maxConn: 1
+23:53:26.090 [main] INFO  - EC2 instance 6339424968755453800 Monitor instance 2690938556817519741
+23:53:26.092 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:53:26.092 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:53:26.095 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:53:26.094 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:53:26.097 [pool-3-thread-2] INFO  - Target Monitor2690938556817519741 state changed to OVERLOADED
+23:53:26.098 [pool-3-thread-1] INFO  - Target Monitor1514594879241338741 state changed to OVERLOADED
+23:53:26.098 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: 6339424968755453800
+23:53:26.098 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: -9142115551003629479
+23:53:26.098 [pool-3-thread-2] INFO  - EC2 6339424968755453800 added running request
+23:53:26.098 [pool-3-thread-1] INFO  - EC2 -9142115551003629479 added running request
+23:53:26.099 [pool-3-thread-2] INFO  - Target 2690938556817519741 is overloaded
+23:53:26.099 [pool-3-thread-1] INFO  - Target 1514594879241338741 is overloaded
+23:53:26.100 [pool-3-thread-2] INFO  - EC2 6339424968755453800 removed running request
+23:53:26.100 [pool-3-thread-1] INFO  - EC2 -9142115551003629479 removed running request
+23:53:26.100 [pool-3-thread-1] INFO  - Target Monitor 1514594879241338741 running requests changed to 0
+23:53:26.100 [pool-3-thread-2] INFO  - Target Monitor 2690938556817519741 running requests changed to 0
+23:53:26.100 [pool-3-thread-1] INFO  - EC2 -9142115551003629479 removed running request
+23:53:26.100 [pool-3-thread-2] INFO  - EC2 6339424968755453800 removed running request
+23:53:30.100 [main] INFO  - Target Monitor1514594879241338741 state changed to OFFLINE
+23:53:30.101 [main] INFO  - EC2 instance -9142115551003629479 shutdown
+23:53:30.110 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:53:30.102 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:53:30.111 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:53:30.111 [pool-3-thread-3] INFO  - Target Monitor2690938556817519741 state changed to OVERLOADED
+23:53:30.111 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 6339424968755453800
+23:53:30.111 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:53:30.112 [pool-3-thread-3] INFO  - EC2 6339424968755453800 added running request
+23:53:30.112 [pool-3-thread-3] INFO  - Target 2690938556817519741 is overloaded
+23:53:30.112 [pool-3-thread-3] INFO  - EC2 6339424968755453800 removed running request
+23:53:30.112 [pool-3-thread-3] INFO  - Target Monitor 2690938556817519741 running requests changed to 0
+23:53:30.112 [pool-3-thread-3] INFO  - EC2 6339424968755453800 removed running request
+23:56:29.779 [main] INFO  - LoadBalancer created with null thread pool and Id: 1837242364826817587
+23:56:29.784 [main] INFO  - EC2 instance created with maxConn: 1 and id: 5949859771696252
+23:56:29.784 [main] INFO  - EC2 instance created with maxConn: 1 and id: 6850535406550830635
+23:56:29.786 [main] INFO  - S3 created with id: -2358253000206031144
+23:56:29.789 [main] INFO  - Bucket created with name: data and Id: -7025803924399572149
+23:56:29.789 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -5504246726974322145
+23:56:29.790 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 5949859771696252 is not running
+23:56:29.790 [main] INFO  - TargetGroup /ec2/data added target: 5949859771696252
+23:56:29.790 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 6850535406550830635 is not running
+23:56:29.790 [main] INFO  - TargetGroup /ec2/data added target: 6850535406550830635
+23:56:29.790 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:56:29.793 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 5949859771696252 is not running
+23:56:29.795 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 2968064015877686149
+23:56:29.798 [main] INFO  - EC2 instance 5949859771696252 initialized with maxConn: 1
+23:56:29.800 [main] INFO  - EC2 instance 5949859771696252 Monitor instance 2968064015877686149
+23:56:29.800 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 7949350581207509703
+23:56:29.801 [main] INFO  - EC2 instance 6850535406550830635 initialized with maxConn: 1
+23:56:29.801 [main] INFO  - EC2 instance 6850535406550830635 Monitor instance 7949350581207509703
+23:56:29.803 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:56:29.803 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:56:29.808 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:56:29.808 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:56:29.811 [pool-3-thread-2] INFO  - Target Monitor7949350581207509703 state changed to OVERLOADED
+23:56:29.811 [pool-3-thread-1] INFO  - Target Monitor2968064015877686149 state changed to OVERLOADED
+23:56:29.811 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: 6850535406550830635
+23:56:29.811 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 5949859771696252
+23:56:29.811 [pool-3-thread-2] INFO  - EC2 6850535406550830635 added running request
+23:56:29.812 [pool-3-thread-1] INFO  - EC2 5949859771696252 added running request
+23:56:29.812 [pool-3-thread-2] INFO  - Target 7949350581207509703 is overloaded
+23:56:29.812 [pool-3-thread-1] INFO  - Target 2968064015877686149 is overloaded
+23:56:29.813 [pool-3-thread-1] INFO  - EC2 5949859771696252 removed running request x
+23:56:29.813 [pool-3-thread-2] INFO  - EC2 6850535406550830635 removed running request x
+23:56:29.813 [pool-3-thread-1] INFO  - Target Monitor 2968064015877686149 running requests changed to 0
+23:56:29.813 [pool-3-thread-2] INFO  - Target Monitor 7949350581207509703 running requests changed to 0
+23:56:29.813 [pool-3-thread-2] INFO  - EC2 6850535406550830635 removed running request y
+23:56:29.813 [pool-3-thread-1] INFO  - EC2 5949859771696252 removed running request y
+23:56:33.814 [main] INFO  - Target Monitor2968064015877686149 state changed to OFFLINE
+23:56:33.815 [main] INFO  - EC2 instance 5949859771696252 shutdown
+23:56:33.822 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:56:33.817 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:56:33.822 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:56:33.823 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:56:33.823 [pool-3-thread-3] INFO  - Target Monitor7949350581207509703 state changed to OVERLOADED
+23:56:33.823 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 6850535406550830635
+23:56:33.823 [pool-3-thread-3] INFO  - EC2 6850535406550830635 added running request
+23:56:33.823 [pool-3-thread-3] INFO  - Target 7949350581207509703 is overloaded
+23:56:33.823 [pool-3-thread-3] INFO  - EC2 6850535406550830635 removed running request x
+23:56:33.823 [pool-3-thread-3] INFO  - Target Monitor 7949350581207509703 running requests changed to 0
+23:56:33.823 [pool-3-thread-3] INFO  - EC2 6850535406550830635 removed running request y
+23:57:25.830 [main] INFO  - LoadBalancer created with null thread pool and Id: -5692147129746968731
+23:57:25.835 [main] INFO  - EC2 instance created with maxConn: 1 and id: 8478139442272828553
+23:57:25.836 [main] INFO  - EC2 instance created with maxConn: 1 and id: 3056486877437162043
+23:57:25.838 [main] INFO  - S3 created with id: -4496926065358733683
+23:57:25.840 [main] INFO  - Bucket created with name: data and Id: 1593565553313898486
+23:57:25.841 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 8585737365544470875
+23:57:25.841 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8478139442272828553 is not running
+23:57:25.841 [main] INFO  - TargetGroup /ec2/data added target: 8478139442272828553
+23:57:25.841 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 3056486877437162043 is not running
+23:57:25.842 [main] INFO  - TargetGroup /ec2/data added target: 3056486877437162043
+23:57:25.842 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:57:25.845 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8478139442272828553 is not running
+23:57:25.847 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 2846862901558451002
+23:57:25.849 [main] INFO  - EC2 instance 8478139442272828553 initialized with maxConn: 1
+23:57:25.852 [main] INFO  - EC2 instance 8478139442272828553 Monitor instance 2846862901558451002
+23:57:25.852 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -2363470464151134822
+23:57:25.852 [main] INFO  - EC2 instance 3056486877437162043 initialized with maxConn: 1
+23:57:25.852 [main] INFO  - EC2 instance 3056486877437162043 Monitor instance -2363470464151134822
+23:57:25.854 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:57:25.854 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:57:25.858 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:57:25.858 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:57:25.861 [pool-3-thread-2] INFO  - Target Monitor-2363470464151134822 state changed to OVERLOADED
+23:57:25.861 [pool-3-thread-1] INFO  - Target Monitor2846862901558451002 state changed to OVERLOADED
+23:57:25.861 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: 3056486877437162043
+23:57:25.862 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 8478139442272828553
+23:57:25.862 [pool-3-thread-2] INFO  - EC2 3056486877437162043 added running request
+23:57:25.862 [pool-3-thread-1] INFO  - EC2 8478139442272828553 added running request
+23:57:25.863 [pool-3-thread-2] INFO  - Target -2363470464151134822 is overloaded
+23:57:25.863 [pool-3-thread-1] INFO  - Target 2846862901558451002 is overloaded
+23:57:25.863 [pool-3-thread-2] ERROR - EC2 3056486877437162043 removed running request
+23:57:25.863 [pool-3-thread-1] ERROR - EC2 8478139442272828553 removed running request
+23:57:25.863 [pool-3-thread-1] INFO  - Target Monitor 2846862901558451002 running requests changed to 0
+23:57:25.863 [pool-3-thread-2] INFO  - Target Monitor -2363470464151134822 running requests changed to 0
+23:57:25.864 [pool-3-thread-1] INFO  - EC2 8478139442272828553 removed running request
+23:57:25.864 [pool-3-thread-2] INFO  - EC2 3056486877437162043 removed running request
+23:57:29.859 [main] INFO  - Target Monitor2846862901558451002 state changed to OFFLINE
+23:57:29.860 [main] INFO  - EC2 instance 8478139442272828553 shutdown
+23:57:29.869 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:57:29.869 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:57:29.871 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:57:29.871 [pool-3-thread-3] INFO  - Target Monitor-2363470464151134822 state changed to OVERLOADED
+23:57:29.871 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:57:29.871 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 3056486877437162043
+23:57:29.871 [pool-3-thread-3] INFO  - EC2 3056486877437162043 added running request
+23:57:29.872 [pool-3-thread-3] INFO  - Target -2363470464151134822 is overloaded
+23:57:29.872 [pool-3-thread-3] ERROR - EC2 3056486877437162043 removed running request
+23:57:29.872 [pool-3-thread-3] INFO  - Target Monitor -2363470464151134822 running requests changed to 0
+23:57:29.872 [pool-3-thread-3] INFO  - EC2 3056486877437162043 removed running request
+23:58:51.918 [main] INFO  - LoadBalancer created with null thread pool and Id: 8123810489856919893
+23:58:51.923 [main] INFO  - EC2 instance created with maxConn: 1 and id: 4001657796950744444
+23:58:51.923 [main] INFO  - EC2 instance created with maxConn: 1 and id: 8812597072213487119
+23:58:51.924 [main] INFO  - S3 created with id: 8129724385172016672
+23:58:51.927 [main] INFO  - Bucket created with name: data and Id: 4331507835528592051
+23:58:51.928 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: -3452952650008738653
+23:58:51.928 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 4001657796950744444 is not running
+23:58:51.928 [main] INFO  - TargetGroup /ec2/data added target: 4001657796950744444
+23:58:51.928 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8812597072213487119 is not running
+23:58:51.928 [main] INFO  - TargetGroup /ec2/data added target: 8812597072213487119
+23:58:51.928 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@44a7bfbc[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+23:58:51.931 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 4001657796950744444 is not running
+23:58:51.932 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -906057854010932353
+23:58:51.935 [main] INFO  - EC2 instance 4001657796950744444 initialized with maxConn: 1
+23:58:51.937 [main] INFO  - EC2 instance 4001657796950744444 Monitor instance -906057854010932353
+23:58:51.937 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 5300217054063234566
+23:58:51.937 [main] INFO  - EC2 instance 8812597072213487119 initialized with maxConn: 1
+23:58:51.937 [main] INFO  - EC2 instance 8812597072213487119 Monitor instance 5300217054063234566
+23:58:51.939 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:58:51.939 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:58:51.943 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:58:51.943 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:58:51.945 [pool-3-thread-2] INFO  - Target Monitor5300217054063234566 state changed to OVERLOADED
+23:58:51.945 [pool-3-thread-1] INFO  - Target Monitor-906057854010932353 state changed to OVERLOADED
+23:58:51.946 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: 8812597072213487119
+23:58:51.946 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 4001657796950744444
+23:58:51.946 [pool-3-thread-2] INFO  - EC2 8812597072213487119 added running request
+23:58:51.946 [pool-3-thread-1] INFO  - EC2 4001657796950744444 added running request
+23:58:51.948 [pool-3-thread-1] INFO  - Target -906057854010932353 is overloaded
+23:58:51.948 [pool-3-thread-2] INFO  - Target 5300217054063234566 is overloaded
+23:58:51.948 [pool-3-thread-1] ERROR - EC2 4001657796950744444 Target -906057854010932353 is overloaded
+23:58:51.948 [pool-3-thread-2] ERROR - EC2 8812597072213487119 Target 5300217054063234566 is overloaded
+23:58:51.949 [pool-3-thread-1] ERROR - EC2 4001657796950744444 removed running request
+23:58:51.949 [pool-3-thread-2] ERROR - EC2 8812597072213487119 removed running request
+23:58:51.949 [pool-3-thread-2] INFO  - Target Monitor 5300217054063234566 running requests changed to 0
+23:58:51.949 [pool-3-thread-1] INFO  - Target Monitor -906057854010932353 running requests changed to 0
+23:58:51.949 [pool-3-thread-2] INFO  - EC2 8812597072213487119 removed running request
+23:58:51.949 [pool-3-thread-1] INFO  - EC2 4001657796950744444 removed running request
+23:58:55.942 [main] INFO  - Target Monitor-906057854010932353 state changed to OFFLINE
+23:58:55.943 [main] INFO  - EC2 instance 4001657796950744444 shutdown
+23:58:55.944 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:58:55.950 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+23:58:55.951 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+23:58:55.951 [pool-3-thread-3] INFO  - Target Monitor5300217054063234566 state changed to OVERLOADED
+23:58:55.951 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+23:58:55.951 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 8812597072213487119
+23:58:55.951 [pool-3-thread-3] INFO  - EC2 8812597072213487119 added running request
+23:58:55.952 [pool-3-thread-3] INFO  - Target 5300217054063234566 is overloaded
+23:58:55.952 [pool-3-thread-3] ERROR - EC2 8812597072213487119 Target 5300217054063234566 is overloaded
+23:58:55.952 [pool-3-thread-3] ERROR - EC2 8812597072213487119 removed running request
+23:58:55.952 [pool-3-thread-3] INFO  - Target Monitor 5300217054063234566 running requests changed to 0
+23:58:55.952 [pool-3-thread-3] INFO  - EC2 8812597072213487119 removed running request
+00:03:14.770 [main] INFO  - LoadBalancer created with null thread pool and Id: -1571018653707102051
+00:03:14.775 [main] INFO  - EC2 instance created with maxConn: 1 and id: 8669051204100421501
+00:03:14.775 [main] INFO  - EC2 instance created with maxConn: 1 and id: -4675773271531217386
+00:03:14.777 [main] INFO  - S3 created with id: -33217456187627692
+00:03:14.782 [main] INFO  - Bucket created with name: data and Id: 4239011881799783299
+00:03:14.783 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 3279695690429349243
+00:03:14.783 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8669051204100421501 is not running
+00:03:14.783 [main] INFO  - TargetGroup /ec2/data added target: 8669051204100421501
+00:03:14.783 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance -4675773271531217386 is not running
+00:03:14.783 [main] INFO  - TargetGroup /ec2/data added target: -4675773271531217386
+00:03:14.783 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:03:14.786 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 8669051204100421501 is not running
+00:03:14.789 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -6243929147668893785
+00:03:14.792 [main] INFO  - EC2 instance 8669051204100421501 initialized with maxConn: 1
+00:03:14.793 [main] INFO  - EC2 instance 8669051204100421501 Monitor instance -6243929147668893785
+00:03:14.793 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 7190094742452602481
+00:03:14.794 [main] INFO  - EC2 instance -4675773271531217386 initialized with maxConn: 1
+00:03:14.794 [main] INFO  - EC2 instance -4675773271531217386 Monitor instance 7190094742452602481
+00:03:14.797 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:03:14.797 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:03:14.801 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:03:14.801 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:03:14.803 [pool-3-thread-2] INFO  - Target Monitor7190094742452602481 state changed to OVERLOADED
+00:03:14.804 [pool-3-thread-1] INFO  - Target Monitor-6243929147668893785 state changed to OVERLOADED
+00:03:14.804 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: -4675773271531217386
+00:03:14.804 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 8669051204100421501
+00:03:14.804 [pool-3-thread-1] INFO  - EC2 8669051204100421501 added running request
+00:03:14.804 [pool-3-thread-2] INFO  - EC2 -4675773271531217386 added running request
+00:03:14.805 [pool-3-thread-1] INFO  - Target -6243929147668893785 is overloaded
+00:03:14.805 [pool-3-thread-2] INFO  - Target 7190094742452602481 is overloaded
+00:03:14.805 [pool-3-thread-1] INFO  - Target Monitor-6243929147668893785 state changed to OVERLOADED
+00:03:14.805 [pool-3-thread-2] INFO  - Target Monitor7190094742452602481 state changed to OVERLOADED
+00:03:14.815 [pool-5-thread-1] INFO  - Executing API in EC2:-4675773271531217386 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:03:14.815 [pool-4-thread-1] INFO  - Executing API in EC2:8669051204100421501 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:03:17.821 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 200
+00:03:17.821 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+00:03:17.822 [pool-5-thread-1] INFO  - Target Monitor 7190094742452602481 running requests changed to 0
+00:03:17.822 [pool-4-thread-1] INFO  - Target Monitor -6243929147668893785 running requests changed to 0
+00:03:17.823 [pool-3-thread-2] INFO  - Target Monitor 7190094742452602481 running requests changed to 0
+00:03:17.823 [pool-3-thread-1] INFO  - Target Monitor -6243929147668893785 running requests changed to 0
+00:03:17.824 [pool-3-thread-1] INFO  - EC2 8669051204100421501 removed running request
+00:03:17.824 [pool-3-thread-2] INFO  - EC2 -4675773271531217386 removed running request
+00:03:18.797 [main] INFO  - Target Monitor-6243929147668893785 state changed to OFFLINE
+00:03:18.798 [main] INFO  - EC2 instance 8669051204100421501 shutdown
+00:03:18.799 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:03:18.800 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:03:18.801 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:03:18.801 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:03:18.802 [pool-3-thread-3] INFO  - Target Monitor7190094742452602481 state changed to OVERLOADED
+00:03:18.802 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: -4675773271531217386
+00:03:18.802 [pool-3-thread-3] INFO  - EC2 -4675773271531217386 added running request
+00:03:18.802 [pool-3-thread-3] INFO  - Target 7190094742452602481 is overloaded
+00:03:18.802 [pool-3-thread-3] INFO  - Target Monitor7190094742452602481 state changed to OVERLOADED
+00:03:18.803 [pool-5-thread-1] INFO  - Executing API in EC2:-4675773271531217386 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:03:21.816 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+00:03:21.816 [pool-5-thread-1] INFO  - Target Monitor 7190094742452602481 running requests changed to 0
+00:03:21.816 [pool-3-thread-3] INFO  - Target Monitor 7190094742452602481 running requests changed to 0
+00:03:21.816 [pool-3-thread-3] INFO  - EC2 -4675773271531217386 removed running request
+00:08:13.514 [main] INFO  - LoadBalancer created with null thread pool and Id: 6425154666353555567
+00:08:13.518 [main] INFO  - EC2 instance created with maxConn: 1 and id: 6891534819062831726
+00:08:13.519 [main] INFO  - EC2 instance created with maxConn: 1 and id: 2696951557624313554
+00:08:13.521 [main] INFO  - S3 created with id: -2474561438451095946
+00:08:13.524 [main] INFO  - Bucket created with name: data and Id: 6678963173979994331
+00:08:13.525 [main] INFO  - EC2TargetGroup created with path: /ec2/data and Id: 7329383691028427998
+00:08:13.525 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 6891534819062831726 is not running
+00:08:13.525 [main] INFO  - TargetGroup /ec2/data added target: 6891534819062831726
+00:08:13.526 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 2696951557624313554 is not running
+00:08:13.526 [main] INFO  - TargetGroup /ec2/data added target: 2696951557624313554
+00:08:13.526 [main] INFO  - LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:08:13.529 [main] WARN  - CAN'T ADD OBSERVER: EC2 instance 6891534819062831726 is not running
+00:08:13.531 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: 603244716782088343
+00:08:13.533 [main] INFO  - EC2 instance 6891534819062831726 initialized with maxConn: 1
+00:08:13.535 [main] INFO  - EC2 instance 6891534819062831726 Monitor instance 603244716782088343
+00:08:13.536 [main] INFO  - EC2TargetMonitor created with maxConn: 1 and id: -1594670945660190390
+00:08:13.536 [main] INFO  - EC2 instance 2696951557624313554 initialized with maxConn: 1
+00:08:13.536 [main] INFO  - EC2 instance 2696951557624313554 Monitor instance -1594670945660190390
+00:08:13.538 [pool-2-thread-1] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:08:13.538 [pool-2-thread-2] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:08:13.541 [pool-3-thread-1] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:08:13.541 [pool-3-thread-2] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:08:13.544 [pool-3-thread-1] INFO  - Target Monitor -1594670945660190390 state changed to OVERLOADED
+00:08:13.544 [pool-3-thread-2] INFO  - Target Monitor 603244716782088343 state changed to OVERLOADED
+00:08:13.544 [pool-3-thread-1] INFO  - TargetGroup /ec2/data found target: 2696951557624313554
+00:08:13.544 [pool-3-thread-2] INFO  - TargetGroup /ec2/data found target: 6891534819062831726
+00:08:13.545 [pool-3-thread-1] INFO  - EC2 2696951557624313554 added running request
+00:08:13.545 [pool-3-thread-2] INFO  - EC2 6891534819062831726 added running request
+00:08:13.546 [pool-3-thread-1] INFO  - Target -1594670945660190390 is overloaded
+00:08:13.546 [pool-3-thread-2] INFO  - Target 603244716782088343 is overloaded
+00:08:13.546 [pool-3-thread-1] INFO  - Target Monitor -1594670945660190390 state changed to OVERLOADED
+00:08:13.546 [pool-3-thread-2] INFO  - Target Monitor 603244716782088343 state changed to OVERLOADED
+00:08:13.555 [pool-5-thread-1] INFO  - Executing API in EC2:2696951557624313554 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:08:13.555 [pool-4-thread-1] INFO  - Executing API in EC2:6891534819062831726 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:08:16.560 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 200
+00:08:16.560 [pool-4-thread-1] INFO  - Api Executed: Returned Code: 400
+00:08:16.561 [pool-5-thread-1] INFO  - Target Monitor -1594670945660190390 running requests changed to 0
+00:08:16.561 [pool-4-thread-1] INFO  - Target Monitor 603244716782088343 running requests changed to 0
+00:08:16.562 [pool-3-thread-2] INFO  - Target Monitor 603244716782088343 running requests changed to 0
+00:08:16.562 [pool-3-thread-1] INFO  - Target Monitor -1594670945660190390 running requests changed to 0
+00:08:16.562 [pool-3-thread-2] INFO  - EC2 6891534819062831726 removed running request
+00:08:16.563 [pool-3-thread-1] INFO  - EC2 2696951557624313554 removed running request
+00:08:17.538 [main] INFO  - Target Monitor 603244716782088343 state changed to OFFLINE
+00:08:17.539 [main] INFO  - EC2 instance 6891534819062831726 shutdown
+00:08:17.540 [pool-2-thread-4] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:08:17.540 [pool-2-thread-3] INFO  - LoadBalancer received request: /lb/ec2/data GET
+00:08:17.542 [pool-3-thread-3] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:08:17.542 [pool-3-thread-4] INFO  - TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:08:17.542 [pool-3-thread-3] INFO  - Target Monitor -1594670945660190390 state changed to OVERLOADED
+00:08:17.543 [pool-3-thread-3] INFO  - TargetGroup /ec2/data found target: 2696951557624313554
+00:08:17.543 [pool-3-thread-3] INFO  - EC2 2696951557624313554 added running request
+00:08:17.543 [pool-3-thread-3] INFO  - Target -1594670945660190390 is overloaded
+00:08:17.543 [pool-3-thread-3] INFO  - Target Monitor -1594670945660190390 state changed to OVERLOADED
+00:08:17.543 [pool-5-thread-1] INFO  - Executing API in EC2:2696951557624313554 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:08:20.559 [pool-5-thread-1] INFO  - Api Executed: Returned Code: 400
+00:08:20.559 [pool-5-thread-1] INFO  - Target Monitor -1594670945660190390 running requests changed to 0
+00:08:20.559 [pool-3-thread-3] INFO  - Target Monitor -1594670945660190390 running requests changed to 0
+00:08:20.560 [pool-3-thread-3] INFO  - EC2 2696951557624313554 removed running request
+00:18:46.246 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -8622899556789154609
+00:18:46.250 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 5458389627790313998
+00:18:46.250 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -2471512808500924545
+00:18:46.252 [main] INFO  - S3 created with id: 2916046051897048631
+00:18:46.256 [main] INFO  - Bucket created with name: data and Id: 2009861795786135702
+00:18:46.257 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -1880832467045309303
+00:18:46.257 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 5458389627790313998 is not running
+00:18:46.257 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 5458389627790313998
+00:18:46.257 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -2471512808500924545 is not running
+00:18:46.257 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -2471512808500924545
+00:18:46.257 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:18:46.260 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 5458389627790313998 is not running
+00:18:46.262 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -9132669065701264013
+00:18:46.265 [main] INFO  - <EC2> instance 5458389627790313998 initialized with maxConn: 1
+00:18:46.267 [main] INFO  - <EC2> instance 5458389627790313998 Monitor instance -9132669065701264013
+00:18:46.267 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -8728445585302692121
+00:18:46.267 [main] INFO  - <EC2> instance -2471512808500924545 initialized with maxConn: 1
+00:18:46.267 [main] INFO  - <EC2> instance -2471512808500924545 Monitor instance -8728445585302692121
+00:18:46.269 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:18:46.269 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:18:46.273 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:18:46.273 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:18:46.276 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 state changed to OVERLOADED
+00:18:46.276 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -9132669065701264013 state changed to OVERLOADED
+00:18:46.276 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2471512808500924545
+00:18:46.277 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 5458389627790313998
+00:18:46.277 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 -2471512808500924545 added running request
+00:18:46.277 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 5458389627790313998 added running request
+00:18:46.278 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -9132669065701264013 is overloaded
+00:18:46.278 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -8728445585302692121 is overloaded
+00:18:46.278 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 state changed to OVERLOADED
+00:18:46.278 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -9132669065701264013 state changed to OVERLOADED
+00:18:46.288 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:-2471512808500924545 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:18:46.288 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:5458389627790313998 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:18:49.290 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+00:18:49.290 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:18:49.291 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -9132669065701264013 running requests changed to 0
+00:18:49.291 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 running requests changed to 0
+00:18:49.291 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 running requests changed to 0
+00:18:49.291 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -9132669065701264013 running requests changed to 0
+00:18:49.291 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 -2471512808500924545 removed running request
+00:18:49.291 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 5458389627790313998 removed running request
+00:18:50.282 [main] INFO  - <EC2TargetGroup>: Target Monitor -9132669065701264013 state changed to OFFLINE
+00:18:50.283 [main] INFO  - <EC2> instance 5458389627790313998 shutdown
+00:18:50.285 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:18:50.285 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:18:50.287 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:18:50.287 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:18:50.288 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 state changed to OVERLOADED
+00:18:50.288 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2471512808500924545
+00:18:50.288 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 -2471512808500924545 added running request
+00:18:50.289 [pool-3-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -8728445585302692121 is overloaded
+00:18:50.289 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 state changed to OVERLOADED
+00:18:50.289 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:-2471512808500924545 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:18:53.299 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:18:53.299 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 running requests changed to 0
+00:18:53.300 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -8728445585302692121 running requests changed to 0
+00:18:53.300 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 -2471512808500924545 removed running request
+00:23:34.006 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -6823453618747898944
+00:23:34.012 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 2947826116379953032
+00:23:34.012 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3322426759959045636
+00:23:34.015 [main] INFO  - S3 created with id: -86843364114341891
+00:23:34.019 [main] INFO  - Bucket created with name: data and Id: 6693816312920479957
+00:23:34.020 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -4725061788277129994
+00:23:34.020 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 2947826116379953032 is not running
+00:23:34.020 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 2947826116379953032
+00:23:34.020 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 3322426759959045636 is not running
+00:23:34.020 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3322426759959045636
+00:23:34.021 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:23:34.030 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 2947826116379953032 is not running
+00:23:34.032 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -7514870216999317025
+00:23:34.036 [main] INFO  - <EC2> instance 2947826116379953032 initialized with maxConn: 1
+00:23:34.039 [main] INFO  - <EC2> instance 2947826116379953032 Monitor instance -7514870216999317025
+00:23:34.039 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 750618932465106504
+00:23:34.039 [main] INFO  - <EC2> instance 3322426759959045636 initialized with maxConn: 1
+00:23:34.039 [main] INFO  - <EC2> instance 3322426759959045636 Monitor instance 750618932465106504
+00:23:34.042 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:23:34.042 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:23:34.047 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:23:34.047 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:23:34.049 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 state changed to OVERLOADED
+00:23:34.049 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -7514870216999317025 state changed to OVERLOADED
+00:23:34.049 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 2947826116379953032
+00:23:34.049 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 3322426759959045636
+00:23:34.050 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 2947826116379953032 added running request
+00:23:34.050 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 3322426759959045636 added running request
+00:23:34.051 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 750618932465106504 is overloaded
+00:23:34.051 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -7514870216999317025 is overloaded
+00:23:34.051 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 state changed to OVERLOADED
+00:23:34.051 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -7514870216999317025 state changed to OVERLOADED
+00:23:34.060 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:2947826116379953032 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:23:34.060 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:3322426759959045636 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:23:37.074 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+00:23:37.074 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:23:37.075 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -7514870216999317025 running requests changed to 0
+00:23:37.075 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 running requests changed to 0
+00:23:37.076 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 running requests changed to 0
+00:23:37.076 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -7514870216999317025 running requests changed to 0
+00:23:37.077 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 2947826116379953032 removed running request
+00:23:37.077 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 3322426759959045636 removed running request
+00:23:38.052 [main] INFO  - <EC2TargetGroup>: Target Monitor -7514870216999317025 state changed to OFFLINE
+00:23:38.053 [main] INFO  - <EC2> instance 2947826116379953032 shutdown
+00:23:38.054 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:23:38.055 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:23:38.056 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:23:38.057 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:23:38.057 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 state changed to OVERLOADED
+00:23:38.058 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 3322426759959045636
+00:23:38.058 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 3322426759959045636 added running request
+00:23:38.058 [pool-3-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor 750618932465106504 is overloaded
+00:23:38.058 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 state changed to OVERLOADED
+00:23:38.059 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:3322426759959045636 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:23:41.074 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:23:41.074 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 running requests changed to 0
+00:23:41.075 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor 750618932465106504 running requests changed to 0
+00:23:41.075 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 3322426759959045636 removed running request
+00:28:52.773 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -7873446004216294575
+00:28:52.777 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -5029496069261816509
+00:28:52.779 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 604685707419057257
+00:28:52.779 [main] INFO  - S3 created with id: 3034709165043409687
+00:28:52.782 [main] INFO  - Bucket created with name: data and Id: -8448821295372089000
+00:29:02.523 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -1953595807797199876
+00:29:02.524 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -5029496069261816509 is not running
+00:29:02.524 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -5029496069261816509
+00:29:02.524 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 604685707419057257 is not running
+00:29:02.524 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 604685707419057257
+00:29:02.524 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6986852[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:29:02.534 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -5029496069261816509 is not running
+00:29:02.539 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -625956649187762764
+00:29:02.561 [main] INFO  - <EC2> instance -5029496069261816509 initialized with maxConn: 1
+00:29:02.578 [main] INFO  - <EC2> instance -5029496069261816509 Monitor instance -625956649187762764
+00:29:02.579 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -4956811956752002348
+00:29:02.580 [main] INFO  - <EC2> instance 604685707419057257 initialized with maxConn: 1
+00:29:02.580 [main] INFO  - <EC2> instance 604685707419057257 Monitor instance -4956811956752002348
+00:29:02.608 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:02.608 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:02.619 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:29:02.620 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:29:02.632 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4956811956752002348 state changed to OVERLOADED
+00:29:02.632 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 604685707419057257
+00:29:02.634 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 604685707419057257 added running request
+00:29:02.635 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -625956649187762764 state changed to OVERLOADED
+00:29:02.635 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -5029496069261816509
+00:29:02.635 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 -5029496069261816509 added running request
+00:29:02.636 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -4956811956752002348 is overloaded
+00:29:02.636 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4956811956752002348 state changed to OVERLOADED
+00:29:02.636 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -625956649187762764 is overloaded
+00:29:02.636 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -625956649187762764 state changed to OVERLOADED
+00:29:02.650 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:604685707419057257 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:29:02.650 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-5029496069261816509 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:29:06.807 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 5786358481183004866
+00:29:06.813 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 8437288653023187179
+00:29:06.813 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 4197964106302739335
+00:29:06.816 [main] INFO  - S3 created with id: -9032316885818364941
+00:29:06.821 [main] INFO  - Bucket created with name: data and Id: 1044247560338331456
+00:29:06.884 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -3654862677292361076
+00:29:06.885 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 8437288653023187179 is not running
+00:29:06.885 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 8437288653023187179
+00:29:06.885 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 4197964106302739335 is not running
+00:29:06.886 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 4197964106302739335
+00:29:06.886 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6986852[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:29:06.891 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 8437288653023187179 is not running
+00:29:06.896 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -189112683191556189
+00:29:06.907 [main] INFO  - <EC2> instance 8437288653023187179 initialized with maxConn: 1
+00:29:06.916 [main] INFO  - <EC2> instance 8437288653023187179 Monitor instance -189112683191556189
+00:29:06.916 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -348602384916811215
+00:29:06.916 [main] INFO  - <EC2> instance 4197964106302739335 initialized with maxConn: 1
+00:29:06.916 [main] INFO  - <EC2> instance 4197964106302739335 Monitor instance -348602384916811215
+00:29:06.939 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:06.939 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:06.953 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:29:06.954 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:29:13.216 [main] INFO  - <EC2TargetGroup>: Target Monitor -189112683191556189 state changed to OFFLINE
+00:29:13.216 [main] INFO  - <EC2> instance 8437288653023187179 shutdown
+00:29:13.216 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -348602384916811215 state changed to OVERLOADED
+00:29:13.217 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:13.217 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:29:21.197 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:29:21.198 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:29:21.197 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 4197964106302739335
+00:29:21.199 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 4197964106302739335 added running request
+00:29:21.205 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -348602384916811215 is overloaded
+00:29:21.206 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -348602384916811215 state changed to OVERLOADED
+00:29:21.219 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:4197964106302739335 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:29:24.233 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:29:24.234 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -348602384916811215 running requests changed to 0
+00:29:24.234 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -348602384916811215 running requests changed to 0
+00:29:24.236 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 4197964106302739335 removed running request
+00:57:49.877 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 7647634273770173178
+00:57:49.881 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 1667053035865054662
+00:57:49.881 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 6045925141667948888
+00:57:49.882 [main] INFO  - S3 created with id: -6731085474705481828
+00:57:49.885 [main] INFO  - Bucket created with name: data and Id: 6953418860695546602
+00:57:49.886 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 7750647144415181506
+00:57:49.886 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 1667053035865054662 is not running
+00:57:49.887 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 1667053035865054662
+00:57:49.887 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 6045925141667948888 is not running
+00:57:49.887 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 6045925141667948888
+00:57:49.887 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+00:57:49.889 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 1667053035865054662 is not running
+00:57:49.892 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -1729176724562531973
+00:57:49.894 [main] INFO  - <EC2> instance 1667053035865054662 initialized with maxConn: 1
+00:57:49.896 [main] INFO  - <EC2> instance 1667053035865054662 Monitor instance -1729176724562531973
+00:57:49.896 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 5096253114368268383
+00:57:49.896 [main] INFO  - <EC2> instance 6045925141667948888 initialized with maxConn: 1
+00:57:49.897 [main] INFO  - <EC2> instance 6045925141667948888 Monitor instance 5096253114368268383
+00:57:49.899 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:57:49.899 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:57:49.904 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:57:49.904 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:57:49.907 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 state changed to OVERLOADED
+00:57:49.907 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -1729176724562531973 state changed to OVERLOADED
+00:57:49.907 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6045925141667948888
+00:57:49.907 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 1667053035865054662
+00:57:49.908 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 6045925141667948888 added running request
+00:57:49.908 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 1667053035865054662 added running request
+00:57:49.908 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 5096253114368268383 is overloaded
+00:57:49.908 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -1729176724562531973 is overloaded
+00:57:49.909 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 state changed to OVERLOADED
+00:57:49.909 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -1729176724562531973 state changed to OVERLOADED
+00:57:49.917 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:1667053035865054662 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:57:49.917 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:6045925141667948888 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+00:57:52.932 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+00:57:52.932 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+00:57:52.934 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 running requests changed to 0
+00:57:52.934 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -1729176724562531973 running requests changed to 0
+00:57:52.935 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 running requests changed to 0
+00:57:52.935 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -1729176724562531973 running requests changed to 0
+00:57:52.935 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 6045925141667948888 removed running request
+00:57:52.935 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 1667053035865054662 removed running request
+00:57:53.911 [main] INFO  - <EC2TargetGroup>: Target Monitor -1729176724562531973 state changed to OFFLINE
+00:57:53.912 [main] INFO  - <EC2> instance 1667053035865054662 shutdown
+00:57:53.913 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:57:53.913 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+00:57:53.915 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+00:57:53.915 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+00:57:53.916 [pool-3-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 state changed to OVERLOADED
+00:57:53.916 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6045925141667948888
+00:57:53.917 [pool-3-thread-4] INFO  - <EC2TargetGroup>: EC2 6045925141667948888 added running request
+00:57:53.917 [pool-3-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor 5096253114368268383 is overloaded
+00:57:53.918 [pool-3-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 state changed to OVERLOADED
+00:57:53.918 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:6045925141667948888 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+00:57:56.928 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+00:57:56.928 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 running requests changed to 0
+00:57:56.929 [pool-3-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 5096253114368268383 running requests changed to 0
+00:57:56.929 [pool-3-thread-4] INFO  - <EC2TargetGroup>: EC2 6045925141667948888 removed running request
+01:08:45.019 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -6205605585612415811
+01:08:45.023 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -4262689432129757582
+01:08:45.023 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -1340025121097325608
+01:08:45.025 [main] INFO  - S3 created with id: -4371405920086444173
+01:08:45.028 [main] INFO  - Bucket created with name: data and Id: 4891142907854049122
+01:08:45.028 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 7566150704221307674
+01:08:45.029 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -4262689432129757582 is not running
+01:08:45.029 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -4262689432129757582
+01:08:45.029 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -1340025121097325608 is not running
+01:08:45.029 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -1340025121097325608
+01:08:45.029 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+01:08:45.032 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -4262689432129757582 is not running
+01:08:45.034 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -58843547451099503
+01:08:45.036 [main] INFO  - <EC2> instance -4262689432129757582 initialized with maxConn: 1
+01:08:45.038 [main] INFO  - <EC2> instance -4262689432129757582 Monitor instance -58843547451099503
+01:08:45.038 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -3938824995857022033
+01:08:45.038 [main] INFO  - <EC2> instance -1340025121097325608 initialized with maxConn: 1
+01:08:45.039 [main] INFO  - <EC2> instance -1340025121097325608 Monitor instance -3938824995857022033
+01:08:45.040 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+01:08:45.040 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+01:08:45.046 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+01:08:45.046 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+01:08:45.050 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -3938824995857022033 state changed to OVERLOADED
+01:08:45.050 [pool-3-thread-1] DEBUG - <EC2TargetGroup>: Selected target -1340025121097325608 for request
+01:08:45.050 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -58843547451099503 state changed to OVERLOADED
+01:08:45.051 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -1340025121097325608
+01:08:45.051 [pool-3-thread-2] DEBUG - <EC2TargetGroup>: Selected target -4262689432129757582 for request
+01:08:45.051 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -4262689432129757582
+01:08:45.051 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 -1340025121097325608 added running request
+01:08:45.051 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 -4262689432129757582 added running request
+01:08:45.052 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -58843547451099503 is overloaded
+01:08:45.052 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3938824995857022033 is overloaded
+01:08:45.063 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:-1340025121097325608 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+01:08:45.063 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-4262689432129757582 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+01:08:48.072 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+01:08:48.072 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+01:08:48.073 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -58843547451099503 running requests changed to 0
+01:08:48.073 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -3938824995857022033 running requests changed to 0
+01:08:48.075 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -58843547451099503 has no running requests
+01:08:48.075 [pool-3-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3938824995857022033 has no running requests
+01:08:48.075 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 -4262689432129757582 removed running request
+01:08:48.075 [pool-3-thread-1] INFO  - <EC2TargetGroup>: EC2 -1340025121097325608 removed running request
+01:08:49.051 [main] INFO  - <EC2TargetGroup>: Target Monitor -58843547451099503 state changed to OFFLINE
+01:08:49.053 [main] INFO  - <EC2> instance -4262689432129757582 shutdown
+01:08:49.054 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+01:08:49.053 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+01:08:49.055 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+01:08:49.055 [pool-3-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -3938824995857022033 state changed to OVERLOADED
+01:08:49.055 [pool-3-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+01:08:49.055 [pool-3-thread-3] DEBUG - <EC2TargetGroup>: Selected target -1340025121097325608 for request
+01:08:49.055 [pool-3-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -1340025121097325608
+01:08:49.055 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 -1340025121097325608 added running request
+01:08:49.056 [pool-3-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -3938824995857022033 is overloaded
+01:08:49.056 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:-1340025121097325608 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+01:08:52.069 [pool-5-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+01:08:52.069 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -3938824995857022033 running requests changed to 0
+01:08:52.069 [pool-3-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -3938824995857022033 has no running requests
+01:08:52.069 [pool-3-thread-3] INFO  - <EC2TargetGroup>: EC2 -1340025121097325608 removed running request
+13:04:24.260 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -4701969306357968861
+13:04:24.266 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -2138182104631931548
+13:04:24.266 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -2355179247656315553
+13:04:24.267 [main] INFO  - S3 created with id: -3059409942123229207
+13:04:24.270 [main] INFO  - Bucket created with name: data and Id: 2907499198266892
+13:04:24.271 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3521882314440113215
+13:04:24.271 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -2138182104631931548 is not running
+13:04:24.271 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -2138182104631931548
+13:04:24.271 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -2355179247656315553 is not running
+13:04:24.271 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -2355179247656315553
+13:04:24.271 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4ef37659[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:04:24.273 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -2138182104631931548 is not running
+13:04:24.275 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -327378411610409731
+13:04:24.278 [main] INFO  - <EC2> instance -2138182104631931548 initialized with maxConn: 1
+13:04:24.279 [main] INFO  - <EC2> instance -2138182104631931548 Monitor instance -327378411610409731
+13:04:24.280 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -2355179247656315553 is not running
+13:04:24.282 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:04:24.282 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:04:24.286 [pool-3-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:04:24.286 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:04:24.289 [pool-3-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -327378411610409731 state changed to OVERLOADED
+13:04:24.289 [pool-3-thread-2] DEBUG - <EC2TargetGroup>: Selected target -2138182104631931548 for request
+13:04:24.289 [pool-3-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2138182104631931548
+13:04:24.289 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 -2138182104631931548 added running request
+13:04:24.290 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -327378411610409731 is overloaded
+13:04:24.299 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2138182104631931548 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:04:27.314 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+13:04:27.314 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -327378411610409731 running requests changed to 0
+13:04:27.315 [pool-3-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -327378411610409731 has no running requests
+13:04:27.315 [pool-3-thread-2] INFO  - <EC2TargetGroup>: EC2 -2138182104631931548 removed running request
+13:10:09.029 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -611672804167961739
+13:10:09.033 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 8620629041453755142
+13:10:09.033 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3724137485672210815
+13:10:09.034 [main] INFO  - S3 created with id: 9140406215922614896
+13:10:09.038 [main] INFO  - Bucket created with name: data and Id: -5528000043770410671
+13:10:09.044 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -397127924815785805
+13:10:09.048 [main] INFO  - <EC2> instance 8620629041453755142 initialized with maxConn: 1
+13:10:09.052 [main] INFO  - <EC2> instance 8620629041453755142 Monitor instance -397127924815785805
+13:10:09.053 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -7484107913398747271
+13:10:09.053 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 8620629041453755142
+13:10:09.053 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 3724137485672210815 is not running
+13:10:09.054 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3724137485672210815
+13:10:09.054 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4cc8eb05[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:10:09.057 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:10:09.057 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:10:09.062 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:10:09.062 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:10:09.065 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -397127924815785805 state changed to OVERLOADED
+13:10:09.065 [pool-4-thread-1] DEBUG - <EC2TargetGroup>: Selected target 8620629041453755142 for request
+13:10:09.066 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8620629041453755142
+13:10:09.066 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 8620629041453755142 added running request
+13:10:09.068 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -397127924815785805 is overloaded
+13:10:09.077 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:8620629041453755142 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:10:12.083 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+13:10:12.083 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -397127924815785805 running requests changed to 0
+13:10:12.084 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -397127924815785805 has no running requests
+13:10:12.084 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 8620629041453755142 removed running request
+13:20:42.918 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -6497306901610107250
+13:20:42.922 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -3896581898586765322
+13:20:42.922 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3521674530376973135
+13:20:42.924 [main] INFO  - S3 created with id: -9111399492107874923
+13:20:42.926 [main] INFO  - Bucket created with name: data and Id: -5944203852069789427
+13:20:42.929 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 5835099536584474262
+13:20:42.932 [main] INFO  - <EC2> instance -3896581898586765322 initialized with maxConn: 1
+13:20:42.934 [main] INFO  - <EC2> instance -3896581898586765322 Monitor instance 5835099536584474262
+13:20:42.935 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 7337692741572853642
+13:20:42.935 [main] INFO  - <EC2>: EC2 -3896581898586765322 added observer
+13:20:42.935 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -3896581898586765322
+13:20:42.935 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 3521674530376973135 is not running
+13:20:42.936 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4cc8eb05[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:20:42.939 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:20:42.939 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:20:42.942 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:20:42.942 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:20:42.945 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 state changed to OVERLOADED
+13:20:42.946 [pool-4-thread-2] DEBUG - <EC2TargetGroup>: Selected target -3896581898586765322 for request
+13:20:42.946 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -3896581898586765322
+13:20:42.946 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 -3896581898586765322 added running request
+13:20:42.947 [pool-4-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 5835099536584474262 is overloaded
+13:20:42.955 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:-3896581898586765322 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:20:45.962 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+13:20:45.962 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 running requests changed to 0
+13:20:45.963 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 state changed to OVERLOADED
+13:20:45.963 [pool-4-thread-1] DEBUG - <EC2TargetGroup>: Selected target -3896581898586765322 for request
+13:20:45.963 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 running requests changed to 0
+13:20:45.963 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -3896581898586765322
+13:20:45.963 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 -3896581898586765322 added running request
+13:20:45.963 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 -3896581898586765322 removed running request
+13:20:45.963 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 state changed to OVERLOADED
+13:20:45.963 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:-3896581898586765322 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:20:48.974 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+13:20:48.975 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 5835099536584474262 running requests changed to 0
+13:20:48.975 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 5835099536584474262 has no running requests
+13:20:48.976 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 -3896581898586765322 removed running request
+13:23:41.395 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 3479953934016948476
+13:23:41.399 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 2398954024101946601
+13:23:41.399 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 320516758001375257
+13:23:41.400 [main] INFO  - S3 created with id: -8025392987177956573
+13:23:41.403 [main] INFO  - Bucket created with name: data and Id: 4910400558400520066
+13:23:41.404 [main] INFO  - <GetApi>: GetApi created: 6686190328291342447
+13:23:41.406 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 2989101106807743514
+13:23:41.409 [main] INFO  - <EC2> instance 2398954024101946601 initialized with maxConn: 1
+13:23:41.411 [main] INFO  - <EC2> instance 2398954024101946601 Monitor instance 2989101106807743514
+13:23:41.412 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 2405194007935794202
+13:23:41.412 [main] INFO  - <EC2>: EC2 2398954024101946601 added observer
+13:23:41.412 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 2398954024101946601
+13:23:41.413 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 320516758001375257 is not running
+13:23:41.413 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@4cc8eb05[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:23:41.415 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:23:41.415 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:23:41.420 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:23:41.420 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:23:41.423 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 state changed to OVERLOADED
+13:23:41.423 [pool-4-thread-2] DEBUG - <EC2TargetGroup>: Selected target 2398954024101946601 for request
+13:23:41.423 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 2398954024101946601
+13:23:41.423 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 2398954024101946601 added running request
+13:23:41.425 [pool-4-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 2989101106807743514 is overloaded
+13:23:41.434 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:2398954024101946601 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:23:44.437 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+13:23:44.437 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 running requests changed to 0
+13:23:44.438 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 state changed to OVERLOADED
+13:23:44.438 [pool-4-thread-1] DEBUG - <EC2TargetGroup>: Selected target 2398954024101946601 for request
+13:23:44.438 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 running requests changed to 0
+13:23:44.438 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 2398954024101946601
+13:23:44.438 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 2398954024101946601 added running request
+13:23:44.438 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 2398954024101946601 removed running request
+13:23:44.438 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 state changed to OVERLOADED
+13:23:44.438 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:2398954024101946601 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:23:47.449 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+13:23:47.449 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2989101106807743514 running requests changed to 0
+13:23:47.450 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 2989101106807743514 has no running requests
+13:23:47.450 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 2398954024101946601 removed running request
+13:33:41.620 [main] INFO  - <ApiGateway>: ApiGateway created: -7249688291625877395
+13:33:41.623 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 379911686503949674
+13:33:41.626 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -8192832592833315180
+13:33:41.626 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -1176979160802862835
+13:33:41.627 [main] INFO  - S3 created with id: -8393709150508653803
+13:33:41.630 [main] INFO  - Bucket created with name: data and Id: -3026346193883072480
+13:33:41.632 [main] INFO  - <GetApi>: GetApi created: 4092039062333593894
+13:33:41.634 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -3346523222201694584
+13:33:41.636 [main] INFO  - <EC2> instance -8192832592833315180 initialized with maxConn: 1
+13:33:41.639 [main] INFO  - <EC2> instance -8192832592833315180 Monitor instance -3346523222201694584
+13:33:41.639 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 310703956080388650
+13:33:41.639 [main] INFO  - <EC2> instance -1176979160802862835 initialized with maxConn: 1
+13:33:41.640 [main] INFO  - <EC2> instance -1176979160802862835 Monitor instance 310703956080388650
+13:33:41.640 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3711449701242640851
+13:33:41.640 [main] INFO  - <EC2>: EC2 -8192832592833315180 added observer
+13:33:41.641 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -8192832592833315180
+13:33:41.641 [main] INFO  - <EC2>: EC2 -1176979160802862835 added observer
+13:33:41.641 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -1176979160802862835
+13:33:41.641 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:33:41.645 [main] INFO  - <EC2TargetGroup>: Target Monitor -3346523222201694584 state changed to OFFLINE
+13:33:41.645 [main] INFO  - <EC2TargetGroup>: Target Monitor -3346523222201694584 removed from target group
+13:33:41.645 [main] INFO  - <EC2> instance -8192832592833315180 shutdown
+13:33:41.647 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:33:41.647 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:33:41.652 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:33:41.652 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:33:41.652 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 310703956080388650 state changed to OVERLOADED
+13:33:41.653 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target -1176979160802862835 for request
+13:33:41.653 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -1176979160802862835
+13:33:41.653 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -1176979160802862835 added running request
+13:33:41.654 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 310703956080388650 is overloaded
+13:33:41.662 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-1176979160802862835 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:33:44.676 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+13:33:44.677 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 310703956080388650 running requests changed to 0
+13:33:44.677 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 310703956080388650 has no running requests
+13:33:44.678 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -1176979160802862835 removed running request
+13:34:21.401 [main] INFO  - <ApiGateway>: ApiGateway created: 1530653212251686617
+13:34:21.403 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 4605883995264408309
+13:34:21.406 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3509159565448940166
+13:34:21.408 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 6246146642823072255
+13:34:21.409 [main] INFO  - S3 created with id: 5254902019284268205
+13:34:21.413 [main] INFO  - Bucket created with name: data and Id: -7141076416795695335
+13:34:21.414 [main] INFO  - <GetApi>: GetApi created: -34048564647526117
+13:34:21.416 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 2746789737174168411
+13:34:21.418 [main] INFO  - <EC2> instance 3509159565448940166 initialized with maxConn: 1
+13:34:21.420 [main] INFO  - <EC2> instance 3509159565448940166 Monitor instance 2746789737174168411
+13:34:21.420 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 1534638786795529670
+13:34:21.421 [main] INFO  - <EC2>: EC2 3509159565448940166 added observer
+13:34:21.421 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3509159565448940166
+13:34:21.421 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance 6246146642823072255 is not running
+13:34:21.421 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:34:21.423 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:34:21.423 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:34:21.427 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:34:21.427 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:34:21.429 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 state changed to OVERLOADED
+13:34:21.429 [pool-4-thread-2] DEBUG - <EC2TargetGroup>: Selected target 3509159565448940166 for request
+13:34:21.430 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 3509159565448940166
+13:34:21.430 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 3509159565448940166 added running request
+13:34:21.431 [pool-4-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 2746789737174168411 is overloaded
+13:34:21.438 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:3509159565448940166 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:34:24.450 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+13:34:24.450 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 running requests changed to 0
+13:34:24.450 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 state changed to OVERLOADED
+13:34:24.451 [pool-4-thread-1] DEBUG - <EC2TargetGroup>: Selected target 3509159565448940166 for request
+13:34:24.451 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 running requests changed to 0
+13:34:24.451 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 3509159565448940166
+13:34:24.451 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 3509159565448940166 added running request
+13:34:24.451 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 3509159565448940166 removed running request
+13:34:24.451 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 state changed to OVERLOADED
+13:34:24.451 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:3509159565448940166 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:34:27.464 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+13:34:27.464 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2746789737174168411 running requests changed to 0
+13:34:27.465 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 2746789737174168411 has no running requests
+13:34:27.465 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 3509159565448940166 removed running request
+13:48:33.139 [main] INFO  - <ApiGateway>: ApiGateway created: 7684016025280556694
+13:48:33.143 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 9002251815570891062
+13:48:33.146 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 5182289174962748964
+13:48:33.147 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -5474247773138559140
+13:48:33.148 [main] INFO  - S3 created with id: -3070734509124072426
+13:48:33.151 [main] INFO  - Bucket created with name: data and Id: -123439129033605787
+13:48:33.152 [main] INFO  - <GetApi>: GetApi created: -3379284143402752068
+13:48:33.154 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -6356892191550345787
+13:48:33.156 [main] INFO  - <EC2> instance 5182289174962748964 initialized with maxConn: 1
+13:48:33.158 [main] INFO  - <EC2> instance 5182289174962748964 Monitor instance -6356892191550345787
+13:48:33.159 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3149590245921936531
+13:48:33.159 [main] INFO  - <EC2>: EC2 5182289174962748964 added observer
+13:48:33.159 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 5182289174962748964
+13:48:33.159 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -5474247773138559140 is not running
+13:48:33.160 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@236e3f4e[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:48:33.162 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:48:33.162 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:48:33.165 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:48:33.165 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:48:51.627 [main] INFO  - <ApiGateway>: ApiGateway created: 1883324208890754739
+13:48:51.632 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -3476720883559703026
+13:48:51.635 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3863207646831848431
+13:48:51.635 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -8507811421135387847
+13:48:51.637 [main] INFO  - S3 created with id: 899924209043938209
+13:48:51.639 [main] INFO  - Bucket created with name: data and Id: -7416456218028286952
+13:48:51.641 [main] INFO  - <GetApi>: GetApi created: -7210818067446915343
+13:48:51.644 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 515531235324267874
+13:48:51.647 [main] INFO  - <EC2> instance 3863207646831848431 initialized with maxConn: 1
+13:48:51.649 [main] INFO  - <EC2> instance 3863207646831848431 Monitor instance 515531235324267874
+13:48:51.650 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3276996029706708981
+13:48:51.650 [main] INFO  - <EC2>: EC2 3863207646831848431 added observer
+13:48:51.650 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3863207646831848431
+13:48:51.651 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -8507811421135387847 is not running
+13:48:51.651 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:48:51.653 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:48:51.653 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:48:51.657 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:48:51.657 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:50:05.040 [main] INFO  - <ApiGateway>: ApiGateway created: 1168319842084233660
+13:50:05.044 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 8987929958255574152
+13:50:05.048 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 6206038685086498205
+13:50:05.048 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -7981282431629720549
+13:50:05.050 [main] INFO  - S3 created with id: -4066051718814912491
+13:50:05.053 [main] INFO  - Bucket created with name: data and Id: 6809419059745994795
+13:50:05.055 [main] INFO  - <GetApi>: GetApi created: -2619190641163871931
+13:50:05.057 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -4942720435756386961
+13:50:05.059 [main] INFO  - <EC2> instance 6206038685086498205 initialized with maxConn: 1
+13:50:05.061 [main] INFO  - <EC2> instance 6206038685086498205 Monitor instance -4942720435756386961
+13:50:05.062 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 2779177148387211529
+13:50:05.062 [main] INFO  - <EC2>: EC2 6206038685086498205 added observer
+13:50:05.062 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 6206038685086498205
+13:50:05.062 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -7981282431629720549 is not running
+13:50:05.062 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:50:05.064 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:50:05.068 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:50:05.064 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:50:05.074 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:23:18.671 [main] INFO  - <ApiGateway>: ApiGateway created: -89411343723270491
+14:23:18.675 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -8913238349536294933
+14:23:18.678 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -4486000693379804831
+14:23:18.678 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -3402119309825830237
+14:23:18.680 [main] INFO  - S3 created with id: 4853303272921643937
+14:23:18.682 [main] INFO  - Bucket created with name: data and Id: 4055258550284594714
+14:23:18.684 [main] INFO  - <GetApi>: GetApi created: 3991059015066505844
+14:23:18.685 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -6832799988965682156
+14:23:18.688 [main] INFO  - <EC2> instance -4486000693379804831 initialized with maxConn: 1
+14:23:18.690 [main] INFO  - <EC2> instance -4486000693379804831 Monitor instance -6832799988965682156
+14:23:18.691 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3993830824051524641
+14:23:18.691 [main] INFO  - <EC2>: EC2 -4486000693379804831 added observer
+14:23:18.691 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -4486000693379804831
+14:23:18.691 [main] WARN  - <EC2>: CAN'T ADD OBSERVER: EC2 instance -3402119309825830237 is not running
+14:23:18.692 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+14:23:18.694 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:23:18.694 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:23:18.699 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+14:23:18.699 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:23:18.701 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 state changed to OVERLOADED
+14:23:18.702 [pool-4-thread-2] DEBUG - <EC2TargetGroup>: Selected target -4486000693379804831 for request
+14:23:18.702 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -4486000693379804831
+14:23:18.702 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 -4486000693379804831 added running request
+14:23:18.703 [pool-4-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -6832799988965682156 is overloaded
+14:23:18.712 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:-4486000693379804831 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+14:23:21.721 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+14:23:21.721 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 running requests changed to 0
+14:23:21.722 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 state changed to OVERLOADED
+14:23:21.722 [pool-4-thread-1] DEBUG - <EC2TargetGroup>: Selected target -4486000693379804831 for request
+14:23:21.722 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -4486000693379804831
+14:23:21.722 [pool-4-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 running requests changed to 0
+14:23:21.722 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 -4486000693379804831 added running request
+14:23:21.722 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 state changed to OVERLOADED
+14:23:21.722 [pool-4-thread-2] INFO  - <EC2TargetGroup>: EC2 -4486000693379804831 removed running request
+14:23:21.722 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:-4486000693379804831 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:23:24.735 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+14:23:24.735 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -4486000693379804831 running requests changed to 0
+14:23:24.736 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -6832799988965682156 has no running requests
+14:23:24.736 [pool-4-thread-1] INFO  - <EC2TargetGroup>: EC2 -4486000693379804831 removed running request
+14:23:43.685 [main] INFO  - <ApiGateway>: ApiGateway created: 2632165210081370045
+14:23:43.689 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 3009843086369752627
+14:23:43.692 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3623674149175292219
+14:23:43.692 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -6838255825694176119
+14:23:43.693 [main] INFO  - S3 created with id: -1039013457994809294
+14:23:43.696 [main] INFO  - Bucket created with name: data and Id: -4768086359311792908
+14:23:43.698 [main] INFO  - <GetApi>: GetApi created: 5981058533070291095
+14:23:43.700 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -3096353202742325055
+14:23:43.703 [main] INFO  - <EC2> instance 3623674149175292219 initialized with maxConn: 1
+14:23:43.705 [main] INFO  - <EC2> instance 3623674149175292219 Monitor instance -3096353202742325055
+14:23:43.705 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 5101117797973363700
+14:23:43.705 [main] INFO  - <EC2> instance -6838255825694176119 initialized with maxConn: 1
+14:23:43.705 [main] INFO  - <EC2> instance -6838255825694176119 Monitor instance 5101117797973363700
+14:23:43.706 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 4802328533101440141
+14:23:43.706 [main] INFO  - <EC2>: EC2 3623674149175292219 added observer
+14:23:43.706 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3623674149175292219
+14:23:43.706 [main] INFO  - <EC2>: EC2 -6838255825694176119 added observer
+14:23:43.706 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -6838255825694176119
+14:23:43.706 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+14:23:43.709 [main] INFO  - <EC2TargetGroup>: Target Monitor 3623674149175292219 state changed to OFFLINE
+14:23:43.710 [main] INFO  - <EC2TargetGroup>: Target Monitor 3623674149175292219 removed from target group
+14:23:43.710 [main] INFO  - <EC2> instance 3623674149175292219 shutdown
+14:23:43.713 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:23:43.713 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:23:43.717 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+14:23:43.717 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:23:43.717 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 state changed to OVERLOADED
+14:23:43.718 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target -6838255825694176119 for request
+14:23:43.718 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -6838255825694176119
+14:23:43.718 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -6838255825694176119 added running request
+14:23:43.720 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 5101117797973363700 is overloaded
+14:23:43.730 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-6838255825694176119 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+14:23:46.740 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+14:23:46.740 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 running requests changed to 0
+14:23:46.740 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 state changed to OVERLOADED
+14:23:46.741 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target -6838255825694176119 for request
+14:23:46.741 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 running requests changed to 0
+14:23:46.741 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -6838255825694176119
+14:23:46.741 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -6838255825694176119 added running request
+14:23:46.741 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -6838255825694176119 removed running request
+14:23:46.741 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 state changed to OVERLOADED
+14:23:46.741 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-6838255825694176119 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:23:49.750 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+14:23:49.750 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 running requests changed to 0
+14:23:49.752 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 5101117797973363700 has no running requests
+14:23:49.752 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -6838255825694176119 removed running request

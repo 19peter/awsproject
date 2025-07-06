@@ -55,7 +55,7 @@ public class Test_GateWay_EC2_S3 {
 
         logger.info("Shutting down components");
         apiGateway.shutdownAndAwait();
-        ec2.shutdownAndAwait();
+        ec2.shutdown();
         logger.info("Application shutdown complete");
     }
 }
