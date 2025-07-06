@@ -96,7 +96,7 @@ public class EC2
                             " And FnName: " + apiCheck.get().getName());
 
                     Response api = apiCheck.get().getFn().execute(data);
-                    Thread.sleep(Helpers.delayDuration);
+                    // Thread.sleep(Helpers.delayDuration);
                     logger.info("<EC2>: Api Executed: Returned Code: " + api.getCode());
                     return api;
                 } catch (Exception e) {

@@ -50,6 +50,7 @@ public class EC2TargetMonitorDecorator extends TargetMonitor<EC2> {
     protected boolean doAddRunningRequest() throws InterruptedException {
         if (runningRequests.get() < MAXCONN.get()) {
             runningRequests.incrementAndGet();
+            logger.info("<EC2TargetMonitorDecorator>: Monitor " + this.getId() + " added running request");
         } else {
             logger.info("<EC2TargetMonitorDecorator>: Monitor " + this.getId() + " is overloaded");
             return false;
@@ -66,6 +67,7 @@ public class EC2TargetMonitorDecorator extends TargetMonitor<EC2> {
     protected boolean doRemoveRunningRequest() {
         if (runningRequests.get() > 0) {
             runningRequests.decrementAndGet();
+            logger.info("<EC2TargetMonitorDecorator>: Monitor " + this.getId() + " removed running request");
         } else {
             logger.info("<EC2TargetMonitorDecorator>: Monitor " + this.getId() + " has no running requests");
             return false;

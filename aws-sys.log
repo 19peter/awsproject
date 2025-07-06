@@ -1716,3 +1716,473 @@
 14:23:49.750 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6838255825694176119 running requests changed to 0
 14:23:49.752 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 5101117797973363700 has no running requests
 14:23:49.752 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -6838255825694176119 removed running request
+20:41:26.737 [main] INFO  - <ApiGateway>: ApiGateway created: -8652927119779671184
+20:41:26.740 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 629575282946801832
+20:41:26.744 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -458492259535495321
+20:41:26.744 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -6008860161978079065
+20:41:26.746 [main] INFO  - S3 created with id: -8089576084571984605
+20:41:26.749 [main] INFO  - Bucket created with name: data and Id: -3991509458257785972
+20:41:26.752 [main] INFO  - <GetApi>: GetApi created: 5310931612952711979
+20:41:26.754 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -5392886479930138077
+20:41:26.757 [main] INFO  - <EC2> instance -458492259535495321 initialized with maxConn: 1
+20:41:26.759 [main] INFO  - <EC2> instance -458492259535495321 Monitor instance -5392886479930138077
+20:41:26.759 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 5382810843318248797
+20:41:26.760 [main] INFO  - <EC2> instance -6008860161978079065 initialized with maxConn: 1
+20:41:26.760 [main] INFO  - <EC2> instance -6008860161978079065 Monitor instance 5382810843318248797
+20:41:26.760 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3010167775788852980
+20:41:26.760 [main] INFO  - <EC2>: EC2 -458492259535495321 added observer
+20:41:26.761 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -458492259535495321
+20:41:26.761 [main] INFO  - <EC2>: EC2 -6008860161978079065 added observer
+20:41:26.761 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -6008860161978079065
+20:41:26.762 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:41:26.765 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:41:26.765 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:41:26.771 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:41:26.771 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:41:26.774 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 state changed to OVERLOADED
+20:41:26.774 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target -6008860161978079065 for request
+20:41:26.775 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -458492259535495321 state changed to OVERLOADED
+20:41:26.775 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -6008860161978079065
+20:41:26.775 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target -458492259535495321 for request
+20:41:26.775 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -458492259535495321
+20:41:26.775 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 added running request
+20:41:26.776 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -458492259535495321 added running request
+20:41:26.777 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 is overloaded
+20:41:26.777 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -5392886479930138077 is overloaded
+20:41:26.788 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:-458492259535495321 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:41:26.788 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-6008860161978079065 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:41:29.795 [pool-3-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:41:29.795 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:41:29.796 [pool-3-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -458492259535495321 running requests changed to 0
+20:41:29.796 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 running requests changed to 0
+20:41:29.797 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -5392886479930138077 has no running requests
+20:41:29.797 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 has no running requests
+20:41:29.797 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -458492259535495321 removed running request
+20:41:29.797 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 removed running request
+20:41:30.768 [main] INFO  - <EC2TargetGroup>: Target Monitor -458492259535495321 state changed to OFFLINE
+20:41:30.769 [main] INFO  - <EC2TargetGroup>: Target Monitor -458492259535495321 removed from target group
+20:41:30.769 [main] INFO  - <EC2> instance -458492259535495321 shutdown
+20:41:30.770 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:41:30.770 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:41:30.771 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:41:30.771 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:41:30.771 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 state changed to OVERLOADED
+20:41:30.771 [pool-5-thread-3] DEBUG - <EC2TargetGroup>: Selected target -6008860161978079065 for request
+20:41:30.771 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -6008860161978079065
+20:41:30.772 [pool-5-thread-3] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 added running request
+20:41:30.772 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 is overloaded
+20:41:30.772 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-6008860161978079065 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:41:33.783 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:41:33.783 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 running requests changed to 0
+20:41:33.783 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 has no running requests
+20:41:33.783 [pool-5-thread-3] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 removed running request
+20:41:33.783 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 state changed to OVERLOADED
+20:41:33.783 [pool-5-thread-4] DEBUG - <EC2TargetGroup>: Selected target -6008860161978079065 for request
+20:41:33.784 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -6008860161978079065
+20:41:33.784 [pool-5-thread-4] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 added running request
+20:41:33.784 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 is overloaded
+20:41:33.784 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-6008860161978079065 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:41:36.796 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:41:36.797 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -6008860161978079065 running requests changed to 0
+20:41:36.797 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor 5382810843318248797 has no running requests
+20:41:36.797 [pool-5-thread-4] INFO  - <EC2TargetGroup>: EC2 -6008860161978079065 removed running request
+20:43:19.398 [main] INFO  - <ApiGateway>: ApiGateway created: 1612931743768299014
+20:43:19.401 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -5683997517447645844
+20:43:19.404 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 3534366655076595359
+20:43:19.405 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 419051095465465126
+20:43:19.407 [main] INFO  - S3 created with id: -8425255474710914801
+20:43:19.410 [main] INFO  - Bucket created with name: data and Id: -1775430121880807263
+20:43:19.412 [main] INFO  - <GetApi>: GetApi created: 2359170537942337788
+20:43:19.413 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 7374754255722315119
+20:43:19.415 [main] INFO  - <EC2> instance 3534366655076595359 initialized with maxConn: 1
+20:43:19.417 [main] INFO  - <EC2> instance 3534366655076595359 Monitor instance 7374754255722315119
+20:43:19.417 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -5654001061505102123
+20:43:19.417 [main] INFO  - <EC2> instance 419051095465465126 initialized with maxConn: 1
+20:43:19.418 [main] INFO  - <EC2> instance 419051095465465126 Monitor instance -5654001061505102123
+20:43:19.418 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -4492880982139026422
+20:43:19.418 [main] INFO  - <EC2>: EC2 3534366655076595359 added observer
+20:43:19.418 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 3534366655076595359
+20:43:19.419 [main] INFO  - <EC2>: EC2 419051095465465126 added observer
+20:43:19.419 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 419051095465465126
+20:43:19.419 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:43:19.422 [main] INFO  - <EC2TargetGroup>: Target Monitor 3534366655076595359 state changed to OFFLINE
+20:43:19.422 [main] INFO  - <EC2TargetGroup>: Target Monitor 3534366655076595359 removed from target group
+20:43:19.423 [main] INFO  - <EC2> instance 3534366655076595359 shutdown
+20:43:19.426 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:43:19.426 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:43:19.430 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:43:19.430 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:43:19.431 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 state changed to OVERLOADED
+20:43:19.431 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target 419051095465465126 for request
+20:43:19.431 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 419051095465465126
+20:43:19.431 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 419051095465465126 added running request
+20:43:19.432 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -5654001061505102123 is overloaded
+20:43:19.441 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:419051095465465126 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:43:22.443 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:43:22.443 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 running requests changed to 0
+20:43:22.443 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 state changed to OVERLOADED
+20:43:22.444 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target 419051095465465126 for request
+20:43:22.444 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 419051095465465126
+20:43:22.444 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 running requests changed to 0
+20:43:22.444 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 419051095465465126 added running request
+20:43:22.444 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 state changed to OVERLOADED
+20:43:22.444 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 419051095465465126 removed running request
+20:43:22.445 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:419051095465465126 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:43:25.459 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:43:25.460 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 419051095465465126 running requests changed to 0
+20:43:25.460 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -5654001061505102123 has no running requests
+20:43:25.460 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 419051095465465126 removed running request
+20:45:15.514 [main] INFO  - <ApiGateway>: ApiGateway created: -2912569369335671157
+20:45:15.518 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -118023969711149266
+20:45:15.521 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 1879082742819110742
+20:45:15.521 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 2590012083073808025
+20:45:15.522 [main] INFO  - S3 created with id: 1144611862263369321
+20:45:15.525 [main] INFO  - Bucket created with name: data and Id: -1316153194890793937
+20:45:15.527 [main] INFO  - <GetApi>: GetApi created: -8806913439401269586
+20:45:15.529 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 6337660454548843715
+20:45:15.531 [main] INFO  - <EC2> instance 1879082742819110742 initialized with maxConn: 1
+20:45:15.533 [main] INFO  - <EC2> instance 1879082742819110742 Monitor instance 6337660454548843715
+20:45:15.533 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -5909471949284980547
+20:45:15.533 [main] INFO  - <EC2> instance 2590012083073808025 initialized with maxConn: 1
+20:45:15.533 [main] INFO  - <EC2> instance 2590012083073808025 Monitor instance -5909471949284980547
+20:45:15.534 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 7322954837033702991
+20:45:15.534 [main] INFO  - <EC2>: EC2 1879082742819110742 added observer
+20:45:15.534 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 1879082742819110742
+20:45:15.534 [main] INFO  - <EC2>: EC2 2590012083073808025 added observer
+20:45:15.534 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 2590012083073808025
+20:45:15.535 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:45:15.537 [main] INFO  - <EC2TargetGroup>: Target Monitor 1879082742819110742 state changed to OFFLINE
+20:45:15.537 [main] INFO  - <EC2TargetGroup>: Target Monitor 1879082742819110742 removed from target group
+20:45:15.537 [main] INFO  - <EC2> instance 1879082742819110742 shutdown
+20:45:15.539 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:45:15.543 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:45:15.544 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2590012083073808025 state changed to OVERLOADED
+20:45:15.544 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target 2590012083073808025 for request
+20:45:15.544 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 2590012083073808025
+20:45:15.544 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 2590012083073808025 added running request
+20:45:15.545 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -5909471949284980547 is overloaded
+20:45:15.548 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:2590012083073808025 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:45:18.550 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:45:18.551 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2590012083073808025 running requests changed to 0
+20:45:18.552 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -5909471949284980547 has no running requests
+20:45:18.553 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 2590012083073808025 removed running request
+20:45:19.546 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:45:19.556 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:45:19.556 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 2590012083073808025 state changed to OVERLOADED
+20:45:19.556 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target 2590012083073808025 for request
+20:45:19.557 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 2590012083073808025
+20:45:19.557 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 2590012083073808025 added running request
+20:45:19.557 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -5909471949284980547 is overloaded
+20:45:19.557 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:2590012083073808025 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:45:22.563 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:45:22.563 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 2590012083073808025 running requests changed to 0
+20:45:22.563 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -5909471949284980547 has no running requests
+20:45:22.564 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 2590012083073808025 removed running request
+20:46:17.951 [main] INFO  - <ApiGateway>: ApiGateway created: -3191740749293556609
+20:46:17.954 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -4687390539390758214
+20:46:17.957 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 9079164982279334622
+20:46:17.958 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -2349751420157421792
+20:46:17.959 [main] INFO  - S3 created with id: 6708195191726773178
+20:46:17.963 [main] INFO  - Bucket created with name: data and Id: -3164465892577000221
+20:46:17.965 [main] INFO  - <GetApi>: GetApi created: 6759084452675588315
+20:46:17.967 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 2472214002785206176
+20:46:17.970 [main] INFO  - <EC2> instance 9079164982279334622 initialized with maxConn: 1
+20:46:17.972 [main] INFO  - <EC2> instance 9079164982279334622 Monitor instance 2472214002785206176
+20:46:17.973 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -8990082917271221210
+20:46:17.973 [main] INFO  - <EC2> instance -2349751420157421792 initialized with maxConn: 1
+20:46:17.973 [main] INFO  - <EC2> instance -2349751420157421792 Monitor instance -8990082917271221210
+20:46:17.973 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -2414677592653742175
+20:46:17.974 [main] INFO  - <EC2>: EC2 9079164982279334622 added observer
+20:46:17.974 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 9079164982279334622
+20:46:17.974 [main] INFO  - <EC2>: EC2 -2349751420157421792 added observer
+20:46:17.974 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -2349751420157421792
+20:46:17.975 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@6bf0219d[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:46:17.977 [main] INFO  - <EC2TargetGroup>: Target Monitor 9079164982279334622 state changed to OFFLINE
+20:46:17.977 [main] INFO  - <EC2TargetGroup>: Target Monitor 9079164982279334622 removed from target group
+20:46:17.977 [main] INFO  - <EC2> instance 9079164982279334622 shutdown
+20:46:17.980 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:46:17.985 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:46:17.985 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2349751420157421792 state changed to OVERLOADED
+20:46:17.985 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target -2349751420157421792 for request
+20:46:17.985 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2349751420157421792
+20:46:17.985 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -2349751420157421792 added running request
+20:46:17.986 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -8990082917271221210 is overloaded
+20:46:17.992 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2349751420157421792 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:46:21.002 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:46:21.003 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2349751420157421792 running requests changed to 0
+20:46:21.004 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -8990082917271221210 has no running requests
+20:46:21.005 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 -2349751420157421792 removed running request
+20:46:21.985 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:46:21.986 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:46:21.987 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor -2349751420157421792 state changed to OVERLOADED
+20:46:21.987 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target -2349751420157421792 for request
+20:46:21.988 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2349751420157421792
+20:46:21.988 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -2349751420157421792 added running request
+20:46:21.988 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -8990082917271221210 is overloaded
+20:46:21.989 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2349751420157421792 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:46:25.001 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:46:25.002 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2349751420157421792 running requests changed to 0
+20:46:25.002 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -8990082917271221210 has no running requests
+20:46:25.003 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 -2349751420157421792 removed running request
+20:48:59.751 [main] INFO  - <ApiGateway>: ApiGateway created: 4585901974821039389
+20:48:59.754 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -2896198388837355565
+20:48:59.758 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -5385320497366149401
+20:48:59.758 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 6283339257807603377
+20:48:59.760 [main] INFO  - S3 created with id: -6820123584730297954
+20:48:59.762 [main] INFO  - Bucket created with name: data and Id: 9210880131526324064
+20:48:59.764 [main] INFO  - <GetApi>: GetApi created: 7370491524408702348
+20:48:59.766 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 2609910756534308721
+20:48:59.769 [main] INFO  - <EC2> instance -5385320497366149401 initialized with maxConn: 1
+20:48:59.771 [main] INFO  - <EC2> instance -5385320497366149401 Monitor instance 2609910756534308721
+20:48:59.771 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 8828160932614005903
+20:48:59.771 [main] INFO  - <EC2> instance 6283339257807603377 initialized with maxConn: 1
+20:48:59.772 [main] INFO  - <EC2> instance 6283339257807603377 Monitor instance 8828160932614005903
+20:48:59.772 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -3333336670050255610
+20:48:59.772 [main] INFO  - <EC2>: EC2 -5385320497366149401 added observer
+20:48:59.773 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -5385320497366149401
+20:48:59.773 [main] INFO  - <EC2>: EC2 6283339257807603377 added observer
+20:48:59.773 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 6283339257807603377
+20:48:59.773 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+20:48:59.777 [main] INFO  - <EC2TargetGroup>: Target Monitor -5385320497366149401 state changed to OFFLINE
+20:48:59.777 [main] INFO  - <EC2TargetGroup>: Target Monitor -5385320497366149401 removed from target group
+20:48:59.777 [main] INFO  - <EC2> instance -5385320497366149401 shutdown
+20:48:59.779 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.780 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.779 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.779 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.780 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.780 [pool-2-thread-6] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+20:48:59.789 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:48:59.789 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+20:48:59.789 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:48:59.790 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:48:59.789 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:48:59.790 [pool-5-thread-2] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:48:59.790 [pool-5-thread-6] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:48:59.790 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+20:48:59.790 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:48:59.790 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:48:59.792 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:48:59.893 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:49:02.898 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:49:02.898 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:02.899 [pool-5-thread-6] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:49:02.899 [pool-5-thread-6] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:49:02.899 [pool-5-thread-6] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:49:02.900 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:02.900 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:49:02.900 [pool-5-thread-6] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:49:02.900 [pool-5-thread-4] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:49:02.900 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:49:02.900 [pool-5-thread-6] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:49:02.900 [pool-5-thread-4] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:49:02.900 [pool-5-thread-2] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+20:49:02.900 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:49:02.900 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:49:05.901 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:49:05.901 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:05.902 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:49:05.902 [pool-5-thread-6] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:05.902 [pool-5-thread-6] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+20:49:05.902 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:49:05.902 [pool-5-thread-1] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:49:05.903 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:49:05.903 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:49:05.903 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:49:08.911 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:49:08.911 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:08.912 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:49:08.912 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:49:08.912 [pool-5-thread-3] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:49:08.912 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:08.912 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:49:08.912 [pool-5-thread-3] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:49:08.912 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 state changed to OVERLOADED
+20:49:08.912 [pool-5-thread-5] DEBUG - <EC2TargetGroup>: Selected target 6283339257807603377 for request
+20:49:08.912 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:49:08.912 [pool-5-thread-4] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+20:49:08.912 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 6283339257807603377
+20:49:08.912 [pool-5-thread-5] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 added running request
+20:49:08.912 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 is overloaded
+20:49:11.914 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:49:11.914 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 6283339257807603377 running requests changed to 0
+20:49:11.915 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:11.915 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+20:49:11.915 [pool-5-thread-1] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+20:49:14.917 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+20:49:14.918 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:14.918 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:14.918 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:6283339257807603377 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+20:49:14.918 [pool-5-thread-3] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+20:49:17.921 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+20:49:17.922 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:17.922 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor 8828160932614005903 has no running requests
+20:49:17.923 [pool-5-thread-5] INFO  - <EC2TargetGroup>: EC2 6283339257807603377 removed running request
+21:03:11.534 [main] INFO  - <ApiGateway>: ApiGateway created: -5012504947905576454
+21:03:11.538 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 6727248871367845120
+21:03:11.541 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -6013287861050887929
+21:03:11.541 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 8907637877162444583
+21:03:11.542 [main] INFO  - S3 created with id: -528449114373954102
+21:03:11.545 [main] INFO  - Bucket created with name: data and Id: -7435120687029643847
+21:03:11.549 [main] INFO  - <GetApi>: GetApi created: 4893909067219717046
+21:03:11.551 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -1568988315595556767
+21:03:11.553 [main] INFO  - <EC2> instance -6013287861050887929 initialized with maxConn: 1
+21:03:11.556 [main] INFO  - <EC2> instance -6013287861050887929 Monitor instance -1568988315595556767
+21:03:11.556 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -3279460939821164761
+21:03:11.556 [main] INFO  - <EC2> instance 8907637877162444583 initialized with maxConn: 1
+21:03:11.556 [main] INFO  - <EC2> instance 8907637877162444583 Monitor instance -3279460939821164761
+21:03:11.556 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 7921951424750905538
+21:03:11.557 [main] INFO  - <EC2>: EC2 -6013287861050887929 added observer
+21:03:11.557 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -6013287861050887929
+21:03:11.557 [main] INFO  - <EC2>: EC2 8907637877162444583 added observer
+21:03:11.557 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 8907637877162444583
+21:03:11.557 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:03:11.560 [main] INFO  - <EC2TargetGroup>: Selected target -6013287861050887929 with state OFFLINE for request
+21:03:11.560 [main] INFO  - <EC2TargetGroup>: Target Monitor -6013287861050887929 removed from target group
+21:03:11.561 [main] INFO  - <EC2> instance -6013287861050887929 shutdown
+21:03:11.563 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:03:11.563 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:03:11.563 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:03:11.563 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:03:11.563 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:03:11.573 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:03:11.574 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:03:11.574 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:03:11.574 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:03:11.574 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:03:11.574 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:11.575 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:11.575 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8907637877162444583
+21:03:11.576 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 is overloaded
+21:03:11.580 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:8907637877162444583 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:03:14.588 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+21:03:14.588 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:14.588 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:14.588 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:14.589 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:14.589 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8907637877162444583
+21:03:14.589 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:14.589 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:14.589 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:14.589 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:14.590 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:8907637877162444583 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:03:17.600 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:03:17.600 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:17.600 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:17.600 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:17.601 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:17.601 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8907637877162444583
+21:03:17.601 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:17.601 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:17.601 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:17.601 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:17.602 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:8907637877162444583 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:03:20.611 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:03:20.611 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:20.611 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:20.611 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 has no running requests
+21:03:20.613 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:20.613 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:20.613 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8907637877162444583
+21:03:20.613 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 is overloaded
+21:03:20.613 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:8907637877162444583 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:03:23.625 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:03:23.625 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:23.625 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:23.625 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:23.626 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:23.626 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: 8907637877162444583
+21:03:23.626 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:23.626 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:23.626 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 added running request
+21:03:23.626 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Selected target 8907637877162444583 with state OVERLOADED for request
+21:03:23.626 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:8907637877162444583 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:03:26.642 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:03:26.642 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 removed running request
+21:03:26.642 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor 8907637877162444583 running requests changed to 0
+21:03:26.643 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -3279460939821164761 has no running requests
+21:09:08.801 [main] INFO  - <ApiGateway>: ApiGateway created: 5225739014594794422
+21:09:08.804 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -2018122132638619784
+21:09:08.808 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: 1000170138485199171
+21:09:08.808 [main] INFO  - <EC2>: EC2 instance created with maxConn: 1 and id: -2524148485237012442
+21:09:08.809 [main] INFO  - S3 created with id: 1118110038183258753
+21:09:08.812 [main] INFO  - Bucket created with name: data and Id: -6155492504164552277
+21:09:08.814 [main] INFO  - <GetApi>: GetApi created: 2756581524732818965
+21:09:08.816 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: 2797072013167644921
+21:09:08.818 [main] INFO  - <EC2> instance 1000170138485199171 initialized with maxConn: 1
+21:09:08.820 [main] INFO  - <EC2> instance 1000170138485199171 Monitor instance 2797072013167644921
+21:09:08.820 [main] INFO  - <EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: 1 and id: -1024819810176779772
+21:09:08.820 [main] INFO  - <EC2> instance -2524148485237012442 initialized with maxConn: 1
+21:09:08.820 [main] INFO  - <EC2> instance -2524148485237012442 Monitor instance -1024819810176779772
+21:09:08.821 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 2925411833519436830
+21:09:08.821 [main] INFO  - <EC2>: EC2 1000170138485199171 added observer
+21:09:08.821 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: 1000170138485199171
+21:09:08.821 [main] INFO  - <EC2>: EC2 -2524148485237012442 added observer
+21:09:08.821 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: -2524148485237012442
+21:09:08.821 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@5f16132a[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+21:09:08.823 [main] INFO  - <EC2TargetGroup>: Selected target 1000170138485199171 with new state OFFLINE for request
+21:09:08.823 [main] INFO  - <EC2TargetGroup>: Target Monitor 1000170138485199171 removed from target group
+21:09:08.824 [main] INFO  - <EC2> instance 1000170138485199171 shutdown
+21:09:08.826 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:09:08.826 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:09:08.826 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:09:08.826 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:09:08.826 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+21:09:08.838 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:09:08.838 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+21:09:08.838 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:09:08.838 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:09:08.838 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+21:09:08.839 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.839 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.839 [pool-5-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2524148485237012442
+21:09:08.839 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 is overloaded
+21:09:08.844 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2524148485237012442 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:09:08.845 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:09:08.845 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.845 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.845 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.846 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.846 [pool-5-thread-3] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.846 [pool-5-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2524148485237012442
+21:09:08.847 [pool-5-thread-3] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.847 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.847 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.847 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2524148485237012442 with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+21:09:08.847 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 200
+21:09:08.847 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.847 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.847 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.847 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.847 [pool-5-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2524148485237012442
+21:09:08.847 [pool-5-thread-5] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.847 [pool-5-thread-5] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.848 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.848 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.848 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2524148485237012442 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:09:08.849 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:09:08.849 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.849 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.849 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.850 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.850 [pool-5-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2524148485237012442
+21:09:08.850 [pool-5-thread-4] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.850 [pool-5-thread-4] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.850 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.850 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.850 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2524148485237012442 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:09:08.850 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:09:08.851 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.851 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.851 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.851 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.851 [pool-5-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: -2524148485237012442
+21:09:08.851 [pool-5-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.851 [pool-5-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.851 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 added running request
+21:09:08.851 [pool-5-thread-2] INFO  - <EC2TargetGroup>: Selected target -2524148485237012442 with new state OVERLOADED for request
+21:09:08.851 [pool-4-thread-1] INFO  - <EC2>: Executing API in EC2:-2524148485237012442 with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+21:09:08.852 [pool-4-thread-1] INFO  - <EC2>: Api Executed: Returned Code: 400
+21:09:08.852 [pool-4-thread-1] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 removed running request
+21:09:08.852 [pool-4-thread-1] INFO  - <EC2TargetGroup>: Target Monitor -2524148485237012442 running requests changed to 0
+21:09:08.852 [pool-5-thread-2] INFO  - <EC2TargetMonitorDecorator>: Monitor -1024819810176779772 has no running requests

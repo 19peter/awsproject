@@ -7,8 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Builders.EC2Builder;
 import org.peters.projectaws.Components.EC2.EC2;
-import org.peters.projectaws.Components.Monitors.EC2TargetMonitorDecorator;
-import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.enums.TargetState;
@@ -39,7 +37,6 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
             return null;
         }
 
-        logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " found target: " + target.get().getId());
 
         return processRequest(target.get(), request);
     }
@@ -70,7 +67,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
             // Try to get a connection slot
             try {
                 if (target.targetMonitor.addRunningRequest()) {
-                    logger.debug("<EC2TargetGroup>: Selected target {} for request", target.getId());
+                    logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " found target: " + target.getId());
                     return Optional.of(target);
                 }
             } catch (InterruptedException e) {
@@ -111,7 +108,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
     @Override
     public void onTargetStateChanged(EC2 ec2, TargetState newState) {
-        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getId() + " state changed to " + newState);
+        logger.info("<EC2TargetGroup>: Selected target {} for request", ec2.getId() + " with new state " + newState);
         if (newState == TargetState.UNHEALTHY || newState == TargetState.OFFLINE) {
             targetsList.remove(ec2);
             // addTarget(createHealthyTarget(target.getMaxConnections()));
@@ -137,16 +134,13 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private Response processRequest(EC2 target, Request request) {
         try {
-            logger.info("<EC2TargetGroup>: EC2 " + target.getId() + " added running request");
             Response response = target.executeApi(request);
             return response;
-
         } catch (Exception e) {
-            logger.error("<EC2TargetGroup>: EC2 " + target.getId() + " removed running request");
+            logger.error("<EC2TargetGroup>: Exception while processing request " + request.getPath() + " " + e.getMessage());
             throw new RuntimeException(e);
         } finally {
             target.targetMonitor.removeRunningRequest();
-            logger.info("<EC2TargetGroup>: EC2 " + target.getId() + " removed running request");
         }
     }
 
