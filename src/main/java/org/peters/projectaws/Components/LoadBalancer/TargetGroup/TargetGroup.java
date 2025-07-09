@@ -5,14 +5,15 @@ import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.Targe
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.enums.TargetState;
 
-import java.util.List;
+
 import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class TargetGroup <T extends AWSObject>
 extends AWSObject
 implements TargetIntegrationInterface, TargetStateObserverInterface<T> {
     String path;
-    List<T> targetsList;
+    CopyOnWriteArrayList<T> targetsList;
 
     public TargetGroup(String path) {
         this.path = path;
@@ -29,5 +30,6 @@ implements TargetIntegrationInterface, TargetStateObserverInterface<T> {
     abstract Optional<T> getAvailableInstance();
     
     public abstract void addTarget(T target);
+    public abstract void removeTarget(T target);
 
 }

@@ -6,11 +6,11 @@ import org.peters.projectaws.Components.EC2.EC2;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.enums.TargetState;
 
-public class EC2TargetMonitorDecorator extends TargetMonitor<EC2> {
-    private static final Logger logger = LogManager.getLogger(EC2TargetMonitorDecorator.class);
+public class EC2TargetMonitor extends TargetMonitor<EC2> {
+    private static final Logger logger = LogManager.getLogger(EC2TargetMonitor.class);
     private final EC2 ec2Instance;
 
-    public EC2TargetMonitorDecorator(EC2 ec2Instance, int maxConn) {
+    public EC2TargetMonitor(EC2 ec2Instance, int maxConn) {
         super(maxConn);
         this.ec2Instance = ec2Instance;
         logger.info("<EC2TargetMonitorDecorator>: EC2TargetMonitor created with maxConn: " + maxConn + " and id: " + this.getId());

@@ -3,7 +3,7 @@ package org.peters.projectaws.Components.EC2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.API.Api;
-import org.peters.projectaws.Components.Monitors.EC2TargetMonitorDecorator;
+import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Helpers.Helpers;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
@@ -24,7 +24,7 @@ public class EC2
         extends AWSObject
         implements ApiGatewayIntegrationInterface, LifecycleManager {
 
-    public EC2TargetMonitorDecorator targetMonitor;
+    public EC2TargetMonitor targetMonitor;
     private static final Logger logger = LogManager.getLogger(EC2.class);
     private List<Api> apis;
     private ExecutorService executor;
@@ -130,7 +130,7 @@ public class EC2
     public void initialize() {
         if (!this.getRunning()) {
             this.executor = Executors.newFixedThreadPool(maxConn);
-            this.targetMonitor = new EC2TargetMonitorDecorator(this, maxConn);
+            this.targetMonitor = new EC2TargetMonitor(this, maxConn);
             this.targetMonitor.initialize();
             if (this.apis == null)
                 this.apis = new ArrayList<>();

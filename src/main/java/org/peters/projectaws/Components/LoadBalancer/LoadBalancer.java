@@ -83,12 +83,10 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         if (!isRunning.get()) throw new IllegalStateException("LoadBalancer is not running");  
        
         String rule = request.getPath();
-        if(!targetGroupsRoutingRules.containsKey(rule)) throw new IllegalArgumentException("Invalid path"); 
-       
-        logger.info("<LoadBalancer>: LoadBalancer received request: " + request.getPath() + " " + request.getMethod());
+        if(!targetGroupsRoutingRules.containsKey(rule)) throw new IllegalArgumentException("Invalid path");
+
+        logger.info("<LoadBalancer>: LoadBalancer received request: {} {}", request.getPath(), request.getMethod());
         TargetIntegrationInterface target = targetGroupsRoutingRules.get(rule);
-        // Response response = target.receiveFromLoadBalancer(request);
-        // return response;
         
         Future<Response> future = executorService.submit(
             () -> target.receiveFromLoadBalancer(request));
@@ -101,18 +99,6 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
             }
-        // try {
-        //     if (future.isDone()) {
-        //         if (future.get(TIMEOUT, TimeUnit.MILLISECONDS) != null) {
-        //             return future.get(TIMEOUT, TimeUnit.MILLISECONDS);
-        //         }
-        //     }
-        // } catch (TimeoutException e) {
-        //     future.cancel(true);
-        //     throw new RuntimeException("Request timed out");    
-        // } catch (InterruptedException | ExecutionException e) {
-        //     throw new RuntimeException(e);
-        // }
     }
 
 

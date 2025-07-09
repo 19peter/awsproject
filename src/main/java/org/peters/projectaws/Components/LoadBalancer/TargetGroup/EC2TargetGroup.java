@@ -1,6 +1,5 @@
 package org.peters.projectaws.Components.LoadBalancer.TargetGroup;
 
-import java.util.ArrayList;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
@@ -10,6 +9,7 @@ import org.peters.projectaws.Components.EC2.EC2;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.enums.TargetState;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 //Interacts with the Target Monitor Class of the EC2 Instance
 public class EC2TargetGroup extends TargetGroup<EC2> {
@@ -21,7 +21,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
     
     public EC2TargetGroup(String path) {
         super(path);
-        targetsList = new ArrayList<>();
+        targetsList = new CopyOnWriteArrayList<>();
         logger.info("<EC2TargetGroup>: EC2TargetGroup created with path: " + path + " and Id: " + this.getId());
     }
 
@@ -104,6 +104,17 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
         if(!ec2.addObserver(this)) return;
         targetsList.add(ec2);
         logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " added target: " + ec2.getId());
+    }
+
+    @Override
+    public void removeTarget(EC2 ec2) {
+        if (!(ec2 instanceof EC2)) {
+            logger.error("<EC2TargetGroup>: Invalid Instance Type");
+            return;
+        }
+        if(!ec2.removeObserver(this)) return;
+        targetsList.remove(ec2);
+        logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " removed target: " + ec2.getId());
     }
 
     @Override

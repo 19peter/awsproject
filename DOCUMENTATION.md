@@ -28,31 +28,61 @@ Base class for all AWS resources with common properties like ID, name, and runni
 
 ## 4. Design Patterns
 
-### 4.1 Builder Pattern
+### 4.1 Composite Strategy Pattern
+
+#### Overview
+The system implements a two-layer Composite Strategy Pattern for flexible request routing. This pattern combines the Strategy and Composite patterns to create a hierarchical structure of interchangeable algorithms.
+
+#### Implementation
+
+**Layer 1: API Gateway Routing**
+- **Strategy Interface**: `ApiGatewayIntegrationInterface`
+  ```java
+  public interface ApiGatewayIntegrationInterface {
+      Response receiveFromGateway(Request request) throws Exception;
+  }
+  ```
+- **Concrete Strategies**:
+  - `EC2Integration`: Handles direct EC2 requests
+  - `S3Integration`: Manages S3 object operations
+  - `LoadBalancerIntegration`: Routes to appropriate load balancer
+
+**Layer 2: Load Balancer Routing**
+- **Strategy Interface**: `TargetIntegrationInterface`
+  ```java
+  public interface TargetIntegrationInterface {
+      Response receiveFromLoadBalancer(Request request) throws Exception;
+  }
+  ```
+- **Concrete Strategies**:
+  - `EC2TargetGroup`: Manages EC2 instances
+  - `LambdaTargetGroup`: Handles Lambda function invocations
+
+#### Key Benefits
+1. **Flexible Routing**: Each layer can independently determine how to process requests
+2. **Extensibility**: New strategies can be added without modifying existing code
+3. **Maintainability**: Clear separation of concerns between routing layers
+4. **Scalability**: Easy to add new routing logic at any level
+
+### 4.2 Builder Pattern
 Used in the `Builders` package to create complex objects step by step.
 
-### 4.2 Decorator Pattern
-- `EC2TargetMonitorDecorator` adds monitoring capabilities to EC2 instances
-- `TargetMonitor` provides base monitoring functionality
-
-### 4.3 Observer Pattern
-- `TargetStateObserverInterface` for monitoring state changes
-- Used in load balancing and auto-scaling
-
-### 4.4 Template Method
+### 4.3 Template Method Pattern
 - `TargetMonitor` defines the skeleton of monitoring operations
-- Subclasses implement specific behavior
+- `EC2TargetMonitor` provides concrete implementations of the monitoring steps
+- This pattern allows defining the algorithm's structure while letting subclasses redefine certain steps
 
-### 4.5 Strategy Pattern
-- Different target groups implement `TargetIntegrationInterface`
-- Allows switching between different load balancing strategies
+### 4.4 Observer Pattern
+- `TargetStateObserverInterface` for monitoring state changes
+- Used in load balancing and auto-scaling to notify components of state changes
+- `EC2TargetMonitor` notifies observers when the EC2 instance's state changes
 
 ## 5. Key Classes
 
 ### 5.1 EC2 (`Components/EC2/EC2.java`)
 - Represents an EC2 instance
 - Implements `ApiGatewayIntegrationInterface` and `LifecycleManager`
-- Uses `EC2TargetMonitorDecorator` for monitoring
+- Uses `EC2TargetMonitor` for monitoring instance state and notifying observers
 
 ### 5.2 LoadBalancer (`Components/LoadBalancer/LoadBalancer.java`)
 - Distributes incoming traffic
@@ -65,11 +95,16 @@ Used in the `Builders` package to create complex objects step by step.
 - `LambdaTargetGroup` manages Lambda functions
 
 ### 5.4 TargetMonitor (`Components/Monitors/TargetMonitor.java`)
-- Base class for monitoring targets
-- Tracks state and running requests
-- Notifies observers of state changes
+- Abstract base class that defines the monitoring algorithm structure
+- Uses the Template Method pattern to allow subclasses to implement specific monitoring behavior
+- Manages observer registration and notification
 
-### 5.5 API Gateway (`Components/ApiGateway/ApiGateway.java`)
+### 5.5 EC2TargetMonitor (`Components/Monitors/EC2TargetMonitor.java`)
+- Implements EC2-specific monitoring functionality
+- Extends `TargetMonitor` to provide concrete implementations of monitoring steps
+- Manages EC2 instance state and notifies observers of changes
+
+### 5.6 API Gateway (`Components/ApiGateway/ApiGateway.java`)
 - Manages APIs and routes
 - Integrates with other services
 
