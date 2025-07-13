@@ -24,7 +24,7 @@ public class Test_GateWay_EC2_S3 {
         S3Builder s3Builder = new S3Builder();
 
         ApiGateway apiGateway = gatewayBuilder.createGateway();
-        EC2 ec2 = ec2Builder.createEc2(1);
+        EC2 ec2 = ec2Builder.createEc2(1, "EC2-ONE");
         S3 s3 = S3Builder.s3;
 
 

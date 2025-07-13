@@ -22,8 +22,9 @@ public class LambdaExecutionContextMonitor extends TargetMonitor<LambdaExecution
 
     @Override
     protected void doSetTargetUnhealthy() {
+        TargetState oldState = this.state;
         this.state = TargetState.UNHEALTHY;
-        notifyObserversOfStateChange(TargetState.UNHEALTHY);
+        notifyObserversOfStateChange(oldState, TargetState.UNHEALTHY);
     }
 
     @Override
@@ -42,8 +43,10 @@ public class LambdaExecutionContextMonitor extends TargetMonitor<LambdaExecution
         }
         
         if (runningRequests.get() == MAXCONN.get()) {
+            TargetState oldState = this.state;
             this.state = TargetState.OVERLOADED;
-            notifyObserversOfStateChange(TargetState.OVERLOADED);
+
+            notifyObserversOfStateChange(oldState, TargetState.OVERLOADED);
         }
         return true;
     }
@@ -59,8 +62,9 @@ public class LambdaExecutionContextMonitor extends TargetMonitor<LambdaExecution
         }
         
         if (runningRequests.get() == 0) {
+            TargetState oldState = this.state;
             this.state = TargetState.HEALTHY;
-            notifyObserversOfStateChange(TargetState.HEALTHY);
+            notifyObserversOfStateChange(oldState, TargetState.HEALTHY);
         }
         return true;
     }
@@ -76,26 +80,33 @@ public class LambdaExecutionContextMonitor extends TargetMonitor<LambdaExecution
     }
 
     @Override
-    protected void doNotifyObserversOfStateChange(TargetState newState) {
+    protected void doNotifyObserversOfStateChange(TargetState oldState, TargetState newState) {
         for (TargetStateObserverInterface<LambdaExecutionContext> observer : observers) {
-            observer.onTargetStateChanged(lambdaExecutionContext, newState);
+            observer.onTargetStateChanged(lambdaExecutionContext, oldState, newState);
         }
     }
 
     @Override
     protected void doNotifyObserversOfRunningRequestsChange() {
         for (TargetStateObserverInterface<LambdaExecutionContext> observer : observers) {
-            observer.onRunningRequestsChanged(lambdaExecutionContext);
+            observer.onRunningRequestsChanged(lambdaExecutionContext, runningRequests.get());
         }
     }
 
     @Override
     protected void doShutdown() {
-        doNotifyObserversOfStateChange(TargetState.OFFLINE);
+        doNotifyObserversOfStateChange(TargetState.OFFLINE, TargetState.OFFLINE);
     }
 
     @Override
     protected void doInitialize() {
-        doNotifyObserversOfStateChange(TargetState.HEALTHY);
+        doNotifyObserversOfStateChange(null, TargetState.HEALTHY);
+    }
+
+    @Override
+    protected void doSetState(TargetState state) {
+        TargetState oldState = this.state;
+        this.state = state;
+        notifyObserversOfStateChange(oldState, state);
     }
 }

@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Annotations.Benchmark.BenchmarkProxy;
 import org.peters.projectaws.Components.Lambda.Lambda;
 import org.peters.projectaws.Components.Lambda.LambdaExecutionContext;
+import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
 import org.peters.projectaws.Interfaces.Lambda.LambdaHandler;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
@@ -45,7 +46,7 @@ public class LambdaTargetGroup extends TargetGroup<LambdaExecutionContext> {
     }
 
     @Override
-    public void onTargetStateChanged(LambdaExecutionContext target, TargetState newState) {
+    public void onTargetStateChanged(LambdaExecutionContext target, TargetState oldState, TargetState newState) {
         if (newState != TargetState.OVERLOADED) {
             this.executor.submit(() -> {
                 try {
@@ -63,11 +64,11 @@ public class LambdaTargetGroup extends TargetGroup<LambdaExecutionContext> {
     }
 
     @Override
-    public void onRunningRequestsChanged(LambdaExecutionContext target) {
+    public void onRunningRequestsChanged(LambdaExecutionContext target, int runningRequests) {
     }
 
     @Override
-    Optional<LambdaExecutionContext> getAvailableInstance() {
+    public Optional<LambdaExecutionContext> getAvailableInstance() {
         if (targetsList.isEmpty()) {
             logger.info("<LambdaTargetGroup>: TargetGroup " + this.getPath() + " is empty");
             LambdaExecutionContext lambdaExecutionContext = new LambdaExecutionContext("", 0, 0);

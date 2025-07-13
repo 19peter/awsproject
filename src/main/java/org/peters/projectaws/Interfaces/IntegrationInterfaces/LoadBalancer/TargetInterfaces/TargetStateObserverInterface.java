@@ -4,6 +4,6 @@ import org.peters.projectaws.enums.TargetState;
 import org.peters.projectaws.Core.AWSObject;
 
 public interface TargetStateObserverInterface<T extends AWSObject> {
-    void onTargetStateChanged(T target, TargetState newState);
-    void onRunningRequestsChanged(T target);
+    void onTargetStateChanged(T target, TargetState oldState, TargetState newState);
+    void onRunningRequestsChanged(T target, int runningRequests);
 }

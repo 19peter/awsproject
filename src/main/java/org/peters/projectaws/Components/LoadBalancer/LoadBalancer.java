@@ -2,12 +2,12 @@ package org.peters.projectaws.Components.LoadBalancer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Components.LoadBalancer.TargetGroup.TargetGroup;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetIntegrationInterface;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
+import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
 import org.peters.projectaws.Core.AWSObject;
 
 import java.util.concurrent.*;

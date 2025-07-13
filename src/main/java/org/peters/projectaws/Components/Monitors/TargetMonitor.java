@@ -21,7 +21,10 @@ public abstract class TargetMonitor<T extends AWSObject> extends AWSObject {
         this.MAXCONN = new AtomicInteger(maxConn);
     }
 
-  
+    public TargetMonitor(int maxConn, String name) {
+        super(name);
+        this.MAXCONN = new AtomicInteger(maxConn);
+    }
 
     public int getMaxConnections() {
         return MAXCONN.get();
@@ -35,6 +38,11 @@ public abstract class TargetMonitor<T extends AWSObject> extends AWSObject {
     public final synchronized TargetState getState() {
         return doGetState();
     }
+
+    public final synchronized void setState(TargetState state) {
+        doSetState(state);
+    }
+    
 
     public final synchronized void setTargetUnhealthy() {
         doSetTargetUnhealthy();
@@ -60,8 +68,8 @@ public abstract class TargetMonitor<T extends AWSObject> extends AWSObject {
         doRemoveObserver(observer);
     }
 
-    public final synchronized void notifyObserversOfStateChange(TargetState newState) {
-        doNotifyObserversOfStateChange(newState);
+    public final synchronized void notifyObserversOfStateChange(TargetState oldState, TargetState newState) {
+        doNotifyObserversOfStateChange(oldState, newState);
     }
 
     public final synchronized void notifyObserversOfRunningRequestsChange() {
@@ -78,13 +86,14 @@ public abstract class TargetMonitor<T extends AWSObject> extends AWSObject {
 
     // Abstract hook methods that must be implemented by subclasses
     protected abstract TargetState doGetState();
+    protected abstract void doSetState(TargetState state);
     protected abstract void doSetTargetUnhealthy();
     protected abstract int doGetRunningRequests();
     protected abstract boolean doAddRunningRequest() throws InterruptedException;
     protected abstract boolean doRemoveRunningRequest();
     protected abstract void doAddObserver(TargetStateObserverInterface<T> observer);
     protected abstract void doRemoveObserver(TargetStateObserverInterface<T> observer);
-    protected abstract void doNotifyObserversOfStateChange(TargetState newState);
+    protected abstract void doNotifyObserversOfStateChange(TargetState oldState, TargetState newState);
     protected abstract void doNotifyObserversOfRunningRequestsChange();
     protected abstract void doShutdown();
     protected abstract void doInitialize();

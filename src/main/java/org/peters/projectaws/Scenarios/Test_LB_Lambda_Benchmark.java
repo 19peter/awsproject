@@ -9,7 +9,7 @@ import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.Lambda.Lambda;
 import org.peters.projectaws.Components.Lambda.LambdaExecutionContext;
 import org.peters.projectaws.Components.LoadBalancer.LoadBalancer;
-import org.peters.projectaws.Components.LoadBalancer.TargetGroup.TargetGroup;
+import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
 import org.peters.projectaws.dtos.Request.Request;
 
 public class Test_LB_Lambda_Benchmark {

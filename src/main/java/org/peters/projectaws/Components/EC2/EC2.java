@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
-import org.peters.projectaws.Helpers.Helpers;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
@@ -20,6 +19,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+//Create EC2, Create TargetGroup and add EC2 to TargetGroup's targetList
+//Then add the TargetGroup as an observer to the EC2's targetMonitor
 public class EC2
         extends AWSObject
         implements ApiGatewayIntegrationInterface, LifecycleManager {
@@ -30,46 +31,66 @@ public class EC2
     private ExecutorService executor;
     private int maxConn;
 
-    public EC2(int maxConn) {
+    public EC2(int maxConn, String name) {
+        super(name);
         this.maxConn = maxConn;
-        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and id: " + this.getId());
+        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
+                + " and id: " + this.getId());
     }
 
-    public EC2(List<Api> apis, int maxConn) {
+    public EC2(List<Api> apis, int maxConn, String name) {
+        super(name);
         this.apis = apis;
         this.maxConn = maxConn;
-        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and id: " + this.getId());
+        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
+                + " and id: " + this.getId());
+    }
+
+    public EC2(EC2 ec2) {
+        this.apis = ec2.apis;
+        this.maxConn = ec2.maxConn;
+        this.setName("COPY::" + ec2.getName());
+        logger.info("<EC2>: EC2 Copy instance created with maxConn: " + maxConn + " and name: " + this.getName()
+                + " and id: " + this.getId());
     }
 
     public boolean addObserver(TargetStateObserverInterface<EC2> observer) {
         if (this.getRunning()) {
             this.targetMonitor.addObserver(observer);
-            logger.info("<EC2>: EC2 " + this.getId() + " added observer");
+            logger.info("<EC2>: EC2 " + this.getName() + " added observer");
             return true;
         } else {
-            logger.warn("<EC2>: CAN'T ADD OBSERVER: EC2 instance " + this.getId() + " is not running");
+            logger.warn("<EC2>: CAN'T ADD OBSERVER: EC2 instance " + this.getName() + " is not running");
             return false;
         }
     }
 
     public boolean removeObserver(TargetStateObserverInterface<EC2> observer) {
         if (this.getRunning()) {
-              this.targetMonitor.removeObserver(observer);
+            this.targetMonitor.removeObserver(observer);
             return true;
         } else {
-            logger.warn("<EC2>: CAN'T REMOVE OBSERVER: EC2 instance " + this.getId() + " is not running");
+            logger.warn("<EC2>: CAN'T REMOVE OBSERVER: EC2 instance " + this.getName() + " is not running");
             return false;
         }
     }
 
     public void setApis(Api api) {
-        if (apis != null) 
+        if (apis != null)
             apis.add(api);
         else
             apis = new ArrayList<>();
-        
+
         apis.add(api);
-        
+
+    }
+
+    public void setApis(List<Api> apis) {
+        this.apis = apis;
+    }
+
+    public List<Api> getApis() {
+        return apis;
     }
 
     public Response executeApi(Request request) {
@@ -86,22 +107,28 @@ public class EC2
             return null;
         }
 
+
+        if (executor == null || executor.isShutdown()) {
+            logger.error("Executor is not initialized or has been shutdown");
+            return null;
+        }
+
         try {
             this.targetMonitor.addRunningRequest();
             Future<Response> future = executor.submit(() -> {
                 try {
-                    logger.info("<EC2>: Executing API in EC2:" + this.getId() +
+                    logger.info("<EC2>: Executing API in EC2:" + this.getName() +
                             " with method: " + method +
                             " And params: " + data +
                             " And FnName: " + apiCheck.get().getName());
 
                     Response api = apiCheck.get().getFn().execute(data);
                     // Thread.sleep(Helpers.delayDuration);
-                    logger.info("<EC2>: Api Executed: Returned Code: " + api.getCode());
+                    logger.info("<EC2>: " + this.getName() + " Api Executed: Returned Code: " + api.getCode());
                     return api;
                 } catch (Exception e) {
                     targetMonitor.setTargetUnhealthy();
-                    logger.info("<EC2>: EC2 " + this.getId() + " is unhealthy");
+                    logger.info("<EC2>: EC2 " + this.getName() + " is unhealthy");
                     throw new RuntimeException(e);
                 } finally {
                     this.targetMonitor.removeRunningRequest();
@@ -112,10 +139,11 @@ public class EC2
             return future.get(30, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            logger.error("<EC2> " + this.getId() + " " + e.getMessage());
+            logger.error("<EC2> " + this.getName() + " " + e.getMessage());
             throw new RuntimeException("Request interrupted", e);
-        } catch (Exception e) {
-            logger.error("<EC2> " + this.getId() + " " + e.getMessage());
+        }
+        catch (Exception e) {
+            logger.error("<EC2> " + this.getName() + " " + e.getMessage());
             targetMonitor.setTargetUnhealthy();
             throw new RuntimeException(e);
         }
@@ -129,16 +157,18 @@ public class EC2
     @Override
     public void initialize() {
         if (!this.getRunning()) {
+            logger.info("<EC2> -----INITIALIZING INSTANCE-----: " + this.getId());
             this.executor = Executors.newFixedThreadPool(maxConn);
-            this.targetMonitor = new EC2TargetMonitor(this, maxConn);
+            this.targetMonitor = new EC2TargetMonitor(this, maxConn, "MONITOR::" + this.getName());
             this.targetMonitor.initialize();
             if (this.apis == null)
                 this.apis = new ArrayList<>();
             this.setRunning(true);
-            logger.info("<EC2> instance " + this.getId() + " initialized" + " with maxConn: " + maxConn);
-            logger.info("<EC2> instance " + this.getId() + " Monitor instance " + this.targetMonitor.getId());
+            logger.info("<EC2> -----INITIALIZED INSTANCE-----: " + this.getName() + " with maxConn: " + maxConn);
+            logger.info("<EC2> -----INITIALIZED MONITOR-----: " + this.getName() + " Monitor instance "
+                    + this.targetMonitor.getName());
         } else {
-            logger.info("<EC2> instance " + this.getId() + " is already running");
+            logger.info("<EC2> instance " + this.getName() + " is already running");
         }
     }
 
@@ -150,13 +180,13 @@ public class EC2
             executor = null;
             this.targetMonitor = null;
             this.setRunning(false);
-            logger.info("<EC2> instance " + this.getId() + " shutdown");
+            logger.info("<EC2> instance " + this.getName() + " shutdown");
         }
     }
 
     @Override
     public boolean isRunning() {
-        logger.info("<EC2> instance " + this.getId() + " isRunning: " + Boolean.toString(this.getRunning()));
+        logger.info("<EC2> instance " + this.getName() + " isRunning: " + Boolean.toString(this.getRunning()));
         return this.isRunning();
     }
 
