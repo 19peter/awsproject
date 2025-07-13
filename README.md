@@ -136,6 +136,10 @@ Used in the `Builders` package to create complex objects step by step.
    - Load Balancer selects target from Target Group
    - Target processes request and returns response
 
+   Create EC2/Lambda, Create TargetGroup and add EC2 to TargetGroup's targetList (addTarget(T))
+   Then add the TargetGroup as an observer to the EC2/Lambda's targetMonitor
+   AutoScalingGroup extends TargetGroup and adds additional functionalities regarding TargetGroup Scaling
+
 ## 8. Error Handling
 
 - Uses Java exceptions for error conditions
