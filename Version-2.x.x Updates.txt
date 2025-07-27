@@ -1,8 +1,14 @@
+0- API Gateway can no longer send requests directly to EC2. Need to pass through LB.
+
 1- Adding App (AMI-like software) in EC2
     1.1- App would simulate a backend/a function that would run inside EC2
 
-2- Adding App Ports and EC2 Ports
+2-  Adding API Gateway API Resource in EC2 instead of the ordinary api list
 
-3- Adding IPs/Elastic IPs for EC2 instances
+3- Adding App Ports and EC2 Ports
 
-4- Creating DNS-like Component that would forward requests to targets
+4- Adding IPs/Elastic IPs for EC2 instances ON-DEMAND
+
+5- Creating DNS names and static ips for LB and API Gateway
+
+6- Creating DNS-like Component that would forward requests to targets(LB and API Gateway)

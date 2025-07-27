@@ -31,7 +31,7 @@ public class Test_AutoScalingGroups {
 
         ApiGateway apiGateway = gatewayBuilder.createGateway();
         LoadBalancer loadBalancer = loadBalancerBuilder.createLoadBalancer();
-        EC2 ec2 = ec2Builder.createEc2(7, "ec2-ONE");
+        EC2 ec2 = ec2Builder.createEc2(1, "ec2-ONE");
         S3 s3 = S3Builder.s3;
 
         s3.addBucket("data", "data-info");
@@ -52,7 +52,7 @@ public class Test_AutoScalingGroups {
         ScalingPolicyRuleAction maxInst = new ScalingPolicyRuleAction("MaxInstance");
         ScalingPolicyRuleAction minInst = new ScalingPolicyRuleAction("MinInstance");
         ScalingPolicyRuleAction overloadedPolicy = new ScalingPolicyRuleAction("OverloadedPolicy");
-        maxInst.setMinOrMax(ScalingPolicyRules.MAX_INSTANCE, 2);
+        maxInst.setMinOrMax(ScalingPolicyRules.MAX_INSTANCE, 4);
         minInst.setMinOrMax(ScalingPolicyRules.MIN_INSTANCE, 1);
         overloadedPolicy.setConditionalRule(ScalingPolicyRules.OVERLOADED, 1, ScalingPolicyActions.SCALE_UP, 1);
         scalingPolicy.addRuleAction(maxInst);

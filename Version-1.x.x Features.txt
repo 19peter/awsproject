@@ -1,0 +1,13 @@
+0- Creating a mock for aws system consisting of CORE and basic aws components
+
+1- Mocking API Gateway, LoadBalancer, Target Groups, AutoScaling Groups, Scaling Policies, EC2, Lambda, S3
+
+2- Creating Builder Classes for each components
+
+3- Creating and connecting components together
+    3.1.1: Gateway -> LB (Target Groups) -> (EC2 || Lambda) ?-> S3
+    3.1.2: Gateway -> (EC2 || Lambda) ?-> S3
+    
+4- LoadBalancing and AutoScaling EC2 instances
+
+5- Creating S3 buckets that are global mimicking S3 global nature

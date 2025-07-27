@@ -3,6 +3,7 @@ package org.peters.projectaws.Components.EC2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.API.Api;
+import org.peters.projectaws.Components.App.App;
 import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
 import org.peters.projectaws.Components.Monitors.TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
@@ -32,14 +33,31 @@ public class EC2
     private List<Api> apis;
     private ExecutorService executor;
     private int maxConn;
+    private int PORT = 4000;
+    private App app;
 
     public EC2(int maxConn, String name) {
         super(name);
         this.maxConn = maxConn;
         logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
-                + " and id: " + this.getId());
+                + " and id: " + this.getId() + " on port: " + PORT);
     }
 
+    public EC2(int maxConn, String name, int port) {
+        super(name);
+        this.maxConn = maxConn;
+        PORT = port;
+        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
+                + " and id: " + this.getId() + " on port: " + port);
+    }
+
+    /**
+     * @deprecated
+     *             EC2 instances will now accept an App instance OR an API Gateway
+     *             API Resources instead of a List of api
+     *             API Gateway API resources will be available after version 2.0.0
+     */
+    @Deprecated()
     public EC2(List<Api> apis, int maxConn, String name) {
         super(name);
         this.apis = apis;
@@ -49,11 +67,11 @@ public class EC2
     }
 
     public EC2(EC2 ec2) {
-        this.apis = ec2.apis;
-        this.maxConn = ec2.maxConn;
+        this.maxConn = ec2.getMaxConn();
+        this.app = ec2.getApp();
         this.setName("COPY::" + ec2.getName());
         logger.info("<EC2>: EC2 Copy instance created with maxConn: " + maxConn + " and name: " + this.getName()
-                + " and id: " + this.getId());
+                + " and id: " + this.getId() + " on port: " + PORT);
     }
 
     public boolean addObserver(TargetStateObserverInterface<EC2> observer) {
@@ -77,6 +95,7 @@ public class EC2
         }
     }
 
+    @Deprecated
     public void setApis(Api api) {
         if (apis != null)
             apis.add(api);
@@ -87,19 +106,24 @@ public class EC2
 
     }
 
+    @Deprecated
     public void setApis(List<Api> apis) {
         this.apis = apis;
     }
 
+    @Deprecated
     public List<Api> getApis() {
         return apis;
+    }
+
+    public App getApp() {
+        return this.app;
     }
 
     public int getMaxConn() {
         return maxConn;
     }
 
-  
     public Response executeApi(Request request) {
         String method = request.getMethod();
         String path = request.getPath();
@@ -114,7 +138,6 @@ public class EC2
             return null;
         }
 
-
         if (executor == null || executor.isShutdown()) {
             logger.error("Executor is not initialized or has been shutdown");
             return null;
@@ -123,21 +146,25 @@ public class EC2
         try {
             Future<Response> future = executor.submit(() -> {
                 try {
-                    logger.info("<EC2>: Executing API in EC2:" + this.getName() +
-                            " with method: " + method +
-                            " And params: " + data +
-                            " And FnName: " + apiCheck.get().getName());
+                    if (provisionConnection()) { 
+                        logger.info("<EC2>: Executing API in EC2:" + this.getName() +
+                        " with method: " + method +
+                        " And params: " + data +
+                        " And FnName: " + apiCheck.get().getName());
 
-                    Response api = apiCheck.get().getFn().execute(data);
-                    // Thread.sleep(Helpers.delayDuration);
-                    logger.info("<EC2>: " + this.getName() + " Api Executed: Returned Code: " + api.getCode());
-                    return api;
+                        Response api = apiCheck.get().getFn().execute(data);
+                        // Thread.sleep(Helpers.delayDuration);
+                        logger.info("<EC2>: " + this.getName() + " Api Executed: Returned Code: " + api.getCode());
+                        releaseConnection();
+                        return api;
+                    } else {
+                        logger.info("<EC2>: EC2 " + this.getName() + " has no provisioned connections");
+                        return null;
+                    }
                 } catch (Exception e) {
                     targetMonitor.setTargetUnhealthy();
                     logger.info("<EC2>: EC2 " + this.getName() + " is unhealthy");
                     throw new RuntimeException(e);
-                } finally {
-                    this.targetMonitor.removeRunningRequest();
                 }
             });
 
@@ -147,8 +174,7 @@ public class EC2
             Thread.currentThread().interrupt();
             logger.error("<EC2> " + this.getName() + " " + e.getMessage());
             throw new RuntimeException("Request interrupted", e);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             logger.error("<EC2> " + this.getName() + " " + e.getMessage());
             targetMonitor.setTargetUnhealthy();
             throw new RuntimeException(e);
@@ -157,7 +183,19 @@ public class EC2
 
     @Override
     public Response receiveFromGateway(Request request) throws InterruptedException {
-        return executeApi(request);
+        if (!this.getRunning()) {
+            logger.error("<EC2>: EC2 " + this.getName() + " is not running");
+            return null;
+        }
+
+        if (this.getTargetMonitorState() == TargetState.HEALTHY ||
+                this.getTargetMonitorState() == TargetState.IDLE) {
+            return executeApi(request);
+        } else {
+            logger.info("<EC2>: EC2 " + this.getName() + " is unhealthy");
+            return null;
+        }
+
     }
 
     @Override
@@ -208,7 +246,7 @@ public class EC2
         return targetMonitor.getRunningRequests();
     }
 
-    public void removeRunningRequest() {
+    public void releaseConnection() {
         targetMonitor.removeRunningRequest();
     }
 

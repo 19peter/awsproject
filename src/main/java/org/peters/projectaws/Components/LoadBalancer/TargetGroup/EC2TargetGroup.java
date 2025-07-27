@@ -15,7 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private static final Logger logger = LogManager.getLogger(EC2TargetGroup.class);
-    private int MAX_RETRIES = 1;
+    private int MAX_RETRIES = 3;
     private int RETRY_DELAY_MS = 100;
     private int currentTargetIndex = 0;
 
@@ -49,39 +49,48 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
         int attempts = 0;
         int startIndex = currentTargetIndex;
-        int healthyTargets = 0;
+        EC2 firstHealthyTarget = null;
 
         do {
             currentTargetIndex = (currentTargetIndex + 1) % targetsList.size();
             EC2 target = targetsList.get(currentTargetIndex);
+            TargetState state = target.getTargetMonitorState();
 
-            // Skip if target is not healthy
-            if (target.getTargetMonitorState() != TargetState.HEALTHY &&
-                target.getTargetMonitorState() != TargetState.IDLE) {
+            // Skip if target is not healthy or idle
+            if (state != TargetState.HEALTHY && state != TargetState.IDLE) {
                 continue;
             }
 
-            healthyTargets++;
+            // If we find an idle target, try to use it immediately
+            if (state == TargetState.IDLE) {
+                logger.info("<EC2TargetGroup>: TargetGroup {} found idle target: {}",
+                        getPath(), target.getName());
+                return Optional.of(target);
 
-            // Try to get a connection slot
-            try {
-                if (target.provisionConnection()) {
-                    logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " found target: " + target.getName());
-                    return Optional.of(target);
-                }
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                logger.warn("<EC2TargetGroup>: Interrupted while waiting for available target");
-                return Optional.empty();
             }
 
-            // If we've checked all targets and found some healthy but busy ones, wait and
-            // retry
-            if (currentTargetIndex == startIndex && healthyTargets > 0) {
+            // Remember the first healthy target we find (in case we don't find any idle
+            // ones)
+            if (firstHealthyTarget == null && state == TargetState.HEALTHY) {
+                firstHealthyTarget = target;
+            }
+
+            // If we've completed a full cycle, try to use the first healthy target we found
+            if (currentTargetIndex == startIndex) {
+                if (firstHealthyTarget != null) {
+
+                    logger.info("<EC2TargetGroup>: TargetGroup {} found healthy target: {}",
+                            getPath(), firstHealthyTarget.getName());
+                    return Optional.of(firstHealthyTarget);
+
+                }
+
+                // If we couldn't get a connection, wait and retry
                 if (++attempts >= MAX_RETRIES) {
                     logger.warn("<EC2TargetGroup>: All healthy targets are busy after {} attempts", MAX_RETRIES);
                     return Optional.empty();
                 }
+                
                 try {
                     Thread.sleep(RETRY_DELAY_MS);
                 } catch (InterruptedException e) {
@@ -89,10 +98,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
                     return Optional.empty();
                 }
             }
-        } while (currentTargetIndex != startIndex || healthyTargets == 0);
-
-        logger.info("<EC2TargetGroup>: No healthy targets available in target group {}", getPath());
-        return Optional.empty();
+        } while (true);
     }
 
     @Override
@@ -143,8 +149,6 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
             logger.error(
                     "<EC2TargetGroup>: Exception while processing request " + request.getPath() + " " + e.getMessage());
             throw new RuntimeException(e);
-        } finally {
-            target.removeRunningRequest();
         }
     }
 
@@ -168,6 +172,5 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
         MAX_RETRIES = maxRetries;
         RETRY_DELAY_MS = maxDelay;
     }
-
 
 }
