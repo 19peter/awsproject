@@ -4,12 +4,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
+import org.peters.projectaws.Components.Monitors.TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
 import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
+import org.peters.projectaws.enums.TargetState;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +27,7 @@ public class EC2
         extends AWSObject
         implements ApiGatewayIntegrationInterface, LifecycleManager {
 
-    public EC2TargetMonitor targetMonitor;
+    private EC2TargetMonitor targetMonitor;
     private static final Logger logger = LogManager.getLogger(EC2.class);
     private List<Api> apis;
     private ExecutorService executor;
@@ -93,6 +95,11 @@ public class EC2
         return apis;
     }
 
+    public int getMaxConn() {
+        return maxConn;
+    }
+
+  
     public Response executeApi(Request request) {
         String method = request.getMethod();
         String path = request.getPath();
@@ -114,7 +121,6 @@ public class EC2
         }
 
         try {
-            this.targetMonitor.addRunningRequest();
             Future<Response> future = executor.submit(() -> {
                 try {
                     logger.info("<EC2>: Executing API in EC2:" + this.getName() +
@@ -188,6 +194,26 @@ public class EC2
     public boolean isRunning() {
         logger.info("<EC2> instance " + this.getName() + " isRunning: " + Boolean.toString(this.getRunning()));
         return this.isRunning();
+    }
+
+    public TargetState getTargetMonitorState() {
+        return targetMonitor.getState();
+    }
+
+    public String getTargetMonitorName() {
+        return targetMonitor.getName();
+    }
+
+    public int getRunningRequests() {
+        return targetMonitor.getRunningRequests();
+    }
+
+    public void removeRunningRequest() {
+        targetMonitor.removeRunningRequest();
+    }
+
+    public boolean provisionConnection() throws InterruptedException {
+        return targetMonitor.addRunningRequest();
     }
 
 }

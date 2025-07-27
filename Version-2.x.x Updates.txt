@@ -1,0 +1,8 @@
+1- Adding App (AMI-like software) in EC2
+    1.1- App would simulate a backend/a function that would run inside EC2
+
+2- Adding App Ports and EC2 Ports
+
+3- Adding IPs/Elastic IPs for EC2 instances
+
+4- Creating DNS-like Component that would forward requests to targets

@@ -31,7 +31,7 @@ public class Test_AutoScalingGroups {
 
         ApiGateway apiGateway = gatewayBuilder.createGateway();
         LoadBalancer loadBalancer = loadBalancerBuilder.createLoadBalancer();
-        EC2 ec2 = ec2Builder.createEc2(1, "ec2-ONE");
+        EC2 ec2 = ec2Builder.createEc2(7, "ec2-ONE");
         S3 s3 = S3Builder.s3;
 
         s3.addBucket("data", "data-info");

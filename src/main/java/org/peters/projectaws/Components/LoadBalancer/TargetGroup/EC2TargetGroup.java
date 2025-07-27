@@ -15,8 +15,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private static final Logger logger = LogManager.getLogger(EC2TargetGroup.class);
-    private int MAX_RETRIES = 3;
-    private int RETRY_DELAY_MS = 1000;
+    private int MAX_RETRIES = 1;
+    private int RETRY_DELAY_MS = 100;
     private int currentTargetIndex = 0;
 
     public EC2TargetGroup(String path) {
@@ -56,8 +56,8 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
             EC2 target = targetsList.get(currentTargetIndex);
 
             // Skip if target is not healthy
-            if (target.targetMonitor.getState() != TargetState.HEALTHY &&
-                target.targetMonitor.getState() != TargetState.IDLE) {
+            if (target.getTargetMonitorState() != TargetState.HEALTHY &&
+                target.getTargetMonitorState() != TargetState.IDLE) {
                 continue;
             }
 
@@ -65,7 +65,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
             // Try to get a connection slot
             try {
-                if (target.targetMonitor.addRunningRequest()) {
+                if (target.provisionConnection()) {
                     logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " found target: " + target.getName());
                     return Optional.of(target);
                 }
@@ -117,7 +117,7 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
         if (!ec2.removeObserver(this))
             return;
         targetsList.remove(ec2);
-        targetGroupDetails.removeCurrentTarget(ec2.targetMonitor.getState());
+        targetGroupDetails.removeCurrentTarget(ec2.getTargetMonitorState());
         logger.info("<EC2TargetGroup>: TargetGroup " + this.getPath() + " removed target: " + ec2.getName());
     }
 
@@ -131,8 +131,8 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
 
     @Override
     public void onRunningRequestsChanged(EC2 ec2, int runningRequests) {
-        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.targetMonitor.getName() + " running requests changed to "
-                + ec2.targetMonitor.getRunningRequests());
+        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getTargetMonitorName() + " running requests changed to "
+                + ec2.getRunningRequests());
     }
 
     private Response processRequest(EC2 target, Request request) {
@@ -144,14 +144,14 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
                     "<EC2TargetGroup>: Exception while processing request " + request.getPath() + " " + e.getMessage());
             throw new RuntimeException(e);
         } finally {
-            target.targetMonitor.removeRunningRequest();
+            target.removeRunningRequest();
         }
     }
 
     protected void handleUnavailableTarget(EC2 ec2, TargetState oldState, TargetState newState) {
         targetsList.remove(ec2);
         targetGroupDetails.updateByState(oldState, newState);
-        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.targetMonitor.getName() + " removed from target group");
+        logger.info("<EC2TargetGroup>: Target Monitor " + ec2.getTargetMonitorName() + " removed from target group");
     }
 
     protected void setMaxRetriesAndMaxDelay(int maxRetries, int maxDelay) {

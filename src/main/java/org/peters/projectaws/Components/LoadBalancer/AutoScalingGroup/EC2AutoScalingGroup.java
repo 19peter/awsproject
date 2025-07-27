@@ -85,7 +85,7 @@ implements AutoScalingGroupInterface
         
 
         long count = targetsList.stream()
-                .filter(target -> target.targetMonitor.getState().toString().equals(rule.toString()))
+                .filter(target -> target.getTargetMonitorState().toString().equals(rule.toString()))
                 .count();
 
         if (count >= value) {
@@ -171,7 +171,7 @@ implements AutoScalingGroupInterface
 
         for (int i = 0; i < instances; i++) {
             EC2Builder ec2Builder = new EC2Builder();
-            EC2 ec2 = ec2Builder.createEc2(instance.getApis(), 1, "ec2-" + i + "-SCALE-UP");
+            EC2 ec2 = ec2Builder.createEc2(instance.getApis(), instance.getMaxConn(), "ec2-" + targetsList.size() + "-SCALE-UP");
             ec2.initialize();
             addTarget(ec2);
             logger.info("<EC2AutoScalingGroup>: SCALING UP: Added instance " + ec2.getId());
@@ -182,7 +182,7 @@ implements AutoScalingGroupInterface
         logger.info("<EC2AutoScalingGroup>: Attempting to scale down");
         for (int i = 0; i < instances; i++) {
             EC2 ec2 = targetsList.stream()
-                    .filter(target -> target.targetMonitor.getState() == TargetState.IDLE)
+                    .filter(target -> target.getTargetMonitorState() == TargetState.IDLE)
                     .findFirst()
                     .orElse(null);
             if (ec2 != null) {
@@ -198,7 +198,7 @@ implements AutoScalingGroupInterface
         logger.info("<EC2AutoScalingGroup>: Attempting to scale down");
         for (int i = 0; i < instances; i++) {
             EC2 ec2 = targetsList.stream()
-                    .filter(target -> target.targetMonitor.getState() == state)
+                    .filter(target -> target.getTargetMonitorState() == state)
                     .findFirst()
                     .orElse(null);
             if (ec2 != null) {

@@ -30170,3 +30170,662 @@ java.lang.IllegalArgumentException: No enum constant org.peters.projectaws.enums
 12:56:10.421 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
 12:56:10.422 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
 12:56:10.422 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:28:09.617 [main] INFO  - <ApiGateway>: ApiGateway created: 3524253309928469848
+13:28:09.620 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 3040445723394398770
+13:28:09.625 [main] INFO  - <EC2>: EC2 instance created with maxConn: 2 and name: ec2-ONE and id: 5899317838093036963
+13:28:09.626 [main] INFO  - S3 created with id: 5956020535706409164
+13:28:09.629 [main] INFO  - Bucket created with name: data and Id: -2250059472677595793
+13:28:09.630 [main] INFO  - <GetApi>: GetApi created: -5609371001428199806
+13:28:09.630 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 5899317838093036963
+13:28:09.632 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 2 and name: MONITOR::ec2-ONE and id: -7678381707465974444
+13:28:09.633 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 2
+13:28:09.633 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:28:09.638 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -4664252996741732745
+13:28:09.638 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:28:09.638 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:28:09.639 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:28:09.639 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: -4664252996741732745
+13:28:09.639 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:28:09.641 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:28:09.641 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:28:09.641 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:28:09.641 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:28:09.641 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:28:09.651 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:28:09.651 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:28:09.651 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:28:09.651 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:28:09.651 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:28:09.651 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:28:09.651 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:28:09.651 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:28:09.651 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:28:09.651 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:28:09.653 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:28:09.653 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2>: EC2 instance created with maxConn: 1 and name: ec2-0-SCALE-UP and id: 5370012820013446983
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 5370012820013446983
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 1 and name: MONITOR::ec2-0-SCALE-UP and id: 7117874837354321731
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-0-SCALE-UP with maxConn: 1
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-0-SCALE-UP Monitor instance MONITOR::ec2-0-SCALE-UP
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2>: EC2 ec2-0-SCALE-UP added observer
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-0-SCALE-UP
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 5370012820013446983
+13:28:09.654 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP added running request
+13:28:09.655 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:28:09.655 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-0-SCALE-UP
+13:28:09.655 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP is overloaded
+13:28:09.656 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-0-SCALE-UP with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:28:09.656 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:28:09.656 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:28:09.657 [pool-5-thread-1] INFO  - <EC2>: ec2-0-SCALE-UP Api Executed: Returned Code: 400
+13:28:09.657 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:28:09.657 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:28:09.657 [pool-5-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP removed running request
+13:28:09.657 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:28:09.658 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:28:09.658 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:28:09.658 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:28:09.658 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:28:09.658 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP added running request
+13:28:09.658 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:28:09.658 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:28:09.658 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:28:09.658 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:28:09.658 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:28:09.658 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:28:09.659 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:28:09.659 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-0-SCALE-UP
+13:28:09.659 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP removed running request
+13:28:09.659 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:28:09.659 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:28:09.659 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:28:09.659 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:28:09.659 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:28:09.659 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-0-SCALE-UP added running request
+13:28:09.659 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:28:09.659 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:28:09.659 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:28:09.659 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:28:39.654 [pool-2-thread-1] WARN  - <LoadBalancer>: Request /lb/ec2/data GET timed out
+13:28:39.654 [pool-2-thread-5] WARN  - <LoadBalancer>: Request /lb/ec2/data GET timed out
+13:31:40.023 [main] INFO  - <ApiGateway>: ApiGateway created: 8751485450903148467
+13:31:40.026 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -4608003193625491770
+13:31:40.031 [main] INFO  - <EC2>: EC2 instance created with maxConn: 2 and name: ec2-ONE and id: -7737397333266777587
+13:31:40.033 [main] INFO  - S3 created with id: -8536858868470877909
+13:31:40.035 [main] INFO  - Bucket created with name: data and Id: 8056594799485093798
+13:31:40.037 [main] INFO  - <GetApi>: GetApi created: -5432802498148231944
+13:31:40.038 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: -7737397333266777587
+13:31:40.039 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 2 and name: MONITOR::ec2-ONE and id: -5676269722972268067
+13:31:40.041 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 2
+13:31:40.041 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:31:40.045 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 590067153444954614
+13:31:40.045 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:31:40.045 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:31:40.045 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:31:40.046 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: 590067153444954614
+13:31:40.046 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:31:40.048 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:31:40.048 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:31:40.048 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:31:40.048 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:31:40.048 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:31:40.059 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:31:40.059 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:31:40.059 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:31:40.059 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:31:40.059 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:31:40.059 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:31:40.059 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:31:40.060 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:31:40.060 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:31:40.061 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:31:40.062 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:31:40.062 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:31:40.062 [pool-4-thread-5] INFO  - <EC2>: EC2 instance created with maxConn: 2 and name: ec2-1-SCALE-UP and id: 7541744201869112510
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 7541744201869112510
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 2 and name: MONITOR::ec2-1-SCALE-UP and id: -5729370801822810787
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 2
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 7541744201869112510
+13:31:40.063 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:31:40.064 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:31:40.064 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:31:40.064 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:31:40.064 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:31:40.064 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:31:40.064 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:31:40.064 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:31:40.065 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:31:40.065 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:31:40.065 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP is overloaded
+13:31:40.065 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP is overloaded
+13:31:40.065 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:31:40.065 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:31:40.065 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:31:40.065 [pool-5-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:31:40.067 [pool-5-thread-2] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 400
+13:31:40.067 [pool-5-thread-1] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 200
+13:31:40.067 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:31:40.067 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:31:40.067 [pool-5-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:31:40.067 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:31:40.067 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.067 [pool-5-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.067 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:31:40.067 [pool-5-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:31:40.067 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.067 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.067 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:31:40.067 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:31:40.067 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:31:40.067 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:31:40.067 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:31:40.067 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:31:40.067 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:31:40.068 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.068 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:31:40.068 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:31:40.068 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:31:40.068 [pool-5-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:31:40.068 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:31:40.068 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:31:40.068 [pool-5-thread-2] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 400
+13:31:40.068 [pool-5-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP has no running requests
+13:31:40.068 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP has no running requests
+13:32:13.006 [main] INFO  - <ApiGateway>: ApiGateway created: -9039003035659830401
+13:32:13.008 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 4424684543470125942
+13:32:13.013 [main] INFO  - <EC2>: EC2 instance created with maxConn: 2 and name: ec2-ONE and id: -1314245065447589876
+13:32:13.016 [main] INFO  - S3 created with id: 7721111306733967145
+13:32:13.019 [main] INFO  - Bucket created with name: data and Id: -7885225726514610540
+13:32:13.021 [main] INFO  - <GetApi>: GetApi created: -8869787288745438732
+13:32:13.021 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: -1314245065447589876
+13:32:13.024 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 2 and name: MONITOR::ec2-ONE and id: -3339731133778220766
+13:32:13.025 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 2
+13:32:13.026 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:32:13.029 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 5966423423084705427
+13:32:13.029 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:32:13.029 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:32:13.030 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:32:13.030 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: 5966423423084705427
+13:32:13.030 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:32:13.032 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:32:13.032 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:32:13.032 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:32:13.032 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:32:13.032 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:32:13.042 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:32:13.043 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:32:13.042 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:32:13.042 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:32:13.042 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:32:13.043 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:32:13.043 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:32:13.043 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:32:13.044 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:32:13.044 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:32:13.045 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:32:13.045 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2>: EC2 instance created with maxConn: 2 and name: ec2-1-SCALE-UP and id: 2295804796615076435
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 2295804796615076435
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 2 and name: MONITOR::ec2-1-SCALE-UP and id: -6595878949019475768
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 2
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:32:13.046 [pool-4-thread-3] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:32:13.047 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:32:13.047 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 2295804796615076435
+13:32:13.047 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:32:13.048 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:32:13.048 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:32:13.048 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:32:13.049 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:32:13.049 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:32:13.049 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:32:13.050 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:32:13.050 [pool-5-thread-1] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 400
+13:32:13.050 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:32:13.050 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:32:13.050 [pool-5-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:32:13.050 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.050 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.051 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:32:13.051 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.051 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:32:13.051 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:32:13.051 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.051 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:32:13.051 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:32:13.051 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:32:13.051 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:32:13.051 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.051 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:32:13.051 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:32:13.051 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:32:13.052 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:32:13.052 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:32:13.052 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:32:13.052 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:32:13.052 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:32:13.052 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.052 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:32:13.052 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:32:13.052 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:32:13.052 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:32:13.052 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:32:13.052 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:32:13.052 [pool-5-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:32:13.053 [pool-5-thread-2] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 200
+13:32:13.053 [pool-5-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:32:13.053 [pool-5-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.053 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:32:13.053 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:32:13.053 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:36:34.415 [main] INFO  - <ApiGateway>: ApiGateway created: 6335221376476482377
+13:36:34.417 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -2803889463987864094
+13:36:34.422 [main] INFO  - <EC2>: EC2 instance created with maxConn: 5 and name: ec2-ONE and id: -8306530870952031404
+13:36:34.424 [main] INFO  - S3 created with id: -1593349176685619433
+13:36:34.426 [main] INFO  - Bucket created with name: data and Id: -4815084353771667729
+13:36:34.428 [main] INFO  - <GetApi>: GetApi created: 2258897014879178179
+13:36:34.428 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: -8306530870952031404
+13:36:34.429 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 5 and name: MONITOR::ec2-ONE and id: -2430107666352912002
+13:36:34.432 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 5
+13:36:34.433 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:36:34.437 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 8097605647532212270
+13:36:34.437 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:36:34.437 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:36:34.438 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:36:34.438 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: 8097605647532212270
+13:36:34.439 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:36:34.440 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:36:34.440 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:36:34.440 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:36:34.440 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:36:34.440 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:36:34.450 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:36:34.450 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:36:34.450 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:36:34.450 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:36:34.450 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:36:34.451 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:36:34.451 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:36:34.451 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:36:34.451 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:36:34.452 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:36:34.452 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:36:34.452 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:36:34.452 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:36:34.452 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:36:34.452 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:36:34.453 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:36:34.454 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:36:34.454 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:36:34.454 [pool-4-thread-3] INFO  - <EC2>: EC2 instance created with maxConn: 5 and name: ec2-1-SCALE-UP and id: 6673731043799214429
+13:36:34.454 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 6673731043799214429
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 5 and name: MONITOR::ec2-1-SCALE-UP and id: 7308473821003661577
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 5
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:36:34.455 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 6673731043799214429
+13:36:34.456 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:36:34.456 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:36:34.456 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:36:34.456 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-1-SCALE-UP
+13:36:34.456 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:36:34.456 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP added running request
+13:36:34.457 [pool-5-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-1-SCALE-UP with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:36:34.457 [pool-3-thread-4] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:36:34.457 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:36:34.457 [pool-3-thread-3] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:36:34.457 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:36:34.458 [pool-3-thread-4] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:36:34.458 [pool-3-thread-3] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:36:34.458 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:36:34.458 [pool-5-thread-1] INFO  - <EC2>: ec2-1-SCALE-UP Api Executed: Returned Code: 400
+13:36:34.458 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 200
+13:36:34.459 [pool-3-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:36:34.459 [pool-5-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:36:34.459 [pool-5-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.459 [pool-3-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.459 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:36:34.459 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.459 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:36:34.459 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-1-SCALE-UP removed running request
+13:36:34.459 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.459 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.460 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:36:34.460 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:36:34.460 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.460 [pool-3-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:36:34.460 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:36:34.460 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:36:34.460 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:36:34.461 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:36:34.461 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:37:22.984 [main] INFO  - <ApiGateway>: ApiGateway created: 4317816022970941516
+13:37:22.987 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 4618449907712961730
+13:37:22.992 [main] INFO  - <EC2>: EC2 instance created with maxConn: 6 and name: ec2-ONE and id: 5217116524210826418
+13:37:22.993 [main] INFO  - S3 created with id: 3683349846895712408
+13:37:22.997 [main] INFO  - Bucket created with name: data and Id: -698922766986733028
+13:37:22.998 [main] INFO  - <GetApi>: GetApi created: -4030519816830022847
+13:37:22.998 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 5217116524210826418
+13:37:23.000 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 6 and name: MONITOR::ec2-ONE and id: 4048336473827867794
+13:37:23.002 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 6
+13:37:23.003 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:37:23.007 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -5112310684735444906
+13:37:23.007 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:37:23.007 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:37:23.007 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:37:23.008 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: -5112310684735444906
+13:37:23.008 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:37:23.011 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:37:23.011 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:37:23.011 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:37:23.011 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:37:23.011 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:37:23.022 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:37:23.022 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:37:23.022 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:37:23.022 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:37:23.022 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:37:23.022 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.023 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:37:23.023 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.023 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:37:23.023 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.023 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:37:23.023 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.024 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:37:23.024 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.024 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:37:23.024 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:37:23.024 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:37:23.024 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:37:23.025 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:37:23.025 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:37:23.025 [pool-4-thread-2] INFO  - <EC2>: EC2 instance created with maxConn: 6 and name: ec2-1-SCALE-UP and id: 4539584296146759891
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 4539584296146759891
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 6 and name: MONITOR::ec2-1-SCALE-UP and id: 6043262712031886140
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 6
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:37:23.026 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 4539584296146759891
+13:37:23.027 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:37:23.027 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:37:23.027 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:37:23.027 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:37:23.027 [pool-3-thread-3] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:37:23.028 [pool-3-thread-4] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:37:23.027 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:37:23.028 [pool-3-thread-5] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:37:23.027 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:37:23.029 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:37:23.029 [pool-3-thread-4] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:37:23.029 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:37:23.029 [pool-3-thread-5] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 200
+13:37:23.029 [pool-3-thread-3] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:37:23.029 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.029 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.030 [pool-3-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.030 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.030 [pool-3-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.030 [pool-3-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.030 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.030 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.030 [pool-3-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.030 [pool-3-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.030 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:37:23.030 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:37:23.031 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:37:23.031 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:37:23.031 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:37:23.031 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:37:23.031 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:38:27.070 [main] INFO  - <ApiGateway>: ApiGateway created: -493859506056846399
+13:38:27.072 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 9022895973537605190
+13:38:27.078 [main] INFO  - <EC2>: EC2 instance created with maxConn: 7 and name: ec2-ONE and id: -6244820245663684053
+13:38:27.079 [main] INFO  - S3 created with id: -7194247648371176783
+13:38:27.082 [main] INFO  - Bucket created with name: data and Id: 2740030394866533128
+13:38:27.084 [main] INFO  - <GetApi>: GetApi created: -6487039955148630049
+13:38:27.084 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: -6244820245663684053
+13:38:27.085 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 7 and name: MONITOR::ec2-ONE and id: 5495443189747122213
+13:38:27.087 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 7
+13:38:27.090 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:38:27.093 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -1837535188408357418
+13:38:27.093 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:38:27.093 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:38:27.094 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:38:27.094 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: -1837535188408357418
+13:38:27.094 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:38:27.097 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:38:27.097 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:38:27.097 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:38:27.096 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:38:27.097 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:38:27.106 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:38:27.106 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:38:27.106 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:38:27.106 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:38:27.106 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:38:27.107 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.107 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:38:27.107 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.107 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:38:27.107 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.107 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:38:27.107 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.107 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:38:27.107 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.108 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.108 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:38:27.108 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:38:27.109 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:38:27.108 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:38:27.108 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:38:27.110 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:38:27.110 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:38:27.110 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:38:27.110 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2>: EC2 instance created with maxConn: 7 and name: ec2-1-SCALE-UP and id: -1803076618278051096
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZING INSTANCE-----: -1803076618278051096
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 7 and name: MONITOR::ec2-1-SCALE-UP and id: -5617316331124766028
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 7
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance -1803076618278051096
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:38:27.111 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:38:27.111 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:38:27.111 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE is overloaded
+13:38:27.112 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.113 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.112 [pool-3-thread-3] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:38:27.112 [pool-3-thread-4] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:38:27.113 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.112 [pool-3-thread-5] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:38:27.113 [pool-3-thread-3] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 200
+13:38:27.113 [pool-3-thread-4] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:38:27.113 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.113 [pool-3-thread-5] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:38:27.113 [pool-3-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.113 [pool-3-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.113 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.113 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.114 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.114 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.114 [pool-3-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.114 [pool-3-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.114 [pool-3-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:38:27.114 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:38:27.114 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+13:38:27.114 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:38:27.115 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:38:27.115 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+13:53:36.759 [main] INFO  - <ApiGateway>: ApiGateway created: -4529161133309057638
+13:53:36.762 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: 2498873832254005521
+13:53:36.768 [main] INFO  - <EC2>: EC2 instance created with maxConn: 7 and name: ec2-ONE and id: 3418931906377361269
+13:53:36.769 [main] INFO  - S3 created with id: 7746360989588198898
+13:53:36.772 [main] INFO  - Bucket created with name: data and Id: -4968983731256939797
+13:53:36.774 [main] INFO  - <GetApi>: GetApi created: -4405428121763039468
+13:53:36.775 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 3418931906377361269
+13:53:36.776 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 7 and name: MONITOR::ec2-ONE and id: 5706524835421336884
+13:53:36.779 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 7
+13:53:36.779 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+13:53:36.784 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: -4434913683023129338
+13:53:36.784 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+13:53:36.784 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+13:53:36.785 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+13:53:36.785 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: -4434913683023129338
+13:53:36.785 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+13:53:36.787 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:53:36.787 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:53:36.787 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:53:36.787 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:53:36.787 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+13:53:36.797 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:53:36.797 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+13:53:36.797 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:53:36.797 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:53:36.797 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+13:53:36.798 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.798 [pool-4-thread-4] ERROR - CHECK
+13:53:36.798 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:53:36.799 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.799 [pool-4-thread-1] ERROR - CHECK
+13:53:36.799 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:53:36.799 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.799 [pool-4-thread-5] ERROR - CHECK
+13:53:36.799 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:53:36.799 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.800 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.800 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.800 [pool-4-thread-2] ERROR - CHECK
+13:53:36.800 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.800 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:53:36.800 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:53:36.801 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:53:36.801 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:53:36.801 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:53:36.802 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:53:36.802 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:53:36.803 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Scaling up by: 1
+13:53:36.803 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Attempting to scale up
+13:53:36.803 [pool-4-thread-4] INFO  - <EC2>: EC2 instance created with maxConn: 7 and name: ec2-1-SCALE-UP and id: 496068468930318214
+13:53:36.803 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 496068468930318214
+13:53:36.803 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 7 and name: MONITOR::ec2-1-SCALE-UP and id: -425760291375690674
+13:53:36.804 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-1-SCALE-UP with maxConn: 7
+13:53:36.804 [pool-4-thread-4] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-1-SCALE-UP Monitor instance MONITOR::ec2-1-SCALE-UP
+13:53:36.804 [pool-4-thread-4] INFO  - <EC2>: EC2 ec2-1-SCALE-UP added observer
+13:53:36.804 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-1-SCALE-UP
+13:53:36.804 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: SCALING UP: Added instance 496068468930318214
+13:53:36.804 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.805 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.805 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.805 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.805 [pool-3-thread-3] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:53:36.805 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.805 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.805 [pool-3-thread-3] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:53:36.805 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to OVERLOADED Checking policy
+13:53:36.806 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Policy found: OVERLOADED
+13:53:36.806 [pool-3-thread-4] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+13:53:36.806 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: MAX INSTANCES 2 REACHED
+13:53:36.806 [pool-3-thread-4] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+13:53:36.806 [pool-4-thread-3] ERROR - CHECK
+13:53:36.806 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.806 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+13:53:36.806 [pool-4-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.806 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.806 [pool-4-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.806 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+13:53:36.806 [pool-3-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.806 [pool-3-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.806 [pool-3-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.806 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.806 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.807 [pool-4-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.807 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.807 [pool-4-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.806 [pool-3-thread-5] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+13:53:36.807 [pool-3-thread-5] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 200
+13:53:36.807 [pool-3-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.808 [pool-3-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.808 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+13:53:36.808 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+13:53:36.808 [pool-4-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+14:13:40.964 [main] INFO  - <ApiGateway>: ApiGateway created: 4321375282614790162
+14:13:40.966 [main] INFO  - <LoadBalancer>: LoadBalancer created with null thread pool and Id: -1078572556439074628
+14:13:40.973 [main] INFO  - <EC2>: EC2 instance created with maxConn: 7 and name: ec2-ONE and id: 8645234443473428303
+14:13:40.974 [main] INFO  - S3 created with id: -4915161939841276857
+14:13:40.978 [main] INFO  - Bucket created with name: data and Id: 7719713244666001207
+14:13:40.980 [main] INFO  - <GetApi>: GetApi created: -4099050941170128285
+14:13:40.981 [main] INFO  - <EC2> -----INITIALIZING INSTANCE-----: 8645234443473428303
+14:13:40.983 [main] INFO  - <EC2TargetMonitor>: EC2TargetMonitor created with maxConn: 7 and name: MONITOR::ec2-ONE and id: 3927887689338881908
+14:13:40.986 [main] INFO  - <EC2> -----INITIALIZED INSTANCE-----: ec2-ONE with maxConn: 7
+14:13:40.986 [main] INFO  - <EC2> -----INITIALIZED MONITOR-----: ec2-ONE Monitor instance MONITOR::ec2-ONE
+14:13:40.990 [main] INFO  - <EC2TargetGroup>: EC2TargetGroup created with path: /ec2/data and Id: 3570063354345202543
+14:13:40.990 [main] INFO  - <EC2>: EC2 ec2-ONE added observer
+14:13:40.991 [main] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data added target: ec2-ONE
+14:13:40.991 [main] INFO  - <EC2AutoScalingGroup>: Applying policy Provision minimum instance
+14:13:40.992 [main] INFO  - <EC2AutoScalingGroup>: EC2AutoScalingGroup created with path: /ec2/data and Id: 3570063354345202543
+14:13:40.992 [main] INFO  - <LoadBalancer>: LoadBalancer initialized with java.util.concurrent.ThreadPoolExecutor@1fb700ee[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0] thread pool
+14:13:40.994 [pool-2-thread-1] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:13:40.994 [pool-2-thread-5] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:13:40.994 [pool-2-thread-2] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:13:40.994 [pool-2-thread-4] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:13:40.994 [pool-2-thread-3] INFO  - <LoadBalancer>: LoadBalancer received request: /lb/ec2/data GET
+14:13:41.005 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:13:41.005 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:13:41.005 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:13:41.005 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/data-key
+14:13:41.005 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data received request: /lb/ec2/data GET /S3/data/new-data-key
+14:13:41.006 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+14:13:41.006 [pool-4-thread-1] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+14:13:41.006 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+14:13:41.007 [pool-4-thread-5] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+14:13:41.007 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+14:13:41.007 [pool-4-thread-2] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+14:13:41.007 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+14:13:41.007 [pool-4-thread-3] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+14:13:41.007 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE added running request
+14:13:41.007 [pool-4-thread-4] INFO  - <EC2TargetGroup>: TargetGroup /ec2/data found target: ec2-ONE
+14:13:41.009 [pool-3-thread-1] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:13:41.009 [pool-3-thread-5] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:13:41.009 [pool-3-thread-3] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:13:41.009 [pool-3-thread-2] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/new-data-key And FnName: getDataFromEC2
+14:13:41.009 [pool-3-thread-4] INFO  - <EC2>: Executing API in EC2:ec2-ONE with method: GET And params: /S3/data/data-key And FnName: getDataFromEC2
+14:13:41.011 [pool-3-thread-2] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+14:13:41.011 [pool-3-thread-1] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+14:13:41.011 [pool-3-thread-5] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+14:13:41.011 [pool-3-thread-4] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 200
+14:13:41.011 [pool-3-thread-3] INFO  - <EC2>: ec2-ONE Api Executed: Returned Code: 400
+14:13:41.011 [pool-3-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+14:13:41.011 [pool-3-thread-2] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+14:13:41.012 [pool-3-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+14:13:41.012 [pool-3-thread-3] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+14:13:41.012 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+14:13:41.012 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+14:13:41.012 [pool-3-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+14:13:41.012 [pool-3-thread-4] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+14:13:41.012 [pool-3-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
+14:13:41.012 [pool-3-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
+14:13:41.012 [pool-3-thread-5] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+14:13:41.013 [pool-4-thread-3] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+14:13:41.013 [pool-4-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+14:13:41.013 [pool-4-thread-2] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+14:13:41.013 [pool-4-thread-5] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
+14:13:41.013 [pool-4-thread-4] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE has no running requests
