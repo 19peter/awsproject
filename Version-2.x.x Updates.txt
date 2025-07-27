@@ -1,5 +1,3 @@
-0- API Gateway can no longer send requests directly to EC2. Need to pass through LB.
-
 1- Adding App (AMI-like software) in EC2
     1.1- App would simulate a backend/a function that would run inside EC2
 
