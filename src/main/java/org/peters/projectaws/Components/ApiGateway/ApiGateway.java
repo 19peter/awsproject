@@ -15,7 +15,9 @@ public class ApiGateway extends AWSObject {
     ConcurrentHashMap<String, ApiGatewayIntegrationInterface> routingRules;
     final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    public ApiGateway() {
+
+    public ApiGateway(String name) {
+        super(name);
         this.routingRules = new ConcurrentHashMap<>();
         logger.info("<ApiGateway>: ApiGateway created: " + this.getId());
     }

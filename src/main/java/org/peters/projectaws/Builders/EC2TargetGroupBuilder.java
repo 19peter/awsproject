@@ -8,14 +8,16 @@ import org.peters.projectaws.Components.LoadBalancer.TargetGroup.LambdaTargetGro
 import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
 import org.peters.projectaws.Core.AWSBuilderObject;
 
-public class TargetGroupBuilder extends AWSBuilderObject {
-    public EC2TargetGroup createEC2TargetGroup(String path) {
+public class EC2TargetGroupBuilder extends AWSBuilderObject<EC2TargetGroup> {
+    String path;
+    
+    public EC2TargetGroupBuilder(String path) {
+        this.path = path;
+    }
+
+    @Override
+    public EC2TargetGroup build() {
         return new EC2TargetGroup(path);
     }
-
-    public TargetGroup<LambdaExecutionContext> createLambdaTargetGroup(String path, Lambda lambda) {
-        return new LambdaTargetGroup(path, lambda);
-    }
-
 
 }

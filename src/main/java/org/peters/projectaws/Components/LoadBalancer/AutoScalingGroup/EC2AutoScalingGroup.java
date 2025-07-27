@@ -170,8 +170,9 @@ implements AutoScalingGroupInterface
         }
 
         for (int i = 0; i < instances; i++) {
-            EC2Builder ec2Builder = new EC2Builder();
-            EC2 ec2 = ec2Builder.createEc2(instance.getApis(), instance.getMaxConn(), "ec2-" + targetsList.size() + "-SCALE-UP");
+            EC2Builder ec2Builder = new EC2Builder("ec2-" + targetsList.size() + "-SCALE-UP", instance.getMaxConn());
+            // EC2 ec2 = ec2Builder.createEc2(instance.getApis(), instance.getMaxConn(), "ec2-" + targetsList.size() + "-SCALE-UP");
+            EC2 ec2 = ec2Builder.build();
             ec2.initialize();
             addTarget(ec2);
             logger.info("<EC2AutoScalingGroup>: SCALING UP: Added instance " + ec2.getId());

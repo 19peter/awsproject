@@ -22,7 +22,8 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
     private final AtomicBoolean isRunning = new AtomicBoolean(false);
     private final int TIMEOUT = 30000;
 
-    public LoadBalancer() {
+    public LoadBalancer(String name) {
+        super(name);
         this.targetGroupsRoutingRules = new ConcurrentHashMap<>();
         logger.info("<LoadBalancer>: LoadBalancer created with {} thread pool and Id: {}", executorService, this.getId());
     }

@@ -2,9 +2,10 @@ package org.peters.projectaws.Scenarios;
 
 import org.peters.projectaws.Interfaces.Function.FunctionInterface;
 import org.peters.projectaws.Builders.ApiGatewayBuilder;
+import org.peters.projectaws.Builders.EC2TargetGroupBuilder;
 import org.peters.projectaws.Builders.LambdaBuilder;
 import org.peters.projectaws.Builders.LoadBalancerBuilder;
-import org.peters.projectaws.Builders.TargetGroupBuilder;
+import org.peters.projectaws.Builders.LambdaTargetGroupBuilder;
 import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.Lambda.Lambda;
 import org.peters.projectaws.Components.Lambda.LambdaExecutionContext;
@@ -26,16 +27,16 @@ public class Test_LB_Lambda_Benchmark {
             return null;
         };
 
-        LambdaBuilder lambdaBuilder = new LambdaBuilder();
-        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder();
-        LoadBalancerBuilder loadBalancerBuilder = new LoadBalancerBuilder();
-        TargetGroupBuilder targetGroupBuilder = new TargetGroupBuilder();
+        LambdaBuilder lambdaBuilder = new LambdaBuilder(functionalInterface);
+        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder("gateway-ONE");
+        LoadBalancerBuilder loadBalancerBuilder = new LoadBalancerBuilder("loadBalancer-ONE");
+        Lambda lambda = lambdaBuilder.build();
+        LambdaTargetGroupBuilder targetGroupBuilder = new LambdaTargetGroupBuilder("/ec2/data", lambda);
         
         
-        Lambda lambda = lambdaBuilder.build(functionalInterface);
-        ApiGateway apiGateway = gatewayBuilder.createGateway();
-        LoadBalancer loadBalancer = loadBalancerBuilder.createLoadBalancer();
-        TargetGroup<LambdaExecutionContext> targetGroup = targetGroupBuilder.createLambdaTargetGroup("/lb/lambda", lambda);
+        ApiGateway apiGateway = gatewayBuilder.build();
+        LoadBalancer loadBalancer = loadBalancerBuilder.build();
+        TargetGroup<LambdaExecutionContext> targetGroup = targetGroupBuilder.build();
 
         loadBalancer.initialize();
         loadBalancer.addTargetGroup("/lb/lambda", targetGroup);

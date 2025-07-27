@@ -7,6 +7,6 @@
 
 4- Adding IPs/Elastic IPs for EC2 instances ON-DEMAND
 
-5- Creating DNS names and static ips for LB and API Gateway
+5- Creating DNS names for LB and API Gateway
 
 6- Creating DNS-like Component that would forward requests to targets(LB and API Gateway)

@@ -18,13 +18,13 @@ public class Test_GateWay_EC2_S3 {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void test() throws InterruptedException {
-        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder();
-        EC2Builder ec2Builder = new EC2Builder();
+        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder("gateway-ONE");
+        EC2Builder ec2Builder = new EC2Builder("ec2-ONE", 1);
         ApiBuilder apiBuilder = new ApiBuilder();
         S3Builder s3Builder = new S3Builder();
 
-        ApiGateway apiGateway = gatewayBuilder.createGateway();
-        EC2 ec2 = ec2Builder.createEc2(1, "EC2-ONE");
+        ApiGateway apiGateway = gatewayBuilder.build();
+        EC2 ec2 = ec2Builder.build();
         S3 s3 = S3Builder.s3;
 
 

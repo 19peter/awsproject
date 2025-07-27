@@ -105,12 +105,10 @@ public class EC2
         apis.add(api);
 
     }
-
     @Deprecated
     public void setApis(List<Api> apis) {
         this.apis = apis;
     }
-
     @Deprecated
     public List<Api> getApis() {
         return apis;
@@ -125,19 +123,6 @@ public class EC2
     }
 
     public Response executeApi(Request request) {
-        String method = request.getMethod();
-        String path = request.getPath();
-        String data = request.getData();
-
-        Optional<Api> apiCheck = apis.stream()
-                .filter(api -> api.getPath().equals(path) && api.getType().equals(method))
-                .findFirst();
-
-        if (apiCheck.isEmpty()) {
-            logger.info("<EC2>: API does not exist: Method: " + method + " Path: " + path);
-            return null;
-        }
-
         if (executor == null || executor.isShutdown()) {
             logger.error("Executor is not initialized or has been shutdown");
             return null;
@@ -147,16 +132,11 @@ public class EC2
             Future<Response> future = executor.submit(() -> {
                 try {
                     if (provisionConnection()) { 
-                        logger.info("<EC2>: Executing API in EC2:" + this.getName() +
-                        " with method: " + method +
-                        " And params: " + data +
-                        " And FnName: " + apiCheck.get().getName());
-
-                        Response api = apiCheck.get().getFn().execute(data);
+                        Response apiResponse = app.executeApi(request);
                         // Thread.sleep(Helpers.delayDuration);
-                        logger.info("<EC2>: " + this.getName() + " Api Executed: Returned Code: " + api.getCode());
+                        logger.info("<EC2>: " + this.getName() + " Api Executed: Returned Code: " + apiResponse.getCode());
                         releaseConnection();
-                        return api;
+                        return apiResponse;
                     } else {
                         logger.info("<EC2>: EC2 " + this.getName() + " has no provisioned connections");
                         return null;

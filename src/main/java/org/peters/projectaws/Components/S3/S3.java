@@ -23,19 +23,19 @@ implements ApiGatewayIntegrationInterface {
 
 
     public S3() {
-        this.buckets = new HashMap<>();
+        S3.buckets = new HashMap<>();
         logger.info("S3 created with id: " + this.getId());
     }
 
     public boolean addBucket(String name, String info) {
-        if (buckets.containsKey(name)) return false;
+        if (S3.buckets.containsKey(name)) return false;
         Bucket bucket = new Bucket(name, info);
-        buckets.put(name, bucket);
+        S3.buckets.put(name, bucket);
         return true;
     }
 
     public static Bucket getBucket(String bucketName) {
-        return buckets.get(bucketName);
+        return S3.buckets.get(bucketName);
     }
 
 
@@ -47,7 +47,7 @@ implements ApiGatewayIntegrationInterface {
             logger.error("Error: Bucket name or key is missing.");
             return null;
         }
-        Bucket bucket = getBucket(bucketName);
+        Bucket bucket = S3.getBucket(bucketName);
         return bucket.getValue(key);
     }
 
@@ -65,7 +65,7 @@ implements ApiGatewayIntegrationInterface {
             return new PostResponseDto("400");
         }
 
-        Bucket bucket = getBucket(bucketName);
+        Bucket bucket = S3.getBucket(bucketName);
 
 
         if (bucket.addData(key, value)) {
@@ -86,8 +86,8 @@ implements ApiGatewayIntegrationInterface {
         String path = request.getPath();
         String data = request.getData();
         String bucketName = path.split("/")[2];
-        if (buckets.containsKey(bucketName)) {
-            Bucket bucket = getBucket(bucketName);
+        if (S3.buckets.containsKey(bucketName)) {
+            Bucket bucket = S3.getBucket(bucketName);
             logger.info("S3 Received from gateway: Path: " + path + " method: " + method + " data: " + data);
         }
         else logger.error("S3: Data not found");

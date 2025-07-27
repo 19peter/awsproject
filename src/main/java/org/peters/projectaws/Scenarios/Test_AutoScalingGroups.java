@@ -3,9 +3,9 @@ package org.peters.projectaws.Scenarios;
 import org.peters.projectaws.Builders.ApiBuilder;
 import org.peters.projectaws.Builders.ApiGatewayBuilder;
 import org.peters.projectaws.Builders.EC2Builder;
+import org.peters.projectaws.Builders.EC2TargetGroupBuilder;
 import org.peters.projectaws.Builders.LoadBalancerBuilder;
 import org.peters.projectaws.Builders.S3Builder;
-import org.peters.projectaws.Builders.TargetGroupBuilder;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.EC2.EC2;
@@ -17,21 +17,22 @@ import org.peters.projectaws.Components.Policies.ScalingPolicy.ScalingPolicy;
 import org.peters.projectaws.Components.Policies.ScalingPolicy.ScalingPolicyRuleAction;
 import org.peters.projectaws.Components.S3.S3;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
+import org.peters.projectaws.Helpers.AppMethods;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.enums.ScalingPolicyActions;
 import org.peters.projectaws.enums.ScalingPolicyRules;
 
 public class Test_AutoScalingGroups {
     public static void test() {
-        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder();
-        LoadBalancerBuilder loadBalancerBuilder = new LoadBalancerBuilder();
-        TargetGroupBuilder targetGroupBuilder = new TargetGroupBuilder();
-        EC2Builder ec2Builder = new EC2Builder();
+        ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder("gateway-ONE");
+        LoadBalancerBuilder loadBalancerBuilder = new LoadBalancerBuilder("loadBalancer-ONE");
+        EC2TargetGroupBuilder targetGroupBuilder = new EC2TargetGroupBuilder("/ec2/data");
+        EC2Builder ec2Builder = new EC2Builder("ec2-ONE", 1);
         ApiBuilder apiBuilder = new ApiBuilder();
 
-        ApiGateway apiGateway = gatewayBuilder.createGateway();
-        LoadBalancer loadBalancer = loadBalancerBuilder.createLoadBalancer();
-        EC2 ec2 = ec2Builder.createEc2(1, "ec2-ONE");
+        ApiGateway apiGateway = gatewayBuilder.build();
+        LoadBalancer loadBalancer = loadBalancerBuilder.build();
+        EC2 ec2 = ec2Builder.build();
         S3 s3 = S3Builder.s3;
 
         s3.addBucket("data", "data-info");
@@ -44,6 +45,7 @@ public class Test_AutoScalingGroups {
         apiGateway.addRule("/lb/ec2/another-data", loadBalancer);
 
         Api getDataFromEC2 = apiBuilder.createGetApi("getDataFromEC2", "/lb/ec2/data", S3::getFromBucket);
+
         ec2.setApis(getDataFromEC2);
 
         ec2.initialize();
