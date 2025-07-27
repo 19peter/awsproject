@@ -15,8 +15,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class EC2TargetGroup extends TargetGroup<EC2> {
 
     private static final Logger logger = LogManager.getLogger(EC2TargetGroup.class);
-    private static final int MAX_RETRIES = 3;
-    private static final int RETRY_DELAY_MS = 100;
+    private int MAX_RETRIES = 3;
+    private int RETRY_DELAY_MS = 1000;
     private int currentTargetIndex = 0;
 
     public EC2TargetGroup(String path) {
@@ -56,7 +56,8 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
             EC2 target = targetsList.get(currentTargetIndex);
 
             // Skip if target is not healthy
-            if (target.targetMonitor.getState() != TargetState.HEALTHY) {
+            if (target.targetMonitor.getState() != TargetState.HEALTHY &&
+                target.targetMonitor.getState() != TargetState.IDLE) {
                 continue;
             }
 
@@ -152,5 +153,21 @@ public class EC2TargetGroup extends TargetGroup<EC2> {
         targetGroupDetails.updateByState(oldState, newState);
         logger.info("<EC2TargetGroup>: Target Monitor " + ec2.targetMonitor.getName() + " removed from target group");
     }
+
+    protected void setMaxRetriesAndMaxDelay(int maxRetries, int maxDelay) {
+        if (maxRetries < 0 || maxDelay < 0) {
+            logger.error("<EC2TargetGroup>: Invalid max retries or max delay");
+            return;
+        }
+
+        if (maxRetries > 6 || maxDelay > 15000) {
+            logger.warn("<EC2TargetGroup>: Max retries must be less than 6 and max delay must not exceed 15 seconds");
+            return;
+        }
+
+        MAX_RETRIES = maxRetries;
+        RETRY_DELAY_MS = maxDelay;
+    }
+
 
 }

@@ -95,6 +95,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
                 return future.get(TIMEOUT, TimeUnit.MILLISECONDS);
             } catch (TimeoutException e) {
                 future.cancel(true);
+                logger.warn("<LoadBalancer>: Request {} {} timed out", request.getPath(), request.getMethod());
                 throw new RuntimeException("Request timed out");    
             } catch (InterruptedException | ExecutionException e) {
                 throw new RuntimeException(e);
