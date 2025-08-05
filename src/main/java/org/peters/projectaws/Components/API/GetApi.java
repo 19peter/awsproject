@@ -2,7 +2,7 @@ package org.peters.projectaws.Components.API;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Interfaces.Function.FunctionInterface;
+import org.peters.projectaws.Interfaces.Function.Function;
 import org.peters.projectaws.dtos.Response.Response;
 
 public class GetApi extends Api{
@@ -10,7 +10,7 @@ public class GetApi extends Api{
 
     public GetApi(String name,
                    String path,
-                  FunctionInterface fn){
+                  Function fn){
         super(name, path, "GET", fn);
         logger.info("<GetApi>: GetApi created: " + this.getId());
     }

@@ -12,7 +12,7 @@ public class ApiGatewayBuilder extends AWSBuilderObject<ApiGateway> {
     }
 
     @Override
-    public ApiGateway build() {
+    public ApiGateway buildProcess() {
         return new ApiGateway(name);
 
     }

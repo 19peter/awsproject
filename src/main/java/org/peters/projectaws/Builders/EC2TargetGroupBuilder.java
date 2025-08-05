@@ -16,7 +16,7 @@ public class EC2TargetGroupBuilder extends AWSBuilderObject<EC2TargetGroup> {
     }
 
     @Override
-    public EC2TargetGroup build() {
+    public EC2TargetGroup buildProcess() {
         return new EC2TargetGroup(path);
     }
 

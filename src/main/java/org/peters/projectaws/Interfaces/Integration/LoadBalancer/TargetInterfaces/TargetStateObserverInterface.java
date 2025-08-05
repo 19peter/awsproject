@@ -1,4 +1,4 @@
-package org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces;
+package org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterfaces;
 
 import org.peters.projectaws.enums.TargetState;
 import org.peters.projectaws.Core.AWSObject;

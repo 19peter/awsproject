@@ -4,7 +4,7 @@ package org.peters.projectaws.Components.ApiGateway;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Core.AWSObject;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
+import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
 import org.peters.projectaws.dtos.Request.Request;
 import java.util.concurrent.*;
 
@@ -12,7 +12,7 @@ public class ApiGateway extends AWSObject {
 
     private static final Logger logger = LogManager.getLogger(ApiGateway.class);
 
-    ConcurrentHashMap<String, ApiGatewayIntegrationInterface> routingRules;
+    ConcurrentHashMap<String, ApiGatewayIntegration> routingRules;
     final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
 
@@ -22,7 +22,7 @@ public class ApiGateway extends AWSObject {
         logger.info("<ApiGateway>: ApiGateway created: " + this.getId());
     }
 
-    public boolean addRule(String rule, ApiGatewayIntegrationInterface target) {
+    public boolean addRule(String rule, ApiGatewayIntegration target) {
         if(routingRules.containsKey(rule)) return false;
         routingRules.put(rule, target);
         return true;
@@ -37,7 +37,7 @@ public class ApiGateway extends AWSObject {
     public boolean routeAsync(Request request) {
         String rule = request.getPath();
         if(!routingRules.containsKey(rule)) return false;
-        ApiGatewayIntegrationInterface target = routingRules.get(rule);
+        ApiGatewayIntegration target = routingRules.get(rule);
         executorService.submit(() -> {
             try {
                 target.receiveFromGateway(request);
@@ -53,7 +53,7 @@ public class ApiGateway extends AWSObject {
     public boolean routeSync(Request request) throws InterruptedException, ExecutionException {
         String rule = request.getPath();
         if(!routingRules.containsKey(rule)) return false;
-        ApiGatewayIntegrationInterface target = routingRules.get(rule);
+        ApiGatewayIntegration target = routingRules.get(rule);
         target.receiveFromGateway(request);
         return true;
     }

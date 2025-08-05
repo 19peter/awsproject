@@ -4,11 +4,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.App.App;
+import org.peters.projectaws.Components.SecurityGroups.SecurityGroup;
+import org.peters.projectaws.Components.SecurityGroups.SecurityRules.SecurityProtocols;
 import org.peters.projectaws.Components.Monitors.EC2TargetMonitor;
-import org.peters.projectaws.Components.Monitors.TargetMonitor;
 import org.peters.projectaws.Core.AWSObject;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
+import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
@@ -16,7 +17,6 @@ import org.peters.projectaws.enums.TargetState;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -26,29 +26,23 @@ import java.util.concurrent.TimeUnit;
 //Then add the TargetGroup as an observer to the EC2's targetMonitor
 public class EC2
         extends AWSObject
-        implements ApiGatewayIntegrationInterface, LifecycleManager {
+        implements ApiGatewayIntegration, LifecycleManager {
 
-    private EC2TargetMonitor targetMonitor;
     private static final Logger logger = LogManager.getLogger(EC2.class);
+    private EC2TargetMonitor targetMonitor;
     private List<Api> apis;
     private ExecutorService executor;
-    private int maxConn;
-    private int PORT = 4000;
-    private App app;
+    private EC2Types type;
+    private int allocatedCPU;
+    private List<App> apps;
+    private List<SecurityGroup> securityGroups;
 
-    public EC2(int maxConn, String name) {
+    public EC2(int allocatedCPU, String name, EC2Types type) {
         super(name);
-        this.maxConn = maxConn;
-        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
-                + " and id: " + this.getId() + " on port: " + PORT);
-    }
-
-    public EC2(int maxConn, String name, int port) {
-        super(name);
-        this.maxConn = maxConn;
-        PORT = port;
-        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
-                + " and id: " + this.getId() + " on port: " + port);
+        this.allocatedCPU = allocatedCPU;
+        this.type = type;
+        logger.info("<EC2>: EC2 instance created with allocatedCPU: " + allocatedCPU + " and name: " + this.getName()
+                + " and id: " + this.getId());
     }
 
     /**
@@ -58,20 +52,21 @@ public class EC2
      *             API Gateway API resources will be available after version 2.0.0
      */
     @Deprecated()
-    public EC2(List<Api> apis, int maxConn, String name) {
+    public EC2(List<Api> apis, int allocatedCPU, String name, EC2Types type) {
         super(name);
         this.apis = apis;
-        this.maxConn = maxConn;
-        logger.info("<EC2>: EC2 instance created with maxConn: " + maxConn + " and name: " + this.getName()
+        this.allocatedCPU = allocatedCPU;
+        this.type = type;
+        logger.info("<EC2>: EC2 instance created with allocatedCPU: " + allocatedCPU + " and name: " + this.getName()
                 + " and id: " + this.getId());
     }
 
     public EC2(EC2 ec2) {
-        this.maxConn = ec2.getMaxConn();
-        this.app = ec2.getApp();
+        this.allocatedCPU = ec2.getMaxConn();
+        this.apps = ec2.getApps();
         this.setName("COPY::" + ec2.getName());
-        logger.info("<EC2>: EC2 Copy instance created with maxConn: " + maxConn + " and name: " + this.getName()
-                + " and id: " + this.getId() + " on port: " + PORT);
+        logger.info("<EC2>: EC2 Copy instance created with allocatedCPU: " + allocatedCPU + " and name: " + this.getName()
+                + " and id: " + this.getId());
     }
 
     public boolean addObserver(TargetStateObserverInterface<EC2> observer) {
@@ -95,6 +90,28 @@ public class EC2
         }
     }
 
+    public void attachSecurityGroup(SecurityGroup securityGroup) {
+        if (securityGroup == null) throw new IllegalArgumentException("SecurityGroup cannot be null");
+        if ((this.securityGroups.stream().filter(sg -> sg.getId() == securityGroup.getId()).findAny().isPresent())) {
+            logger.warn("<EC2>: CAN'T ATTACH SECURITY GROUP: Security Group " + securityGroup.getId() + " is already attached to EC2 " + this.getName());
+            return;
+        }
+        this.securityGroups.add(securityGroup);
+    }
+
+    public void detachSecurityGroup(SecurityGroup securityGroup) {
+        if (securityGroup == null) throw new IllegalArgumentException("SecurityGroup cannot be null");
+        if (!this.securityGroups.stream().filter(sg -> sg.getId() == securityGroup.getId()).findAny().isPresent()) {
+            logger.warn("<EC2>: CAN'T DETACH SECURITY GROUP: Security Group " + securityGroup.getId() + " is not attached to EC2 " + this.getName());
+            return;
+        }
+        this.securityGroups.remove(securityGroup);
+    }
+
+    public List<SecurityGroup> getSecurityGroups() {
+        return this.securityGroups;
+    }
+
     @Deprecated
     public void setApis(Api api) {
         if (apis != null)
@@ -114,18 +131,33 @@ public class EC2
         return apis;
     }
 
-    public App getApp() {
-        return this.app;
+    public List<App> getApps() {
+        return this.apps;
     }
 
     public int getMaxConn() {
-        return maxConn;
+        return allocatedCPU;
+    }
+
+    public EC2Types getEC2Type() {
+        return type;
     }
 
     public Response executeApi(Request request) {
         if (executor == null || executor.isShutdown()) {
             logger.error("Executor is not initialized or has been shutdown");
             return null;
+        }
+
+        App app = apps.get(request.getPort());
+        if (app == null) {
+            logger.error("App not found on Port: " + request.getPort());
+            return new Response("404");
+        }
+
+        if (!this.securityGroups.stream().anyMatch(sg -> sg.isInboundPortAndProtocolAllowed(request.getPort(), SecurityProtocols.TCP))) {
+            logger.error("Port " + request.getPort() + " is not allowed");
+            return new Response("403", "Port " + request.getPort() + " is not allowed");
         }
 
         try {
@@ -181,14 +213,19 @@ public class EC2
     @Override
     public void initialize() {
         if (!this.getRunning()) {
+            if (this.securityGroups == null) {
+                logger.warn("<EC2>: CAN'T INITIALIZE EC2: SecurityGroups is null");
+                return;
+            }
+                
             logger.info("<EC2> -----INITIALIZING INSTANCE-----: " + this.getId());
-            this.executor = Executors.newFixedThreadPool(maxConn);
-            this.targetMonitor = new EC2TargetMonitor(this, maxConn, "MONITOR::" + this.getName());
+            this.executor = Executors.newFixedThreadPool(allocatedCPU);
+            this.targetMonitor = new EC2TargetMonitor(this, allocatedCPU, "MONITOR::" + this.getName());
             this.targetMonitor.initialize();
             if (this.apis == null)
                 this.apis = new ArrayList<>();
             this.setRunning(true);
-            logger.info("<EC2> -----INITIALIZED INSTANCE-----: " + this.getName() + " with maxConn: " + maxConn);
+            logger.info("<EC2> -----INITIALIZED INSTANCE-----: " + this.getName() + " with allocatedCPU: " + allocatedCPU);
             logger.info("<EC2> -----INITIALIZED MONITOR-----: " + this.getName() + " Monitor instance "
                     + this.targetMonitor.getName());
         } else {

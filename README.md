@@ -25,10 +25,35 @@ Base class for all AWS resources with common properties like ID, name, and runni
 - **API Gateway**: API management
 - **Load Balancer**: Distributes traffic
 - **Auto Scaling**: Automatic scaling of resources
+- **EventBridge**: Serverless event bus for building event-driven applications
 
 ## 4. Design Patterns
 
-### 4.1 Composite Strategy Pattern
+### 4.1 Event-Driven Architecture with EventBridge
+
+#### Overview
+The system implements an event-driven architecture using EventBridge for decoupled communication between components.
+
+#### Key Components
+- **EventBus**: Manages event routing and delivery
+- **EventRule**: Defines event patterns and target routing
+- **EventTarget**: Represents event destinations
+- **EventBridgeListener**: Interface for components that can receive events
+
+#### Example Usage
+```java
+// Create an event rule
+EventRule rule = new EventRule("ec2.amazonaws.com", "running", new EventTarget());
+
+// Add the rule to the default event bus
+EventBridge.addRuleToDefaultBus(rule);
+
+// Publish an event
+AWSEvent event = new AWSEvent("ec2.amazonaws.com", "running");
+EventBridge.publishEvent(event, "DEFAULT");
+```
+
+### 4.2 Composite Strategy Pattern
 
 #### Overview
 The system implements a two-layer Composite Strategy Pattern for flexible request routing. This pattern combines the Strategy and Composite patterns to create a hierarchical structure of interchangeable algorithms.
@@ -127,7 +152,13 @@ Used in the `Builders` package to create complex objects step by step.
 - `onTargetStateChanged()`: Handle target state changes
 - `onRunningRequestsChanged()`: Handle running requests changes
 
-## 7. Data Flow
+## 7. Event Flow
+
+1. **Event Emission**: Components emit events to EventBridge
+2. **Event Routing**: EventBridge routes events based on rules
+3. **Event Processing**: Target components receive and process events
+
+## 8. Data Flow
 
 1. Request enters through API Gateway
 2. API Gateway routes to appropriate service

@@ -2,7 +2,7 @@ package org.peters.projectaws.Components.API;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Interfaces.Function.FunctionInterface;
+import org.peters.projectaws.Interfaces.Function.Function;
 import org.peters.projectaws.dtos.Response.Response;
 
 public class PostApi extends Api {
@@ -10,7 +10,7 @@ public class PostApi extends Api {
 
     public PostApi(String name,
             String path,
-            FunctionInterface fn) {
+            Function fn) {
         super(name, path, "POST", fn);
         logger.info("<PostApi>: PostApi created: " + this.getId());
         this.fn = fn;

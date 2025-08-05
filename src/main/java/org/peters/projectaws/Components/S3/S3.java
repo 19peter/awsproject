@@ -5,26 +5,30 @@ package org.peters.projectaws.Components.S3;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
 import org.peters.projectaws.Main;
 import org.peters.projectaws.dtos.Request.Request;
-import org.peters.projectaws.dtos.Response.S3.GetDataResponseDto;
-import org.peters.projectaws.dtos.Response.S3.PostResponseDto;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.Core.AWSObject;
+import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
 
 import java.util.*;
 
 public class S3 extends AWSObject 
-implements ApiGatewayIntegrationInterface {
+implements ApiGatewayIntegration {
     private static final Logger logger = LogManager.getLogger(Main.class);
     static Map<String, Bucket> buckets;
-    ApiGatewayIntegrationInterface integrationInterface;
 
-
-    public S3() {
+    private S3() {
         S3.buckets = new HashMap<>();
-        logger.info("S3 created with id: " + this.getId());
+        logger.info("<S3>: S3 created with id: " + this.getId());
+    }
+
+    private static class SingletonHolder{
+        private static final S3 INSTANCE = new S3();
+    }
+
+    public static S3 getInstance() {
+        return SingletonHolder.INSTANCE;
     }
 
     public boolean addBucket(String name, String info) {
@@ -39,12 +43,12 @@ implements ApiGatewayIntegrationInterface {
     }
 
 
-    public static GetDataResponseDto getFromBucket(String requestPath) {
+    public static Response getFromBucket(String requestPath) {
         HashMap<String, String> details = extractBucketAndKey(requestPath);
         String bucketName = details.get("BUCKETNAME");
         String key = details.get("KEY");
         if (bucketName == null || bucketName.isEmpty() || key == null || key.isEmpty()){
-            logger.error("Error: Bucket name or key is missing.");
+            logger.error("<S3>: Error: Bucket name or key is missing.");
             return null;
         }
         Bucket bucket = S3.getBucket(bucketName);
@@ -60,21 +64,21 @@ implements ApiGatewayIntegrationInterface {
 
 
         if (bucketName == null || bucketName.isEmpty() || key == null || key.isEmpty() || value == null || value.isEmpty()){
-            logger.error("Error: Bucket name or key or value is missing.");
+            logger.error("<S3>: Error: Bucket name or key or value is missing.");
 
-            return new PostResponseDto("400");
+            return new Response("400");
         }
 
         Bucket bucket = S3.getBucket(bucketName);
 
 
         if (bucket.addData(key, value)) {
-            logger.info("Adding To Bucket: " + bucketName + " Key: " + key + " And Value: " + value);
-            return new PostResponseDto("200");
+            logger.info("<S3>: Adding To Bucket: " + bucketName + " Key: " + key + " And Value: " + value);
+            return new Response("200");
 
         } else  {
-            logger.error("Failed To Add To Bucket: " + bucketName + " Key: " + key + " And Value: " + value);
-            return new PostResponseDto("400");
+            logger.error("<S3>: Failed To Add To Bucket: " + bucketName + " Key: " + key + " And Value: " + value);
+            return new Response("400");
 
         }
 

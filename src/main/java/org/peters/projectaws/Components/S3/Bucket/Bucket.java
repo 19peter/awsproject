@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Helpers.Helpers;
-import org.peters.projectaws.dtos.Response.S3.GetDataResponseDto;
+import org.peters.projectaws.dtos.Response.Response;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,9 +29,9 @@ public class Bucket extends AWSObject {
         return this.data;
     }
 
-    public GetDataResponseDto getValue(String key) {
+    public Response getValue(String key) {
         var dataCheck = this.data.get(key);
-        var response = new GetDataResponseDto();
+        var response = new Response("400");
 
         if (dataCheck != null && !dataCheck.isEmpty()) {
             response = Helpers.populateResponse("200", dataCheck, true);

@@ -13,7 +13,8 @@ public class LambdaTargetGroupBuilder extends AWSBuilderObject<LambdaTargetGroup
         this.lambda = lambda;
     }
 
-    public LambdaTargetGroup build() {
+    @Override
+    public LambdaTargetGroup buildProcess() {
         return new LambdaTargetGroup(path, lambda);
     }
 }

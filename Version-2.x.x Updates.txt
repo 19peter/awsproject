@@ -3,10 +3,16 @@
 
 2-  Adding API Gateway API Resource in EC2 instead of the ordinary api list
 
-3- Adding App Ports and EC2 Ports
+3- A Security Group must be added to EC2 instance to initialize it 
+    3.1- allows it to expose ports to the internet
 
 4- Adding IPs/Elastic IPs for EC2 instances ON-DEMAND
 
-5- Creating DNS names for LB and API Gateway
+5- Creating DNS names for AWS Services (EC2, LB, API Gateway, Lambda, S3)
 
-6- Creating DNS-like Component that would forward requests to targets(LB and API Gateway)
+6- Creating EventBridge EventBus and Event
+    6.1- EventBus would be used to forward events (ObjectCreationEvent) to targets(DNS, ComponentRegistry)
+
+7- Creating DNS-like Component that would forward requests to targets(LB and API Gateway)
+
+8- Addin EC2 Type param to allocate CPU resource for ec2 instance

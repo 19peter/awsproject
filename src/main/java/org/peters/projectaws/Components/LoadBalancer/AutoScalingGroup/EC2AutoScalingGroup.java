@@ -6,7 +6,7 @@ import org.peters.projectaws.Components.EC2.EC2;
 import org.peters.projectaws.Components.LoadBalancer.TargetGroup.EC2TargetGroup;
 import org.peters.projectaws.Components.Policies.ScalingPolicy.ScalingPolicy;
 import org.peters.projectaws.Components.Policies.ScalingPolicy.ScalingPolicyRuleAction;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.AutoScalingGroupInterface;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.AutoScalingGroupIntegration;
 import org.peters.projectaws.enums.ScalingPolicyActions;
 import org.peters.projectaws.enums.ScalingPolicyRules;
 import org.peters.projectaws.enums.TargetState;
@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 public class EC2AutoScalingGroup 
 extends EC2TargetGroup 
-implements AutoScalingGroupInterface 
+implements AutoScalingGroupIntegration 
 {
     private static final Logger logger = LogManager.getLogger(EC2AutoScalingGroup.class);
     private ScalingPolicy scalingPolicy;
@@ -170,8 +170,7 @@ implements AutoScalingGroupInterface
         }
 
         for (int i = 0; i < instances; i++) {
-            EC2Builder ec2Builder = new EC2Builder("ec2-" + targetsList.size() + "-SCALE-UP", instance.getMaxConn());
-            // EC2 ec2 = ec2Builder.createEc2(instance.getApis(), instance.getMaxConn(), "ec2-" + targetsList.size() + "-SCALE-UP");
+            EC2Builder ec2Builder = new EC2Builder("ec2-" + targetsList.size() + "-SCALE-UP",  instance.getEC2Type());
             EC2 ec2 = ec2Builder.build();
             ec2.initialize();
             addTarget(ec2);

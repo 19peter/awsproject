@@ -1,9 +1,9 @@
-package org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer;
+package org.peters.projectaws.Interfaces.Integration.LoadBalancer;
 
 import org.peters.projectaws.Components.Policies.ScalingPolicy.ScalingPolicyRuleAction;
 import org.peters.projectaws.enums.TargetState;
 
-public interface AutoScalingGroupInterface {
+public interface AutoScalingGroupIntegration {
     void applyPolicyIfApplicable(TargetState newState);
     void applyPolicy(ScalingPolicyRuleAction ruleAction);
     void requestScaleUp(int instances);

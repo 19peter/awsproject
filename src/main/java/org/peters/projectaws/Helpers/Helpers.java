@@ -1,8 +1,9 @@
 package org.peters.projectaws.Helpers;
 
-import org.peters.projectaws.dtos.Response.S3.GetDataResponseDto;
 
 import java.util.concurrent.ThreadLocalRandom;
+
+import org.peters.projectaws.dtos.Response.Response;
 
 public class Helpers {
 
@@ -14,10 +15,9 @@ public class Helpers {
         Thread.sleep(sleepTime);
     }
 
-    public static GetDataResponseDto populateResponse(String code, String data, boolean isPresent) {
-        GetDataResponseDto response = new GetDataResponseDto();
+    public static Response populateResponse(String code, String data, boolean isPresent) {
+        Response response = new Response(code);
         response.setData(data);
-        response.setCode(code);
         response.setIsPresent(isPresent);
         return response;
 

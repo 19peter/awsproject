@@ -1,6 +1,9 @@
 package org.peters.projectaws.Scenarios;
 
-import org.peters.projectaws.Interfaces.Function.FunctionInterface;
+import org.peters.projectaws.Interfaces.Function.Function;
+
+import java.net.URISyntaxException;
+
 import org.peters.projectaws.Builders.ApiGatewayBuilder;
 import org.peters.projectaws.Builders.EC2TargetGroupBuilder;
 import org.peters.projectaws.Builders.LambdaBuilder;
@@ -15,8 +18,8 @@ import org.peters.projectaws.dtos.Request.Request;
 
 public class Test_LB_Lambda_Benchmark {
 
-    public static void test() {
-        FunctionInterface functionalInterface = (data) -> {
+    public static void test() throws URISyntaxException {
+        Function functionalInterface = (data) -> {
             try {
             
                 Thread.sleep(1000);

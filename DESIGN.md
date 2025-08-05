@@ -1,6 +1,48 @@
 # AWS-SYS Design Documentation
 
-## 1. Composite Strategy Pattern Implementation
+## 1. EventBridge Architecture
+
+### 1.1 Core Components
+
+#### EventBridge
+- Central event bus for managing and routing events
+- Supports multiple named buses (e.g., "DEFAULT" bus)
+- Handles event publication and rule evaluation
+
+#### EventRule
+- Defines event matching patterns (source, state)
+- Contains target configuration for matched events
+- Supports flexible event routing based on event attributes
+
+#### EventTarget
+- Represents event destinations
+- Maintains a list of listeners for event delivery
+- Handles fan-out to multiple listeners
+
+#### EventBridgeListener
+- Interface for components that can receive events
+- Single method contract: `onEvent(AWSEvent event)`
+- Implemented by components that need to react to events
+
+### 1.2 Event Flow
+1. **Event Creation**: Components create AWSEvent objects
+2. **Event Publication**: Events are published to a specific event bus
+3. **Rule Matching**: EventBridge evaluates rules against the event
+4. **Target Invocation**: Matching rules trigger their associated targets
+5. **Listener Notification**: Target notifies all registered listeners
+
+### 1.3 Builder Pattern
+- **EventRuleBuilder**: Simplifies creation of event rules
+  ```java
+  EventRule rule = new EventRuleBuilder()
+      .withSource("ec2.amazonaws.com")
+      .withDetailState("running")
+      .withTarget(new EventTarget())
+      .build();
+  ```
+- **EventBuilder**: (Planned) For constructing event objects
+
+## 2. Composite Strategy Pattern Implementation
 
 ### Architecture Overview
 
@@ -167,6 +209,11 @@ sequenceDiagram
 #### Adding a New API Gateway Integration
 1. Implement `ApiGatewayIntegrationInterface`
 2. Add routing logic in API Gateway
+
+#### Adding a New Event Listener
+1. Implement `EventBridgeListener` interface
+2. Register with an `EventTarget`
+3. Create appropriate `EventRule` to route events
 
 #### Adding a New Target Group Type
 1. Implement `TargetIntegrationInterface`

@@ -31040,3 +31040,18 @@ java.lang.IllegalArgumentException: No enum constant org.peters.projectaws.enums
 16:06:35.184 [pool-3-thread-1] INFO  - <EC2TargetMonitor>: Monitor MONITOR::ec2-ONE removed running request
 16:06:35.185 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to HEALTHY Checking policy
 16:06:35.185 [pool-3-thread-1] INFO  - <EC2AutoScalingGroup>: Target state changed to IDLE Checking policy
+01:04:39.465 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 5466158740112545346
+01:05:08.400 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 7865179945142582426
+01:06:05.839 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 2456380350228178976
+01:08:21.640 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -1536153758846476803
+01:08:21.642 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+01:09:11.177 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -7424099568707174531
+01:09:11.178 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+01:09:37.338 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -3965377700220038613
+01:09:37.338 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+01:09:37.340 [main] INFO  - <EventBridge>: Event ObjectCreationEvent matches rule 
+01:10:29.489 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -3603869995340667492
+01:10:29.491 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+01:10:29.492 [main] INFO  - <EventBridge>: Event ObjectCreationEvent matches rule 
+01:10:29.493 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+01:10:29.494 [main] INFO  - <DNS>: Registered component: test with DNS name: test-global.awsproject.dns

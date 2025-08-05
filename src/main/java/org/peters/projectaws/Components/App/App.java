@@ -12,26 +12,44 @@ import java.util.List;
 import java.util.Optional;
 
 public class App {
-    List<Api> apis;
     private static final Logger logger = LogManager.getLogger(App.class);
+    private String name;
+    private int port;
+    private List<Api> apis;
 
 
-    public App() {
+    public App(String name, int port) {
+        this.name = name;
+        this.port = port;
         this.apis = new ArrayList<>();
-    }
-
-    public App(List<Api> apis) {
-        this.apis = apis;
     }
 
     public void setApis(Api api) {
         apis.add(api);
     }
 
+    public void setApis(List<Api> apis) {
+        this.apis = apis;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Response executeApi(Request request)  {
         String method = request.getMethod();
         String path = request.getPath();
         String data = request.getData();
+        int port = request.getPort();
+
+        if(port != this.port) {
+            logger.info("<App>: Port does not match: Method: " + method + " Path: " + path);
+            return new Response("403");
+        }   
         
         Optional<Api> apiCheck = apis.stream()
                 .filter(api -> api.getPath().equals(request.getPath()) && api.getType().equals(request.getMethod()))

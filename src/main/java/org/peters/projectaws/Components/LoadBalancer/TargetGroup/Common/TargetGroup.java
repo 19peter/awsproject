@@ -1,8 +1,8 @@
 package org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common;
 
 import org.peters.projectaws.Core.AWSObject;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetIntegrationInterface;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetIntegration;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.enums.TargetState;
 import org.peters.projectaws.dtos.TargetGroupDetails.TargetGroupDetails;
 
@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class TargetGroup <T extends AWSObject>
 extends AWSObject
-implements TargetIntegrationInterface, TargetStateObserverInterface<T> {
+implements TargetIntegration, TargetStateObserverInterface<T> {
     String path;
     protected CopyOnWriteArrayList<T> targetsList;
     protected TargetGroupDetails targetGroupDetails;

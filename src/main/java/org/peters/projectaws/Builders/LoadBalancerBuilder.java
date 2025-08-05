@@ -11,7 +11,7 @@ public class LoadBalancerBuilder extends AWSBuilderObject<LoadBalancer> {
     }
     
     @Override
-    public LoadBalancer build() {
+    public LoadBalancer buildProcess() {
         return new LoadBalancer(name);
     }
 }

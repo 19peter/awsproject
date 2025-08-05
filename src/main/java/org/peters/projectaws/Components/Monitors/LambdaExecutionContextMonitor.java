@@ -3,7 +3,7 @@ package org.peters.projectaws.Components.Monitors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Components.Lambda.LambdaExecutionContext;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.enums.TargetState;
 
 public class LambdaExecutionContextMonitor extends TargetMonitor<LambdaExecutionContext> {

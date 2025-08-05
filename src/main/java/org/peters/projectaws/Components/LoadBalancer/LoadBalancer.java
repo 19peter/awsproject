@@ -2,8 +2,8 @@ package org.peters.projectaws.Components.LoadBalancer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.ApiGateway.ApiGatewayIntegrationInterface;
-import org.peters.projectaws.Interfaces.IntegrationInterfaces.LoadBalancer.TargetIntegrationInterface;
+import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
+import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetIntegration;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
@@ -15,10 +15,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class LoadBalancer 
 extends AWSObject
-implements ApiGatewayIntegrationInterface, LifecycleManager {
+implements ApiGatewayIntegration, LifecycleManager {
     private static final Logger logger = LogManager.getLogger(LoadBalancer.class);
     private ExecutorService executorService;
-    private ConcurrentHashMap<String, TargetIntegrationInterface> targetGroupsRoutingRules;
+    private ConcurrentHashMap<String, TargetIntegration> targetGroupsRoutingRules;
     private final AtomicBoolean isRunning = new AtomicBoolean(false);
     private final int TIMEOUT = 30000;
 
@@ -87,7 +87,7 @@ implements ApiGatewayIntegrationInterface, LifecycleManager {
         if(!targetGroupsRoutingRules.containsKey(rule)) throw new IllegalArgumentException("Invalid path");
 
         logger.info("<LoadBalancer>: LoadBalancer received request: {} {}", request.getPath(), request.getMethod());
-        TargetIntegrationInterface target = targetGroupsRoutingRules.get(rule);
+        TargetIntegration target = targetGroupsRoutingRules.get(rule);
         
         Future<Response> future = executorService.submit(
             () -> target.receiveFromLoadBalancer(request));

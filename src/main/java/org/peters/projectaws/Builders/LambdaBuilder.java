@@ -1,18 +1,18 @@
 package org.peters.projectaws.Builders;
 
 import org.peters.projectaws.Components.Lambda.Lambda;
-import org.peters.projectaws.Interfaces.Function.FunctionInterface;
+import org.peters.projectaws.Interfaces.Function.Function;
 import org.peters.projectaws.Core.AWSBuilderObject;
 
 public class LambdaBuilder extends AWSBuilderObject<Lambda> {
-    FunctionInterface functionalInterface;
+    Function functionalInterface;
     
-    public LambdaBuilder(FunctionInterface functionalInterface) {
+    public LambdaBuilder(Function functionalInterface) {
         this.functionalInterface = functionalInterface;
     }
 
     @Override
-    public Lambda build() {
+    public Lambda buildProcess() {
         return new Lambda(functionalInterface);
     }
 }

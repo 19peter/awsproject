@@ -1,5 +1,7 @@
 package org.peters.projectaws.Scenarios;
 
+import java.net.URISyntaxException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Builders.ApiBuilder;
@@ -9,6 +11,7 @@ import org.peters.projectaws.Builders.S3Builder;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.EC2.EC2;
+import org.peters.projectaws.Components.EC2.EC2Types;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
 import org.peters.projectaws.Components.S3.S3;
 import org.peters.projectaws.Main;
@@ -17,15 +20,15 @@ import org.peters.projectaws.dtos.Request.Request;
 public class Test_GateWay_EC2_S3 {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
-    public static void test() throws InterruptedException {
+    public static void test() throws InterruptedException, URISyntaxException {
         ApiGatewayBuilder gatewayBuilder = new ApiGatewayBuilder("gateway-ONE");
-        EC2Builder ec2Builder = new EC2Builder("ec2-ONE", 1);
+        EC2Builder ec2Builder = new EC2Builder("ec2-ONE", EC2Types.T3_MICRO);
         ApiBuilder apiBuilder = new ApiBuilder();
         S3Builder s3Builder = new S3Builder();
 
         ApiGateway apiGateway = gatewayBuilder.build();
         EC2 ec2 = ec2Builder.build();
-        S3 s3 = S3Builder.s3;
+        S3 s3 = S3.getInstance();
 
 
         s3.addBucket("data", "data-info");
