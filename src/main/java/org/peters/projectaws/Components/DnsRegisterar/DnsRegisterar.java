@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Core.AWSEvent;
 import org.peters.projectaws.Interfaces.EventBridgeListener.EventBridgeListener;
+import org.peters.projectaws.enums.EventBridgeDefaultEvents;
 
 public class DnsRegisterar implements EventBridgeListener {
     private static Map<String, String> dnsMap = new HashMap<>();
@@ -19,6 +20,14 @@ public class DnsRegisterar implements EventBridgeListener {
             "S3",
             "LoadBalancer",
             "ApiGateway"));
+    
+    private static class InstanceHolder{
+        private static final DnsRegisterar instance = new DnsRegisterar();
+    }
+
+    public static DnsRegisterar getInstance() {
+        return InstanceHolder.instance;
+    }
 
     public static void register(String componentName) {
         String dnsName = generateDnsName(componentName);
@@ -45,7 +54,8 @@ public class DnsRegisterar implements EventBridgeListener {
 
     @Override
     public void onEvent(AWSEvent event) {
-        if (event.getName().equals("ObjectCreationEvent")) {
+        if (event.getName().equals(EventBridgeDefaultEvents.ObjectCreationEvent.name())) {
+            logger.info("<DNS>: Received event: " + event.getName() + " from " + event.getSource());
             if (allowedComponents.contains(event.getSource())) {
                 register(event.getSourceObject().getName());
             }

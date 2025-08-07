@@ -13,6 +13,7 @@ import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterface
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
+import org.peters.projectaws.enums.EC2Types;
 import org.peters.projectaws.enums.TargetState;
 
 import java.util.ArrayList;

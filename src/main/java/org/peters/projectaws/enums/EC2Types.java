@@ -1,4 +1,4 @@
-package org.peters.projectaws.Components.EC2;
+package org.peters.projectaws.enums;
 
 public enum EC2Types {
     T3_MICRO,

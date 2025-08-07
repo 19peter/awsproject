@@ -31055,3 +31055,30 @@ java.lang.IllegalArgumentException: No enum constant org.peters.projectaws.enums
 01:10:29.492 [main] INFO  - <EventBridge>: Event ObjectCreationEvent matches rule 
 01:10:29.493 [main] INFO  - <ComponentRegistry>: Component test registered successfully
 01:10:29.494 [main] INFO  - <DNS>: Registered component: test with DNS name: test-global.awsproject.dns
+00:29:16.016 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -2435793956214945453
+00:29:16.018 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:29:16.020 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:30:17.743 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -809847477183759248
+00:30:17.745 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:30:17.748 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:32:38.745 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 2611356142062689124
+00:32:38.748 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:32:38.749 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:33:47.771 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -8121418490582882526
+00:33:47.774 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:33:47.777 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:34:48.554 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: -8320283002034148953
+00:34:48.558 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:34:48.560 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:35:53.281 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 2876064283291827090
+00:35:53.282 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:35:53.283 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:35:53.284 [main] INFO  - <EventBridge>: Event ObjectCreationEvent matches rule 
+00:35:53.284 [main] INFO  - <DNS>: Received event: ObjectCreationEvent from EC2
+00:35:53.284 [main] INFO  - <DNS>: Registered component: test with DNS name: test-global.awsproject.dns
+00:36:51.077 [main] INFO  - <EC2>: EC2 instance created with allocatedCPU: 1 and name: test and id: 7130566148505289243
+00:36:51.078 [main] INFO  - <ComponentRegistry>: Component test registered successfully
+00:36:51.079 [main] INFO  - <EventBridge>: Publishing event ObjectCreationEvent to bus DEFAULT
+00:36:51.080 [main] INFO  - <EventBridge>: Event ObjectCreationEvent matches rule 
+00:36:51.081 [main] INFO  - <DNS>: Received event: ObjectCreationEvent from EC2
+00:36:51.082 [main] INFO  - <DNS>: Registered component: test with DNS name: test-global.awsproject.dns

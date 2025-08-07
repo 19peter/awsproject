@@ -1,5 +1,7 @@
 package org.peters.projectaws.Components.EC2;
 
+import org.peters.projectaws.enums.EC2Types;
+
 public class EC2SizeAllocator {
     public static int getEC2Size(EC2Types type) {
         switch (type) {

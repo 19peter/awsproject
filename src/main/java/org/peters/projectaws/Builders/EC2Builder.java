@@ -2,8 +2,8 @@ package org.peters.projectaws.Builders;
 
 import org.peters.projectaws.Components.EC2.EC2;
 import org.peters.projectaws.Components.EC2.EC2SizeAllocator;
-import org.peters.projectaws.Components.EC2.EC2Types;
 import org.peters.projectaws.Core.AWSBuilderObject;
+import org.peters.projectaws.enums.EC2Types;
 
 public class EC2Builder extends AWSBuilderObject<EC2> {
     String name;

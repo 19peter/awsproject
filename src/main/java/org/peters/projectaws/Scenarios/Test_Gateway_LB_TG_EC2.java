@@ -11,13 +11,13 @@ import org.peters.projectaws.Builders.S3Builder;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.EC2.EC2;
-import org.peters.projectaws.Components.EC2.EC2Types;
 import org.peters.projectaws.Components.LoadBalancer.LoadBalancer;
 import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
 import org.peters.projectaws.Components.S3.S3;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
 import org.peters.projectaws.Helpers.Helpers;
 import org.peters.projectaws.dtos.Request.Request;
+import org.peters.projectaws.enums.EC2Types;
 
 public class Test_Gateway_LB_TG_EC2 {
 

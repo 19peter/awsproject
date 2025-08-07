@@ -1,7 +1,6 @@
 package org.peters.projectaws.Components.EventBridge;
 
 import org.peters.projectaws.Core.AWSEvent;
-import org.peters.projectaws.Core.AWSObject;
 
 public class EventRule {
     String source;
@@ -15,10 +14,6 @@ public class EventRule {
     }
 
     public boolean matches(AWSEvent event) {
-        System.out.println(event.getSource());
-        System.out.println(this.source);
-        System.out.println(event.getState());
-        System.out.println(this.detailState);
         return event.getSource().equals(this.source) && event.getState().equals(this.detailState);
     }
 

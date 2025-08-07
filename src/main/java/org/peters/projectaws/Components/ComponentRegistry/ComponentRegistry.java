@@ -4,18 +4,23 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.peters.projectaws.Core.AWSEvent;
 import org.peters.projectaws.Core.AWSObject;
-import org.peters.projectaws.Interfaces.EventBridgeListener.EventBridgeListener;
 
-public class ComponentRegistry implements EventBridgeListener {
+public class ComponentRegistry  {
     private static final Logger logger = LogManager.getLogger(ComponentRegistry.class);
     private static HashMap<String, AWSObject> components = new HashMap<>();
+    private static class InstanceHolder{
+        private static final ComponentRegistry instance = new ComponentRegistry();
+    }
+    
+    public static ComponentRegistry getInstance() {
+        return InstanceHolder.instance;
+    }
     
     public static void registerComponent(AWSObject component) {
         if (components.containsKey(component.getName())) {
             logger.error("<ComponentRegistry>: Component " + component.getName() + " already exists");
-            return;
+            throw new IllegalArgumentException("Component " + component.getName() + " already exists");
         }
         components.put(component.getName(), component);
         logger.info("<ComponentRegistry>: Component " + component.getName() + " registered successfully");
@@ -42,11 +47,6 @@ public class ComponentRegistry implements EventBridgeListener {
         return components.containsKey(name);
     }
 
-    @Override
-    public void onEvent(AWSEvent event) {
-        if (event.getName().equals("ObjectCreationEvent")) {
-            registerComponent(event.getSourceObject());
-        }
-    }
+
     
 }

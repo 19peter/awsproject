@@ -11,11 +11,11 @@ import org.peters.projectaws.Builders.S3Builder;
 import org.peters.projectaws.Components.API.Api;
 import org.peters.projectaws.Components.ApiGateway.ApiGateway;
 import org.peters.projectaws.Components.EC2.EC2;
-import org.peters.projectaws.Components.EC2.EC2Types;
 import org.peters.projectaws.Components.S3.Bucket.Bucket;
 import org.peters.projectaws.Components.S3.S3;
 import org.peters.projectaws.Main;
 import org.peters.projectaws.dtos.Request.Request;
+import org.peters.projectaws.enums.EC2Types;
 
 public class Test_GateWay_EC2_S3 {
     private static final Logger logger = LogManager.getLogger(Main.class);
