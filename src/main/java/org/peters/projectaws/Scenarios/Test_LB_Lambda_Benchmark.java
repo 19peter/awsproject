@@ -45,7 +45,7 @@ public class Test_LB_Lambda_Benchmark {
         loadBalancer.addTargetGroup("/lb/lambda", targetGroup);
         apiGateway.addRule("/lb/lambda", loadBalancer);
 
-        apiGateway.routeAsync(new Request("GET", "/lb/lambda", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/lambda", null));
+        apiGateway.serve(new Request("GET", "/lb/lambda", null));
+        apiGateway.serve(new Request("GET", "/lb/lambda", null));
     }
 }

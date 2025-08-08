@@ -15,7 +15,7 @@ public class EC2Builder extends AWSBuilderObject<EC2> {
     }
 
     @Override
-    public EC2 buildProcess() {
+    protected EC2 buildProcess() {
         return new EC2(EC2SizeAllocator.getEC2Size(type), name, type);
     }
 

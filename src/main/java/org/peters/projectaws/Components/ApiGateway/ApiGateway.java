@@ -5,10 +5,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
+import org.peters.projectaws.Interfaces.RequestServer.RequestServer;
 import org.peters.projectaws.dtos.Request.Request;
+import org.peters.projectaws.dtos.Response.Response;
+
 import java.util.concurrent.*;
 
-public class ApiGateway extends AWSObject {
+public class ApiGateway 
+extends AWSObject
+implements RequestServer {
 
     private static final Logger logger = LogManager.getLogger(ApiGateway.class);
 
@@ -34,28 +39,22 @@ public class ApiGateway extends AWSObject {
         return true;
     }
 
-    public boolean routeAsync(Request request) {
+    @Override
+    public Response serve(Request request) {
         String rule = request.getPath();
-        if(!routingRules.containsKey(rule)) return false;
+        if(!routingRules.containsKey(rule)) return null;
         ApiGatewayIntegration target = routingRules.get(rule);
+        Response response = new Response("404", "Request Server Not Found");
         executorService.submit(() -> {
             try {
-                target.receiveFromGateway(request);
+                return target.receiveFromGateway(request);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             }
         });
-        return true;
-    }
-
-    public boolean routeSync(Request request) throws InterruptedException, ExecutionException {
-        String rule = request.getPath();
-        if(!routingRules.containsKey(rule)) return false;
-        ApiGatewayIntegration target = routingRules.get(rule);
-        target.receiveFromGateway(request);
-        return true;
+        return response;
     }
 
     public void shutdownAndAwait() {

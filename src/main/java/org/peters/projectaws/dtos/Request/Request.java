@@ -18,7 +18,7 @@ public class Request {
         this.method = method;
         this.path = path;
         headers = new HashMap<>();
-        port = extractPortFromUrl(path);
+        port = extractPort(path);
     }
 
     public Request(String method, String path, String data, HashMap<String,String> headers) throws URISyntaxException {
@@ -26,7 +26,7 @@ public class Request {
         this.method = method;
         this.path = path;
         this.headers = headers;
-        port = extractPortFromUrl(path);
+        port = extractPort(path);
     }
 
 
@@ -55,6 +55,18 @@ public class Request {
         }
         
         return port;
+    }
+
+    private int extractPort(String url) {
+        if (url == null || url.isEmpty()) {
+            return 80;
+        }
+
+        if (url.split(":").length < 2) {
+            return 80;
+        }
+        String port = url.split(":")[1];
+        return Integer.parseInt(port);
     }
 
     public String getData() {

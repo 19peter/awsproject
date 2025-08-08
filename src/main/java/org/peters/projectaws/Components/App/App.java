@@ -57,7 +57,7 @@ public class App {
 
         if (apiCheck.isEmpty()) {
             logger.info("<App>: API does not exist: Method: " + method + " Path: " + path);
-            return null;
+            return new Response("404");
         }
 
         Response apiResponse = apiCheck.get().getFn().execute(data);    

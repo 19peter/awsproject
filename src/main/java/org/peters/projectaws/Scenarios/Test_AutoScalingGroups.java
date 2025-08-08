@@ -69,11 +69,11 @@ public class Test_AutoScalingGroups {
         loadBalancer.initialize();
         loadBalancer.addTargetGroup("/lb/ec2/data", autoScalingGroup);
 
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
 
     }
 }

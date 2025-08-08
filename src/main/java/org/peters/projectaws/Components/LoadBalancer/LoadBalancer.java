@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
 import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetIntegration;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
+import org.peters.projectaws.Interfaces.RequestServer.RequestServer;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.Components.LoadBalancer.TargetGroup.Common.TargetGroup;
@@ -15,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class LoadBalancer 
 extends AWSObject
-implements ApiGatewayIntegration, LifecycleManager {
+implements ApiGatewayIntegration, LifecycleManager, RequestServer {
     private static final Logger logger = LogManager.getLogger(LoadBalancer.class);
     private ExecutorService executorService;
     private ConcurrentHashMap<String, TargetIntegration> targetGroupsRoutingRules;
@@ -25,7 +26,7 @@ implements ApiGatewayIntegration, LifecycleManager {
     public LoadBalancer(String name) {
         super(name);
         this.targetGroupsRoutingRules = new ConcurrentHashMap<>();
-        logger.info("<LoadBalancer>: LoadBalancer created with {} thread pool and Id: {}", executorService, this.getId());
+        logger.info("<LoadBalancer>: LoadBalancer created with Id: {}", this.getId());
     }
 
     @Override
@@ -33,7 +34,7 @@ implements ApiGatewayIntegration, LifecycleManager {
         if (!isRunning.get()) {
             this.executorService = Executors.newFixedThreadPool(10);
             isRunning.set(true);
-            logger.info("<LoadBalancer>: LoadBalancer initialized with {} thread pool", executorService);
+            logger.info("<LoadBalancer>: LoadBalancer initialized with {} thread pool", 10);
         } else {
             logger.warn("<LoadBalancer>: LoadBalancer is already initialized ");
         }
@@ -83,11 +84,25 @@ implements ApiGatewayIntegration, LifecycleManager {
     public Response receiveFromGateway(Request request) throws InterruptedException, ExecutionException {
         if (!isRunning.get()) throw new IllegalStateException("LoadBalancer is not running");  
        
-        String rule = request.getPath();
-        if(!targetGroupsRoutingRules.containsKey(rule)) throw new IllegalArgumentException("Invalid path");
+       return processRequest(request);
+    }
 
-        logger.info("<LoadBalancer>: LoadBalancer received request: {} {}", request.getPath(), request.getMethod());
+    @Override
+    public Response serve(Request request) {
+        if (!isRunning.get()) throw new IllegalStateException("LoadBalancer is not running");  
+        return processRequest(request);
+    }
+
+
+    private Response processRequest(Request request) {
+        String rule = request.getPath();
+        if(!targetGroupsRoutingRules.containsKey(rule)) {
+            logger.info("<LoadBalancer>: TargetGroup not found for path: " + rule);
+            return new Response("404", "Not Found");
+        }
+
         TargetIntegration target = targetGroupsRoutingRules.get(rule);
+        logger.info("<LoadBalancer>: TargetGroup found for path: " + rule);
         
         Future<Response> future = executorService.submit(
             () -> target.receiveFromLoadBalancer(request));

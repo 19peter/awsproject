@@ -19,8 +19,12 @@ public class EventBridge {
     EventBridge() {
         EventTarget creationEventTargets = new EventTarget();
         creationEventTargets.addListener(DnsRegisterar.getInstance());
-        EventRule objCreationEventRule = EventRuleBuilder.build("EC2", "CREATED", creationEventTargets);
-        EventBridge.addRuleToDefaultBus(objCreationEventRule);
+        EventRule ec2CreationEventRule = EventRuleBuilder.build("EC2", "CREATED", creationEventTargets);
+        EventRule lbCreationEventRule = EventRuleBuilder.build("LoadBalancer", "CREATED", creationEventTargets);
+        EventRule apiGatewayCreationEventRule = EventRuleBuilder.build("ApiGateway", "CREATED", creationEventTargets);
+        EventBridge.addRuleToDefaultBus(ec2CreationEventRule);
+        EventBridge.addRuleToDefaultBus(lbCreationEventRule);
+        EventBridge.addRuleToDefaultBus(apiGatewayCreationEventRule);
     }
 
     private static class InstanceHolder{

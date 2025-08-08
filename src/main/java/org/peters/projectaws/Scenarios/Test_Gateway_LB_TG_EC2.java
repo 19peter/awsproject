@@ -66,11 +66,11 @@ public class Test_Gateway_LB_TG_EC2 {
 
         ec2.shutdown();
 
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
-        apiGateway.routeAsync(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
+        apiGateway.serve(new Request("GET", "/lb/ec2/data", "/S3/data/new-data-key", null));
 
         // loadBalancer.shutdown();
         

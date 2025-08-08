@@ -11,6 +11,7 @@ import org.peters.projectaws.Core.AWSObject;
 import org.peters.projectaws.Interfaces.Integration.ApiGateway.ApiGatewayIntegration;
 import org.peters.projectaws.Interfaces.Integration.LoadBalancer.TargetInterfaces.TargetStateObserverInterface;
 import org.peters.projectaws.Interfaces.Lifecycle.LifecycleManager;
+import org.peters.projectaws.Interfaces.RequestServer.RequestServer;
 import org.peters.projectaws.dtos.Request.Request;
 import org.peters.projectaws.dtos.Response.Response;
 import org.peters.projectaws.enums.EC2Types;
@@ -23,11 +24,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+import javax.annotation.processing.Generated;
+
 //Create EC2, Create TargetGroup and add EC2 to TargetGroup's targetList
 //Then add the TargetGroup as an observer to the EC2's targetMonitor
 public class EC2
         extends AWSObject
-        implements ApiGatewayIntegration, LifecycleManager {
+        implements ApiGatewayIntegration, LifecycleManager, RequestServer {
 
     private static final Logger logger = LogManager.getLogger(EC2.class);
     private EC2TargetMonitor targetMonitor;
@@ -41,6 +44,9 @@ public class EC2
     public EC2(int allocatedCPU, String name, EC2Types type) {
         super(name);
         this.allocatedCPU = allocatedCPU;
+        this.apps = new ArrayList<>();
+        this.apis = new ArrayList<>();
+        this.securityGroups = new ArrayList<>();
         this.type = type;
         logger.info("<EC2>: EC2 instance created with allocatedCPU: " + allocatedCPU + " and name: " + this.getName()
                 + " and id: " + this.getId());
@@ -136,6 +142,19 @@ public class EC2
         return this.apps;
     }
 
+    public void attachApp(App app) {
+        if (app == null) throw new IllegalArgumentException("App cannot be null");
+        if ((this.apps.stream().filter(a -> a.getName() == app.getName()).findAny().isPresent())) {
+            logger.warn("<EC2>: CAN'T ATTACH APP: App " + app.getName() + " is already attached to EC2 " + this.getName());
+            return;
+        }
+        if (this.apps.stream().anyMatch(a -> a.getPort() == app.getPort())) {
+            logger.warn("<EC2>: CAN'T ATTACH APP: PORT " + app.getPort() + " is already in use by App " + app.getName());
+            return;
+        }
+        this.apps.add(app);
+    }
+    
     public int getMaxConn() {
         return allocatedCPU;
     }
@@ -147,10 +166,10 @@ public class EC2
     public Response executeApi(Request request) {
         if (executor == null || executor.isShutdown()) {
             logger.error("Executor is not initialized or has been shutdown");
-            return null;
+            return new Response("503");
         }
 
-        App app = apps.get(request.getPort());
+        App app = apps.stream().filter(a -> a.getPort() == request.getPort()).findAny().orElse(null);
         if (app == null) {
             logger.error("App not found on Port: " + request.getPort());
             return new Response("404");
@@ -172,7 +191,7 @@ public class EC2
                         return apiResponse;
                     } else {
                         logger.info("<EC2>: EC2 " + this.getName() + " has no provisioned connections");
-                        return null;
+                        return new Response("503");
                     }
                 } catch (Exception e) {
                     targetMonitor.setTargetUnhealthy();
@@ -210,6 +229,8 @@ public class EC2
         }
 
     }
+
+
 
     @Override
     public void initialize() {
@@ -270,6 +291,11 @@ public class EC2
 
     public boolean provisionConnection() throws InterruptedException {
         return targetMonitor.addRunningRequest();
+    }
+
+    @Override
+    public Response serve(Request request) {
+        return executeApi(request);
     }
 
 }

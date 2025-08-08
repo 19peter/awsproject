@@ -1,11 +1,11 @@
 package org.peters.projectaws.Core;
 
-public abstract class AWSEvent {
+public abstract class AWSEvent<T extends AWSObject> {
     String name;
-    AWSObject source;
+    T source;
     String state;
 
-    public AWSEvent(String name, AWSObject source, String state) {
+    public AWSEvent(String name, T source, String state) {
         this.name = name;
         this.source = source;
         this.state = state;
@@ -15,7 +15,7 @@ public abstract class AWSEvent {
         return name;
     }
 
-    public AWSObject getSourceObject() {
+    public T getSourceObject() {
         return source;
     }
 

@@ -51,10 +51,10 @@ public class Test_GateWay_EC2_S3 {
         ec2.setApis(addDataToEC2);
 
 
-        apiGateway.routeAsync(new Request("POST", "/ec2/data", "/S3/data/new-data-key/new-data-value"));
-        apiGateway.routeAsync(new Request("POST", "/ec2/data", "/S3/data/new-data-key/data-version-2"));
+        apiGateway.serve(new Request("POST", "/ec2/data", "/S3/data/new-data-key/new-data-value"));
+        apiGateway.serve(new Request("POST", "/ec2/data", "/S3/data/new-data-key/data-version-2"));
         Thread.sleep(3000);
-        apiGateway.routeAsync(new Request("GET", "/ec2/data", "/S3/data/new-data-key"));
+        apiGateway.serve(new Request("GET", "/ec2/data", "/S3/data/new-data-key"));
 
         logger.info("Shutting down components");
         apiGateway.shutdownAndAwait();
